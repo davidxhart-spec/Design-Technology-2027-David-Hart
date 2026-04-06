@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2.2 Prototyping techniques — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="active">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>A2.2 — Prototyping techniques</h1>
+<h2>Key concepts</h2>
+<p>A prototype is a tangible version of an idea — something you can hold, test, show to users, and modify. Prototyping is how designers learn whether an idea actually works, before investing in production. Every prototype answers a specific question: <em>does this fit the hand? is this strong enough? do users understand this interaction?</em></p>
+<h3>Low-fidelity vs high-fidelity</h3>
+<p><strong>Low-fidelity prototypes</strong> are rough, quick, and cheap — paper sketches, cardboard mock-ups, foam models, masking tape. They test big questions: <em>is the form right? does the scale work? is the basic interaction sensible?</em> Low-fidelity prototyping belongs early in the process, when ideas are still flexible and cheap to change.</p>
+<p><strong>High-fidelity prototypes</strong> are close to the final product — 3D-printed parts in correct materials, working electronic circuits, functional mechanisms. They test detailed questions: <em>does the latch feel secure? is the grip comfortable over 20 minutes? does the battery last long enough?</em> High-fidelity prototyping belongs later, when the design direction is settled.</p>
+<p>Bad design practice is to jump straight to high-fidelity. A glossy prototype feels like progress, but if the underlying form is wrong, all that effort is wasted. Good designers iterate low-fidelity first, many times, until they are confident in the direction.</p>
+<h3>Rapid prototyping technologies</h3>
+<p><strong>FDM (Fused Deposition Modelling)</strong> — a heated nozzle extrudes plastic filament layer by layer. Cheap, accessible, good for functional parts. Visible layer lines, limited surface finish, limited to thermoplastics.</p>
+<p><strong>SLA / resin printing</strong> — a laser cures liquid resin layer by layer. Very fine detail, smooth surfaces, excellent for display models. Brittle parts, needs post-processing (washing, curing), resin is messy and toxic.</p>
+<p><strong>SLS (Selective Laser Sintering)</strong> — a laser fuses powder. No support material needed, strong parts, complex geometries. Expensive, industrial scale.</p>
+<p><strong>Laser cutting</strong> — a focused laser cuts or engraves flat sheet material. Extremely fast, precise, repeatable. Limited to 2D profiles (though layered assemblies are possible).</p>
+<p><strong>CNC milling</strong> — a computer-controlled cutter removes material from a block. Produces parts in real engineering materials (metal, wood, rigid plastic). Slow setup, wastes material, limited to shapes a cutter can reach.</p>
+<p><strong>Hand-built physical models</strong> — foam, cardboard, clay, MDF, 3D-printed composites. Still essential — they are cheap, fast, and force the designer to make form decisions physically.</p>
+<h3>Iteration</h3>
+<p>A single prototype is an experiment with a sample size of one. <strong>Iterative prototyping</strong> — building, testing, refining, building again — is how designers convert assumptions into knowledge.</p>
+<p>Each iteration should:</p>
+<ol>
+<li>State the question being tested</li>
+<li>Build the simplest prototype that can answer it</li>
+<li>Test with real users or against real conditions</li>
+<li>Document what was learned</li>
+<li>Modify the design and build again</li>
+</ol>
+<p>Three iterations is usually the minimum for a credible IA. More is better. Each iteration narrows the gap between assumption and reality.</p>
+<h3>Testing prototypes</h3>
+<p>Prototypes reveal nothing until they are tested. Tests should be:</p>
+<ul>
+<li><strong>Specific</strong> — targeting one question (grip comfort, not "is it good")</li>
+<li><strong>Measurable</strong> — produce data you can compare (minutes until fatigue, task completion rate, error count)</li>
+<li><strong>User-involved</strong> — watch real users, not the designer trying their own prototype</li>
+<li><strong>Documented</strong> — photos, videos, quotes, numerical results</li>
+</ul>
+<h2>Case studies</h2>
+<p><strong>Dyson's first vacuum prototype</strong> — James Dyson famously built 5,127 prototypes over 15 years developing his cyclonic vacuum. Most were small variations testing one parameter. This extreme iteration allowed gradual refinement impossible to achieve in a single design.</p>
+<p><strong>IDEO rapid prototyping of the Palm V</strong> — designers sculpted aluminium blocks at different sizes to find the ideal pocket form. Users carried blocks for days, reporting how they felt. No electronics, no screen — just form. This low-fidelity approach defined the product before any engineering began.</p>
+<p><strong>SpaceX Starship</strong> — visible iterative prototyping at industrial scale. Each prototype tests specific failure modes (tank pressure, engine relight, heat-shield performance). Accepted failures produce more knowledge per dollar than a single attempt at perfection would.</p>
+<p><strong>Cardboard aided design</strong> — many furniture and product designers still build 1:1 cardboard mock-ups before any CAD work. A chair you can actually sit on teaches more than a perfect render ever will.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Prototype</strong> — a tangible, testable representation of a design idea.</li>
+<li><strong>Low-fidelity prototype</strong> — a rough, quick, inexpensive prototype that tests broad questions early in the process.</li>
+<li><strong>High-fidelity prototype</strong> — a refined prototype close to the final product that tests detailed performance.</li>
+<li><strong>FDM</strong> — Fused Deposition Modelling; 3D printing by extruded plastic filament.</li>
+<li><strong>SLA</strong> — Stereolithography; 3D printing by laser-cured liquid resin.</li>
+<li><strong>CNC</strong> — Computer Numerical Control; automated removal of material by a programmed cutter.</li>
+<li><strong>Iteration</strong> — a single cycle of build, test, learn, refine.</li>
+<li><strong>Iterative prototyping</strong> — the practice of refining a design through repeated cycles.</li>
+<li><strong>Rapid prototyping</strong> — any fast, computer-controlled fabrication method (3D printing, laser cutting, CNC).</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. When is low-fidelity prototyping more appropriate than high-fidelity?</strong></p>
+<p><em>Early in the design process, when the direction is still being decided. Low-fidelity prototypes are fast and cheap, encouraging experimentation. They let you test big questions (form, scale, interaction) without the sunk cost that makes designers reluctant to change high-fidelity prototypes. High-fidelity comes later, when the direction is stable and detailed questions need answering.</em></p>
+<p><strong>2. Describe three rapid prototyping technologies, giving one advantage and one limitation of each.</strong></p>
+<p><em>FDM: advantage — inexpensive, widely accessible, produces functional thermoplastic parts. Limitation — visible layer lines and limited surface finish. SLA: advantage — very high detail and smooth surfaces, excellent for display models. Limitation — parts are brittle and need post-processing with toxic resin. Laser cutting: advantage — extremely fast and precise on flat sheet material. Limitation — essentially 2D, limited to material compatible with the laser.</em></p>
+<p><strong>3. Why is iterative prototyping more effective than building a single prototype?</strong></p>
+<p><em>A single prototype tests one set of assumptions, which may be wrong. Iteration exposes each assumption to reality, one at a time. User feedback at each stage reveals problems the designer cannot anticipate. Without iteration, the final product depends on guesswork; with iteration, each decision is evidence-based. Dyson's 5,127 prototypes are an extreme example of this principle in practice.</em></p>
+<p><strong>4. A student builds one 3D-printed prototype at the end of their IA to "show the final design." Critique this approach against the course's expectations.</strong></p>
+<p><em>This is a model of the final design, not an iterative prototype. It tests nothing, demonstrates no learning, and produces no evidence for Criterion C (Developing Ideas) or the iteration expected in the design process. A credible IA shows multiple prototypes at increasing fidelity, each answering a specific question, with documented testing and refinement. A single end-of-project model fails to demonstrate design thinking.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>Fidelity increases over time</h3>
+<p>A useful mental model: plot fidelity on the Y-axis and time on the X-axis. Early iterations sit at low fidelity (sketches, cardboard). Later iterations climb toward high fidelity (CAD, 3D prints, functional prototypes). Iteration is not only "more prototypes" — it is prototypes of <em>increasing resolution</em> as the design direction stabilises.</p>
+<h3>SOAR framework for ideation drawings</h3>
+<p>A memorable acronym for presenting design ideas:</p>
+<ul>
+<li><strong>S</strong>ketch</li>
+<li><strong>O</strong>utline</li>
+<li><strong>A</strong>nnotate</li>
+<li><strong>R</strong>ender</li>
+</ul>
+<p>Use SOAR to ensure every IA sketch communicates clearly. A sketch without outline is unclear; without annotation the reasoning is hidden; without render the form is flat.</p>
+<h3>Sketching vs drawing</h3>
+<ul>
+<li><strong>Sketching</strong> = low-fidelity, fast, exploratory. Used early.</li>
+<li><strong>Drawing</strong> = higher fidelity, more precise, communicative. Used later.</li>
+</ul>
+<p>Students often confuse the two, producing over-finished "sketches" that cannot be iterated. Encourage genuinely rough exploration early.</p>
+<h3>CAD vs CAM</h3>
+<ul>
+<li><strong>CAD</strong> (Computer Aided Design) — designing digitally. Examples: Fusion 360, SolidWorks, Tinkercad.</li>
+<li><strong>CAM</strong> (Computer Aided Manufacturing) — converting digital models into machine instructions (G-code, DXF, STL).</li>
+</ul>
+<p>A student designs in CAD → exports to CAM → machine produces the part.</p>
+<h3>Surface vs solid modelling</h3>
+<ul>
+<li><strong>Surface modelling</strong> — photorealistic appearance, no internal data. Good for visualisation.</li>
+<li><strong>Solid modelling</strong> — complete geometric data including internal volumes. Required for manufacture, FEA, and simulations.</li>
+</ul>
+<p>Students should know when each is appropriate.</p>
+<h3>Virtual prototyping with FEA</h3>
+<p>Finite Element Analysis (FEA) predicts how objects react to physical forces without needing to build and destroy physical prototypes. Benefits:<br />
+- Lower cost (no material, no tool wear)<br />
+- Faster iteration (change geometry, re-run in minutes)<br />
+- Reveals stress concentrations that may not be obvious</p>
+<p>Physical testing remains mandatory for regulatory compliance and safety-critical products.</p>
+<h3>Emerging prototyping technologies</h3>
+<ul>
+<li><strong>Haptic technology</strong> — applies forces to the user giving tactile feedback. Allows designers to test ergonomic interactions in VR before building physical prototypes.</li>
+<li><strong>Digital humans</strong> — virtual figures with motion capture and biomechanics simulation, used to test ergonomic assumptions.</li>
+</ul>
+<h3>Classroom tasks</h3>
+<p><strong>Isometric drawing progression:</strong> Start with a single cube on grid paper, progress to multiple cubes, then to a cantilever chair drawn freehand with protractor. Add rendering to convey material and depth.</p>
+<p><strong>Iterative CAD exercise:</strong> Model a simple product in low-fidelity CAD. 3D print or laser cut. Evaluate with a target user. Re-design, re-print. Document each iteration.</p>
+<hr />
+<p><strong>Next:</strong> <a href="A3.1-material-classification.html">A3.1 — Material classification and properties</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

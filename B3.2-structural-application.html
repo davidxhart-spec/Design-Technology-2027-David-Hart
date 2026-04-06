@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B3.2 Structural application (HL) — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="active">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>B3.2 — Structural application (HL)</h1>
+<h2>Key concepts</h2>
+<p>B3.2 applies the structural theory from A3.2 to real design work — taking a product that must resist loads and deciding how to make it strong, stiff, and efficient without over-engineering.</p>
+<h3>Applying structural principles to products</h3>
+<p>Every load-bearing product faces the same questions:</p>
+<ol>
+<li>What loads will it experience? (weight, impact, fatigue, wind, user force)</li>
+<li>Where are those loads applied and in what directions?</li>
+<li>How will the load path travel through the structure?</li>
+<li>Where are the highest stresses, and how does the material handle them?</li>
+<li>What is the failure mode if overloaded?</li>
+</ol>
+<p>A backpack strap carries tension along its length. A bicycle seat post carries compression plus bending from rider weight. A table resists bending of its top and compression in its legs. Each product needs a mental model of how force moves through it.</p>
+<h3>Load paths</h3>
+<p>A <strong>load path</strong> is the route by which applied forces travel from point of application to the ground (or wherever they are resolved). Good design creates clear, short load paths. Bad design makes forces meander through unintended members, causing stress concentrations and fatigue.</p>
+<p>In a chair: user weight enters the seat, passes through the seat frame to the legs, down through the legs to the floor. If the frame is interrupted or poorly connected, load paths detour through members never intended to carry them.</p>
+<h3>Iterative structural testing</h3>
+<p>Structural design is iterative. A first prototype is loaded, deflection or failure is observed, and the design is strengthened at the failure point. Over iterations, the product converges on minimum material for required performance.</p>
+<p>Testing approaches:<br />
+- <strong>Static load test</strong> — apply known weights, measure deflection<br />
+- <strong>Destructive test</strong> — load to failure to find real safety margin<br />
+- <strong>Fatigue cycle test</strong> — apply repeated loads to discover long-term failures<br />
+- <strong>FEA simulation</strong> — run virtual loading before physical tests<br />
+- <strong>Drop and impact tests</strong> — simulate real-world abuse</p>
+<h3>Optimising for strength and weight</h3>
+<p>Strength-to-weight ratio is usually the key metric. Optimisation strategies:</p>
+<ul>
+<li><strong>Use tubes instead of rods</strong> — a hollow tube has almost all the bending stiffness of a solid rod at a fraction of the weight, because material near the centre carries little bending stress.</li>
+<li><strong>Use I-beams or box sections</strong> — concentrate material in flanges far from the neutral axis.</li>
+<li><strong>Ribbing and flanging</strong> — thin sheet plus ribs is stiffer than thick flat sheet.</li>
+<li><strong>Truss architecture</strong> — triangulated members avoid bending entirely.</li>
+<li><strong>Topology optimisation</strong> — software removes material from low-stress regions iteratively.</li>
+</ul>
+<h3>Material efficiency in structures</h3>
+<p>A structure using less material saves weight, cost, and embodied carbon. Efficiency measures include:</p>
+<ul>
+<li><strong>Specific strength</strong> — strength per unit mass</li>
+<li><strong>Specific stiffness</strong> — stiffness per unit mass</li>
+<li><strong>Utilisation</strong> — what fraction of the material is fully loaded</li>
+</ul>
+<p>A well-optimised structure has high utilisation everywhere. A poorly optimised structure has over-engineered regions carrying little load.</p>
+<h3>Real-world safety factors</h3>
+<p>Designers apply a <strong>safety factor</strong> — a multiplier above the maximum expected load — to account for unexpected loading, material variation, manufacturing defects, and long-term degradation. Typical factors:</p>
+<ul>
+<li>Aircraft structures: 1.5× (tight but safe due to rigorous testing)</li>
+<li>Consumer products: 2–3×</li>
+<li>Lifting equipment: 4–10× (where failure endangers life)</li>
+</ul>
+<p>Higher safety factor means more material — a balance between safety and weight/cost.</p>
+<h2>Case studies</h2>
+<p><strong>Bicycle frame evolution</strong> — diamond frames use triangulation for efficient load paths. Modern carbon frames vary tube wall thickness, fibre orientation, and cross-section shape along the length to match local stress patterns revealed by FEA. The top tube is strongest where it joins the head tube; the chain stay is stiffest at the bottom bracket.</p>
+<p><strong>Sheet-metal chair legs</strong> — designers fold or emboss flat sheet into channels to create bending stiffness without weight. The humble Eames wire chair used a triangulated rod truss to achieve a stool's strength with a fraction of the material of wooden predecessors.</p>
+<p><strong>Airbus A380 wing spar</strong> — uses ribbed CFRP panels with optimised thickness distribution. Wingtips flex metres vertically without fatigue — because the structure is optimised for the right load path and every kilo saved allows hundreds more of passengers or cargo.</p>
+<p><strong>Packaging corrugations</strong> — cardboard boxes use fluted corrugation as an I-beam cross-section, giving thin, lightweight, strong structural performance. A plain flat cardboard of the same weight would be useless.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Load path</strong> — the route that applied forces travel through a structure to resolution.</li>
+<li><strong>Specific strength</strong> — strength per unit mass (strength-to-weight ratio).</li>
+<li><strong>Specific stiffness</strong> — stiffness per unit mass.</li>
+<li><strong>Utilisation</strong> — the fraction of a structure's material that is fully loaded.</li>
+<li><strong>Topology optimisation</strong> — computational method removing low-stress material iteratively.</li>
+<li><strong>Safety factor</strong> — multiplier applied to expected loads to ensure reliability.</li>
+<li><strong>Destructive test</strong> — loading a structure to failure to determine true capacity.</li>
+<li><strong>Fatigue test</strong> — repeated cyclic loading to reveal long-term failure modes.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Explain what a load path is and why clear load paths matter.</strong></p>
+<p><em>A load path is the route by which applied forces travel from their point of application through the structure to their resolution point (typically the ground). Clear, direct load paths result in predictable stress distributions and efficient material use; forces flow through members designed to carry them. Tortuous or interrupted load paths create stress concentrations in unintended members, leading to unexpected failures and requiring extra material in unpredictable locations.</em></p>
+<p><strong>2. Why is a hollow tube nearly as strong as a solid rod of the same outer diameter under bending?</strong></p>
+<p><em>In a bending member, stress is proportional to distance from the neutral axis (centre). Material at the outer surface carries the most stress; material near the centre carries very little. Removing the central core (creating a tube) eliminates mostly under-utilised material. The result: large bending stiffness loss is small, but mass reduction is dramatic. This is why bicycle frames, scaffolding, and fishing rods are all tubular.</em></p>
+<p><strong>3. Describe two techniques for optimising strength-to-weight in a product structure.</strong></p>
+<p><em>Topology optimisation: FEA software iteratively removes material from low-stress regions, producing organic-looking structures optimised for the specific load case. Used widely in aerospace brackets. Shape-based optimisation: replacing solid members with I-beams, tubes, or triangulated trusses — standard engineering methods that concentrate material where stress is highest. Bicycle frames are a classic example of the latter.</em></p>
+<p><strong>4. Explain the role of safety factors and why different products use different values.</strong></p>
+<p><em>A safety factor is a multiplier above the expected maximum load. It covers unexpected overloads, material variability, manufacturing defects, and long-term degradation. Aircraft use relatively low factors (~1.5) because loads are predictable and testing is rigorous, and excess weight is costly. Lifting equipment uses high factors (up to 10) because human life depends on it and loading conditions are less controllable. Consumer products typically 2–3, balancing cost, weight, and acceptable failure risk.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>Structures are everywhere in product design</h3>
+<p>Even small everyday products contain structures that must withstand forces:<br />
+- <strong>Sitting on a chair</strong> applies compression and bending<br />
+- <strong>Dropping a phone</strong> applies impact and shear<br />
+- <strong>Carrying a heavy bag</strong> applies tension in straps and bending in the base<br />
+- <strong>Opening a hinge</strong> applies cyclic torsion and shear</p>
+<p>Repeated use of "normal" actions creates fatigue failure over time if structure is not properly designed.</p>
+<h3>Practical challenge — cantilever beam design</h3>
+<p>A hands-on assessed task students can complete in 2 lessons:</p>
+<p><strong>Goal:</strong> Build the strongest, most efficient cantilever beam from 6mm plywood that supports at least 2 kg at the free end without flexing.</p>
+<p><strong>Rules:</strong><br />
+- Must remain perpendicular to the vertical surface when loaded<br />
+- Must be removable (no direct glue to wall)<br />
+- Entire structure weighed to calculate strength-to-weight ratio</p>
+<p><strong>Variables to experiment with:</strong><br />
+- Thickness and shape of the beam<br />
+- Area, shape, and position of the attachment piece<br />
+- Methods of supporting beam from above / below<br />
+- Joining methods and joint surface areas<br />
+- Attachment methods (screws, nuts, bolts)</p>
+<p><strong>Sequence:</strong> Create model → test with mass → weigh → modify → repeat.</p>
+<p><strong>Documentation:</strong> Photos with annotated force arrows, coded annotations (≤10 words each), visible thought process.</p>
+<h3>How to strengthen a structure — design levers</h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change material</td>
+<td>Swap plastic for aluminium</td>
+</tr>
+<tr>
+<td>Add reinforcement</td>
+<td>Ribs, gussets, cross-bracing</td>
+</tr>
+<tr>
+<td>Change shape</td>
+<td>Arches, domes, triangulation</td>
+</tr>
+<tr>
+<td>Increase thickness</td>
+<td>At stress concentration points only</td>
+</tr>
+<tr>
+<td>Combine structures</td>
+<td>Frame + shell (bike frame + shell casing)</td>
+</tr>
+</tbody>
+</table>
+<h3>CAD for structural design</h3>
+<p>A 3D model of the structure is created on computer. FEA software then applies forces and predicts deflection, stress concentration, and failure points — before physical prototypes are built. Modern structural design is virtual first, physical second.</p>
+<h3>Annotation discipline</h3>
+<p>When presenting structural iterations: use <strong>photos with force arrows</strong>, and keep written annotations to <strong>10 words or fewer</strong> per note. Students typically over-write; forcing brevity sharpens thinking and improves communication.</p>
+<hr />
+<p><strong>Next:</strong> <a href="B3.3-mechanical-application.html">B3.3 — Mechanical application (HL)</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

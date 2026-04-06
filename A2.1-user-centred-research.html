@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2.1 User-centred research methods — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="active">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>A2.1 — User-centred research methods</h1>
+<h2>Key concepts</h2>
+<p>Design decisions are only as good as the research they are based on. Before sketching a single idea, a designer must understand the user — who they are, what they do, what frustrates them, and what they actually need (which is often different from what they say they need).</p>
+<p>Research methods fall into two broad categories: <strong>primary</strong> (you collect the data yourself) and <strong>secondary</strong> (you use data that already exists).</p>
+<h3>Primary research</h3>
+<p>Primary research is first-hand data you gather specifically for your project. The main methods are:</p>
+<ul>
+<li><strong>Interviews</strong> — one-to-one conversations. Best for depth, emotional responses, and unexpected insights. A good interview uses open questions ("tell me about the last time you...") rather than closed yes/no questions. Time-consuming and limited to small samples.</li>
+<li><strong>Observation</strong> — watching users in their real context without interfering. Reveals what people actually do, which is often different from what they say they do. Essential for spotting workarounds and frustrations that users have stopped noticing.</li>
+<li><strong>Surveys and questionnaires</strong> — written questions answered by many users. Efficient, produces quantifiable data, but shallow. Responses depend entirely on how questions are worded.</li>
+<li><strong>Focus groups</strong> — small group discussions. Useful for exploring attitudes and generating ideas, but dominated by confident voices. Poor for sensitive topics.</li>
+<li><strong>Shadowing / contextual inquiry</strong> — following a user through a real task, asking questions as they work. Combines observation with interview.</li>
+</ul>
+<p>A strong project uses <strong>triangulation</strong> — three or more methods producing consistent findings. If interviews, observation, and surveys all point to the same issue, you can be confident it is real.</p>
+<h3>Secondary research</h3>
+<p>Secondary research uses data collected by others: published studies, anthropometric databases, industry reports, existing product reviews, academic papers, standards documents. Fast and broad, but not specific to your users or context. Usually used to frame primary research, not replace it.</p>
+<h3>Synthesising research</h3>
+<p>Raw data is not a design brief. You must interpret it. Three tools are commonly used:</p>
+<p><strong>Personas</strong> — fictional but evidence-based user profiles. A good persona includes demographics, goals, frustrations, context of use, and a representative quote drawn from real interviews. Bad personas are invented; good personas are assembled from research data.</p>
+<p><strong>User journey maps</strong> — a timeline of what a user does, thinks, and feels while trying to complete a task. Reveals pain points and moments where the product fails them.</p>
+<p><strong>Empathy maps</strong> — a tool that splits research notes into what the user says, thinks, does, and feels. Helps separate surface statements from deeper motivations.</p>
+<h3>User needs vs user wants</h3>
+<ul>
+<li>A <strong>need</strong> is essential for the product to work for the user — often unstated and discovered through observation.</li>
+<li>A <strong>want</strong> is a preference that enhances satisfaction — usually voiced directly.</li>
+</ul>
+<p>Users articulate wants easily ("I want it to be blue"). Needs must be uncovered ("when you reach the top shelf, what happens?"). Great products address real needs; mediocre products chase wants.</p>
+<h2>Case studies</h2>
+<p><strong>IDEO and the shopping trolley redesign (1999)</strong> — tasked by ABC News to redesign a supermarket trolley in 5 days, IDEO sent designers to supermarkets not to design but to <em>watch</em>. They observed parents, shop staff, and elderly users. The resulting design had modular baskets (parents unload direct to car), a scanner handle (shop staff priority), and anti-theft wheels. Almost every feature came from observation, not imagination.</p>
+<p><strong>Intuit "Follow Me Home" programme</strong> — Intuit sent software engineers to customers' homes to watch them use financial software. One of the most valuable research programmes in software history, it caught thousands of usability problems that internal testing never found.</p>
+<p><strong>Design Council case study on dementia-friendly hospitals</strong> — researchers shadowed patients with dementia through hospital visits. They discovered that shiny floors looked like water to patients, who then refused to walk on them. No interview would have surfaced this — only observation.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Primary research</strong> — data collected first-hand for a specific project.</li>
+<li><strong>Secondary research</strong> — existing data collected by others for other purposes.</li>
+<li><strong>Interview</strong> — structured or semi-structured one-to-one conversation with a user.</li>
+<li><strong>Observation</strong> — watching users in their natural context without interference.</li>
+<li><strong>Survey</strong> — a set of written questions distributed to many users.</li>
+<li><strong>Triangulation</strong> — confirming findings using three or more research methods.</li>
+<li><strong>Persona</strong> — an evidence-based fictional user profile that represents a segment of real users.</li>
+<li><strong>User journey map</strong> — a visual timeline showing a user's actions, thoughts, and emotions during a task.</li>
+<li><strong>Empathy map</strong> — a tool that categorises research findings into what users say, think, do, and feel.</li>
+<li><strong>User need</strong> — a requirement essential for a product to be functional, safe, or fit for purpose.</li>
+<li><strong>User want</strong> — a preference that enhances satisfaction but is not essential.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Distinguish between primary and secondary research, giving two examples of each.</strong></p>
+<p><em>Primary research is first-hand data you collect yourself — e.g. interviewing five kitchen users about their peeler habits, or observing hospital staff at a nursing station. Secondary research uses data collected by others — e.g. using a published anthropometric database, or reading a market report on kitchen tool sales. Primary is specific and contextual but slow; secondary is broad and fast but not tailored.</em></p>
+<p><strong>2. What information should a strong user persona contain, and why must it be evidence-based?</strong></p>
+<p><em>A strong persona contains: demographics (age, occupation, ability), behaviours, goals and motivations, frustrations, context of use, and a direct quote. It must be evidence-based because fabricated personas encode the designer's assumptions rather than reality, leading to solutions that solve invented problems. A persona is a summary of research, not a character sketch.</em></p>
+<p><strong>3. Compare interviews and surveys as research methods.</strong></p>
+<p><em>Interviews give depth, emotional nuance, and unexpected insights through follow-up questions, but are slow and limited to small samples. Surveys reach large numbers and produce quantifiable data efficiently, but are shallow and depend heavily on question wording. The strongest approach combines both: surveys to find patterns, interviews to understand them.</em></p>
+<p><strong>4. Why is observation often more reliable than asking users what they do?</strong></p>
+<p><em>People are often unaware of their own behaviour, especially around workarounds and frustrations they have normalised. They may also tell researchers what they think the researcher wants to hear. Observation captures what actually happens. IDEO's trolley research would have failed if they had simply asked shoppers what they wanted — the best insights came from watching behaviour nobody had articulated.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>Needs, wants and limitations — a working definition</h3>
+<ul>
+<li><strong>Need</strong> — what users need, or the product will fail</li>
+<li><strong>Want</strong> — what users would like (preferences)</li>
+<li><strong>Limitation</strong> — what constrains their ability</li>
+</ul>
+<p>A good persona identifies all three clearly. A student designing a smart toothbrush for a busy parent should capture her <em>need</em> (reliably clean teeth, quick routine), her <em>want</em> (feature for the kids, app integration), and her <em>limitation</em> (no time in the morning).</p>
+<h3>Field research — a worked structure</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task</td>
+<td>Staff making coffee</td>
+</tr>
+<tr>
+<td>User(s)</td>
+<td>School staff</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>School staff room</td>
+</tr>
+<tr>
+<td>Timeline</td>
+<td>30 minutes from 08:30 – 09:00</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>To see how many staff bring their own cups</td>
+</tr>
+<tr>
+<td>Record method</td>
+<td>Table tally, quantified observations</td>
+</tr>
+<tr>
+<td>Insights</td>
+<td>60% used disposable cups. Ran out of spoons by 08:40</td>
+</tr>
+</tbody>
+</table>
+<p>Use this template to scaffold any IA field research study.</p>
+<h3>Qualitative vs quantitative data</h3>
+<ul>
+<li><strong>Qualitative</strong> — words, descriptions, quotes (open survey responses, interview transcripts, observation notes). Rich but hard to summarise.</li>
+<li><strong>Quantitative</strong> — numbers, counts, ratings (closed surveys, task times, error counts). Summarisable but loses context.</li>
+</ul>
+<p>Strong UCD research <strong>triangulates</strong> across both types.</p>
+<h3>IDEO and the Oral-B toothbrush</h3>
+<p>IDEO used <strong>field research</strong> (home-bathroom observation of children brushing) rather than relying on interviews or surveys. Parents and children both <em>said</em> they brushed well; video revealed the opposite. Observation reveals behaviour users are unaware of.</p>
+<h3>Classroom activity — persona from survey</h3>
+<p>After running a short survey, ask students to synthesise a persona considering four areas:<br />
+- <strong>Functional</strong> — how do they want to make life easier?<br />
+- <strong>Political</strong> — do they care about environment, where products are made?<br />
+- <strong>Financial</strong> — job, disposable income, spending habits<br />
+- <strong>Social</strong> — hobbies, interests, lifestyle</p>
+<p>This produces evidence-based personas rather than invented ones.</p>
+<h3>Multidisciplinary UCD teams — example roles</h3>
+<p>For a toothbrush: product designer, ergonomist, dentist, UI/UX designer, sustainability expert. Ask students: <em>which disciplines would your IA project need?</em></p>
+<h3>Form + Function + Empathy</h3>
+<p>A useful framing: good design can be measured in three words — <strong>form, function, empathy</strong>. Ask students how each applies to their chosen product.</p>
+<hr />
+<p><strong>Next:</strong> <a href="A2.2-prototyping-techniques.html">A2.2 — Prototyping techniques</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

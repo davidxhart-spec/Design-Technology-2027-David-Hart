@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B1.1 User-centred design — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="active">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>B1.1 — User-centred design</h1>
+<h2>Key concepts</h2>
+<p>User-centred design (UCD) is a philosophy and a process. The philosophy is that <strong>users must be central to every design decision</strong>. The process is a set of habits that keep users central — research before ideas, iteration over perfection, evidence over opinion.</p>
+<p>UCD emerged from frustration with products that were technically brilliant but unusable. A VCR with 27 buttons that no-one could program to record a show. A medical device that doctors operated incorrectly because the interface contradicted their mental models. These are design failures, not user failures.</p>
+<h3>UCD principles</h3>
+<p>Four principles underpin every UCD process:</p>
+<ol>
+<li><strong>Early and continuous user focus</strong> — users are involved from the very first research, not consulted at the end to "validate" the design.</li>
+<li><strong>Iterative design</strong> — test ideas repeatedly with users, refine, test again. One round is not enough.</li>
+<li><strong>Evidence-based decisions</strong> — design choices are justified by research data, not assertions or hunches.</li>
+<li><strong>Holistic user experience</strong> — consider the entire interaction (discovery, purchase, first use, repeated use, maintenance, disposal), not just the product in hand.</li>
+</ol>
+<h3>From user needs to specification</h3>
+<p>UCD translates research into <strong>design specifications</strong> — specific, measurable requirements the product must meet. This conversion is the hinge between understanding and making.</p>
+<p>Example of a weak specification: "the product must be easy to use".</p>
+<p>Example of a strong specification: "a first-time user aged 65+ must complete the primary task within 60 seconds without instructions, in 9 of 10 trials".</p>
+<p>Specifications should be <strong>SMART</strong>: Specific, Measurable, Achievable, Relevant, Time-bound. Good specifications are testable — you can prove the product meets them.</p>
+<h3>Designing for usability</h3>
+<p>Usability has components:</p>
+<ul>
+<li><strong>Learnability</strong> — how quickly a new user can perform basic tasks</li>
+<li><strong>Efficiency</strong> — how quickly an experienced user can perform tasks</li>
+<li><strong>Memorability</strong> — how easily a returning user remembers how to use it</li>
+<li><strong>Error rate</strong> — how often users make mistakes, and how easily they recover</li>
+<li><strong>Satisfaction</strong> — how pleasant the product is to use</li>
+</ul>
+<p>A product can be efficient but not learnable (professional software), or learnable but not efficient (simplified consumer apps). Know which axis matters most for your users.</p>
+<h3>Feedback loops and user testing</h3>
+<p>UCD runs on <strong>feedback loops</strong>: build something, let users try it, watch what happens, change the design. The faster the loop, the faster learning accumulates.</p>
+<p>A usability test needs:<br />
+- A <strong>realistic task</strong> — not a demo, a real thing the user would do<br />
+- <strong>Target users</strong> — not the designer's friends<br />
+- <strong>Observation</strong> — watch silently, let users struggle, note where they hesitate<br />
+- <strong>Think-aloud protocol</strong> — ask users to narrate their thoughts as they work<br />
+- <strong>Documentation</strong> — photos, quotes, task completion rates</p>
+<h3>Accessibility in UCD</h3>
+<p>UCD must include users with disabilities, temporary impairments, and ageing. Designing for users at the edges (low vision, motor limitations, cognitive differences) produces better products for everyone. This overlaps heavily with inclusive design (C1.2) and contradicts the idea of a single "average user".</p>
+<h2>Case studies</h2>
+<p><strong>Microsoft Inclusive Design toolkit</strong> — pioneered the principle that permanent disability reveals design flaws everyone encounters temporarily. A one-handed person is not different from a parent holding a baby, which is not different from a barista carrying coffee. Design decisions that help permanent users help everyone situationally.</p>
+<p><strong>The Oral-B electric toothbrush</strong> — developed through extensive video observation of people brushing in their own bathrooms. Designers discovered users gripped the brush with their palm, not their fingers, leading to a grip redesign that won over dentists and consumers simultaneously.</p>
+<p><strong>Airbnb redesign 2014</strong> — went from a transactional booking site to a community experience platform through months of observation and interviews with hosts and guests. Illustrated that UCD operates at the service level, not just the product level.</p>
+<p><strong>Ford Third Age Suit</strong> — engineers wore suits that simulated age-related mobility limits while designing car interiors. Revealed reach, flexibility, and visibility issues no young designer would have identified. Empathy built through experience.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>User-centred design (UCD)</strong> — a design philosophy placing user needs at the core of every decision.</li>
+<li><strong>Design specification</strong> — a measurable requirement the product must meet.</li>
+<li><strong>Usability</strong> — the ease with which a user can achieve goals with a product.</li>
+<li><strong>Learnability</strong> — how quickly a new user can begin using a product.</li>
+<li><strong>Efficiency</strong> — the speed with which an experienced user can complete tasks.</li>
+<li><strong>Think-aloud protocol</strong> — a usability testing method where users verbalise their thoughts.</li>
+<li><strong>Feedback loop</strong> — the cycle of build, test, learn, refine.</li>
+<li><strong>Accessibility</strong> — the design of products usable by people with the widest range of abilities.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. State the four principles of user-centred design and explain why each matters.</strong></p>
+<p><em>Early and continuous user focus — prevents designers from inventing problems that don't exist. Iterative design — catches mistakes while they are cheap to fix. Evidence-based decisions — replaces opinion with data a critic cannot dismiss. Holistic user experience — catches failures outside the immediate product (packaging, first use, disposal) that still shape the user's relationship with the product.</em></p>
+<p><strong>2. Give a weak specification and a strong specification for the same product feature, and explain the difference.</strong></p>
+<p><em>Weak: "the handle must be comfortable". Strong: "90% of users aged 18–65 must rate handle comfort as 4 or higher on a 5-point scale after 20 minutes of continuous use". The strong version is specific, measurable, and testable — it can be verified after testing. The weak version depends entirely on interpretation and cannot be audited.</em></p>
+<p><strong>3. Describe the five components of usability and give a product example where one component dominates.</strong></p>
+<p><em>Learnability, efficiency, memorability, error rate, satisfaction. In a photocopier used by infrequent visitors to an office, learnability dominates — a complex interface defeats casual users regardless of how efficient it is for experts. In professional audio editing software, efficiency dominates — users willingly accept steep learnability curves for speed in daily use.</em></p>
+<p><strong>4. A student claims they did UCD because they asked five friends if they liked the final prototype. Critique this claim.</strong></p>
+<p><em>This is not UCD. It omits early user research, iterative testing, and evidence-based decisions. Asking friends at the end produces confirmation rather than learning — friends are not target users and will give polite answers. Genuine UCD would involve interviews with target users before any prototyping, test-and-refine cycles throughout, and documented evidence that each design decision was driven by user data.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>The five UCD stages explained</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Activity</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Research</strong></td>
+<td>Strategies to understand the problem, user needs, user goals</td>
+<td>Evidence gathering</td>
+</tr>
+<tr>
+<td><strong>Concept</strong></td>
+<td>Testing ideas with target users, much iteration</td>
+<td>Refining direction</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>Higher-fidelity prototypes presented to users</td>
+<td>Observation + feedback</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong></td>
+<td>Highly refined solution, careful data collection</td>
+<td>Evaluation vs criteria</td>
+</tr>
+<tr>
+<td><strong>Launch</strong></td>
+<td>Product released for sale, continuous post-launch evaluation</td>
+<td>Ongoing iteration</td>
+</tr>
+</tbody>
+</table>
+<p>After launch, UCD continues — new needs emerge, so the cycle repeats.</p>
+<h3>Usability objectives and task analysis</h3>
+<p><strong>Usability objectives</strong> are the measurable targets for how easy, efficient, and satisfying the product should be. Examples:<br />
+- "A new user completes the primary task within 60 seconds"<br />
+- "Error rate is below 1 per 10 users on first use"<br />
+- "Satisfaction rating averages ≥4 on a 5-point scale"</p>
+<p><strong>Task analysis</strong> breaks a user action into sub-steps. Identify bottlenecks, errors, and frustrations at each step. Used for interface, tool, and process design.</p>
+<h3>Multidisciplinary UCD teams</h3>
+<p>A UCD team pulls expertise from several disciplines. Example for a toothbrush design:<br />
+- Product designer<br />
+- Ergonomist<br />
+- Dentist (domain expert)<br />
+- UI/UX designer (for app integration)<br />
+- Sustainability expert</p>
+<p>The team composition depends on the complexity of user, task, and environment.</p>
+<h3>Independent learning task — redesign a product</h3>
+<p>Students pick a product they use daily, then write or sketch what they would do at each of the 5 UCD stages to redesign it. They identify target users, describe research methods, propose prototypes, and set evaluation criteria. Assembled into a 5-slide presentation.</p>
+<p>This task transfers abstract UCD theory into concrete design planning.</p>
+<h3>Needs / wants / limitations — the operational distinction</h3>
+<ul>
+<li><strong>Need</strong> — essential; product fails without it</li>
+<li><strong>Want</strong> — preference; nice to have</li>
+<li><strong>Limitation</strong> — constraint on the user's ability</li>
+</ul>
+<p>A persona that lists all three (plus functional, political, financial, social dimensions) anchors subsequent design decisions in real user evidence rather than designer guesswork.</p>
+<hr />
+<p><strong>Next:</strong> <a href="B2.1-design-process.html">B2.1 — The IB DP Design process</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

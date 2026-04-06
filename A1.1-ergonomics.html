@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1.1 Ergonomics — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="active">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>A1.1 — Ergonomics</h1>
+<h2>Key concepts</h2>
+<p><strong>Ergonomics</strong> is the study of the relationship between people and the things they use. It is the science that asks: <em>does this product fit the human using it?</em> Good ergonomics reduces fatigue, prevents injury, increases productivity, and makes products feel natural to use. Bad ergonomics causes discomfort, errors, and long-term health problems.</p>
+<p>The foundation of ergonomics is <strong>anthropometrics</strong> — the measurement of the human body. Designers rely on large databases of body measurements (height, reach, grip strength, sitting knee clearance, etc.) to make decisions about product dimensions. You cannot design a comfortable chair, a safe power tool, or a usable smartphone without anthropometric data.</p>
+<h3>Static vs dynamic data</h3>
+<ul>
+<li><strong>Static data</strong> is measured with the body at rest: standing height, sitting eye height, hand length.</li>
+<li><strong>Dynamic data</strong> is measured with the body in motion: overhead reach, grip strength while turning, stride length.</li>
+</ul>
+<p>Static data tells you how big to make fixed things (door frames, seat backs). Dynamic data tells you how to design for interaction (steering wheels, control levers, sports equipment).</p>
+<h3>Percentiles</h3>
+<p>Anthropometric data is presented as <strong>percentiles</strong>. The 50th percentile is the median — half the population is smaller, half is larger. The 5th percentile represents small users; the 95th percentile represents large users.</p>
+<p>The percentile you design for depends on what you are designing:</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Percentile to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clearance (doorways, seat-to-ceiling)</td>
+<td><strong>95th percentile</strong> — if it fits the tallest, it fits everyone</td>
+</tr>
+<tr>
+<td>Reach (controls, shelves)</td>
+<td><strong>5th percentile</strong> — if the smallest can reach, everyone can</td>
+</tr>
+<tr>
+<td>Adjustable range (office chairs, car seats)</td>
+<td><strong>5th to 95th</strong> — accommodate the middle 90%</td>
+</tr>
+<tr>
+<td>Strength requirement (jar lid, safety catch)</td>
+<td><strong>5th percentile</strong> — must be usable by weakest</td>
+</tr>
+</tbody>
+</table>
+<p>Designers rarely design for the 50th percentile alone — doing so excludes half the population.</p>
+<h3>Physical, psychological and physiological factors</h3>
+<p>Ergonomics is not only about size. Three factor categories must be considered:</p>
+<ul>
+<li><strong>Physical</strong> — size, reach, strength, grip. Answered by anthropometric data.</li>
+<li><strong>Physiological</strong> — fatigue, circulation, injury risk, repetitive strain. Answered by studying how the body responds over time.</li>
+<li><strong>Psychological</strong> — perception, cognitive load, emotional response, sense of control. Answered by user testing and observation.</li>
+</ul>
+<p>A chair that is the right size (physical) but cuts off circulation after 20 minutes (physiological) or makes the user feel trapped (psychological) has failed ergonomically.</p>
+<h2>Case studies</h2>
+<p><strong>OXO Good Grips (1990)</strong> — Sam Farber's wife had arthritis and struggled with standard kitchen peelers. He designed a peeler with a soft, oversized, oval rubber handle. It reduced grip force requirement, fit a wide percentile range, and worked better for <em>everyone</em> — not just arthritis sufferers. Now an iconic example of inclusive ergonomic design.</p>
+<p><strong>Clear RX prescription bottles</strong> — Target redesigned medication bottles after a customer's grandmother took her husband's pills by mistake. The new design put the label on a flat face, used large readable type, added colour-coded rings per family member, and included an inverted cap so the bottle stood upright showing the label. Ergonomics applied to reading, identifying, handling.</p>
+<p><strong>Herman Miller Aeron chair</strong> — designed in 1994 based on extensive anthropometric research, offered in three sizes (A, B, C) to accommodate the 5th–95th percentile rather than forcing adjustment of a single chair. The mesh seat addressed physiological concerns (heat, circulation) that padded chairs caused.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Ergonomics</strong> — the study of the relationship between people and the products, systems, and environments they interact with.</li>
+<li><strong>Anthropometrics</strong> — the branch of ergonomics concerned with measuring the human body.</li>
+<li><strong>Percentile</strong> — a value below which a given percentage of the population falls (e.g. 95th percentile height means 95% of people are shorter).</li>
+<li><strong>Clearance</strong> — space provided so that the largest user can fit without obstruction.</li>
+<li><strong>Reach</strong> — distance a user must extend to operate a control or access an object.</li>
+<li><strong>Static data</strong> — anthropometric measurements taken with the body at rest.</li>
+<li><strong>Dynamic data</strong> — anthropometric measurements taken with the body in motion.</li>
+<li><strong>Physiological factor</strong> — an ergonomic consideration relating to the body's function over time (fatigue, circulation, injury).</li>
+<li><strong>Psychological factor</strong> — an ergonomic consideration relating to perception, emotion, or cognitive response.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Define ergonomics and anthropometrics and explain the relationship between them.</strong></p>
+<p><em>Ergonomics is the study of how humans interact with products, systems and environments, with the goal of designing for comfort, efficiency and safety. Anthropometrics is the sub-field concerned with body measurements. Anthropometric data provides the quantitative evidence on which ergonomic design decisions depend — without accurate measurements of the target users, ergonomic claims cannot be justified.</em></p>
+<p><strong>2. A designer is specifying the height of a doorway. Which percentile should they design for, and why?</strong></p>
+<p><em>The 95th percentile of male standing height (since males are generally taller). Clearance dimensions must accommodate the largest expected user — if the doorway is tall enough for the 95th percentile, it works for everyone below that. Designing for the 50th percentile would result in 50% of users having to duck.</em></p>
+<p><strong>3. Explain, with examples, why both static and dynamic anthropometric data are needed when designing a car interior.</strong></p>
+<p><em>Static data is used for fixed dimensions — seat width, door opening height, sitting eye height for mirror position. Dynamic data is used for interaction elements — steering wheel reach while seated, gear lever movement range, foot pedal travel. Using only static data would produce a car that someone could sit in but not comfortably operate; using only dynamic data would produce a car that could be operated but fitted no-one properly.</em></p>
+<p><strong>4. A product designer claims a new hand tool has "good ergonomics" because the handle matches 50th-percentile grip circumference. Critique this claim.</strong></p>
+<p><em>Matching the 50th percentile alone excludes roughly half of users — those with smaller or larger grips. A genuinely ergonomic handle would accommodate the 5th to 95th percentile range, through either adjustability, multiple sizes, or a softer material that conforms to different grip sizes (the OXO approach). The claim also ignores physiological factors (grip fatigue, vibration damping) and psychological factors (confidence, perceived quality) that contribute to overall ergonomic quality.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>Case study: Sony PlayStation controllers and regional anthropometrics</h3>
+<p>Sony released the first PlayStation in Japan, then launched internationally. The controllers were designed using Japanese anthropometric data only — when the console reached the US market, users found the controllers too small for Western hands. Sony had to recall and re-issue larger controllers at significant cost. Nintendo later faced the same issue with the Wii Fit balance board: Japan set a 20-stone weight limit, Europe approximately 23 stone, and the US version had to support nearly 30 stone.</p>
+<p>These examples illustrate <strong>international mindedness</strong> — anthropometric data is regionalised, and designers must use data appropriate to the target market. A designer using only European data will produce products that fail for Asian users, and vice versa.</p>
+<h3>Key framing questions</h3>
+<ul>
+<li><em>Is it better for something to be universal or tailor-made to each user?</em></li>
+<li><em>How do ergonomic considerations influence the design of a product?</em></li>
+<li><em>Why would ergonomics be important in manufacturing?</em> (Workers repeat actions thousands of times per shift — poor ergonomics causes injury, lost time, and production cost.)</li>
+</ul>
+<h3>Percentile choice — quick reference</h3>
+<ul>
+<li><strong>Keyboard reach</strong> — 5th percentile arm length (shortest users must be able to reach)</li>
+<li><strong>Door height</strong> — 95th percentile stature (clearance for tallest users)</li>
+<li><strong>Office chair seat pan</strong> — adjustable across 5th–95th percentile</li>
+</ul>
+<h3>Classroom activities</h3>
+<p><strong>Hand measurement task:</strong> Draw the outline of your hand on paper. Add measurement lines (length, palm width, thumb span, finger widths) in millimetres. Pool data with classmates into a table and calculate averages for A/B/C users. Discuss why actual class data differs from published anthropometric tables.</p>
+<p><strong>Bad ergonomics design challenge:</strong> Design, deliberately, an ergonomically terrible everyday product. The act of making something bad forces students to articulate what makes good ergonomics visible.</p>
+<p><strong>Physiology/biomechanics research:</strong> Draw a flowchart showing the development of prosthetic arms over time. Focus on how biomechanics research has improved grip force, sensory feedback, and range of motion.</p>
+<h3>Psychological factors — data types</h3>
+<p>User responses to light, smell, sound, taste, temperature, and texture can be measured using four data scales:</p>
+<ul>
+<li><strong>Nominal</strong> — category only (e.g. favourite colour)</li>
+<li><strong>Ordinal</strong> — ranked order (e.g. 1st, 2nd, 3rd)</li>
+<li><strong>Interval</strong> — equal units, no true zero (e.g. temperature in °C)</li>
+<li><strong>Ratio</strong> — equal units with true zero (e.g. weight, time)</li>
+</ul>
+<p>Different scales permit different statistical operations — a common Paper 2 topic.</p>
+<hr />
+<p><strong>Next:</strong> <a href="A2.1-user-centred-research.html">A2.1 — User-centred research methods</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

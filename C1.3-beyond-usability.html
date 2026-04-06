@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C1.3 Beyond usability (HL) — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="active">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C1.3 — Beyond usability (HL)</h1>
+<h2>Key concepts</h2>
+<p>Usability is about <em>can the user do the task?</em> <strong>Beyond usability</strong> asks a deeper question: <em>how does the user feel about doing the task, and about the product they are doing it with?</em></p>
+<p>A usable product is not necessarily a product people love. Hospital waiting-room chairs are technically usable but nobody enjoys them. A well-designed smartphone is usable <em>and</em> emotionally compelling. The difference matters — emotional response drives what users buy, what they keep, and what they recommend.</p>
+<h3>Emotional design</h3>
+<p><strong>Don Norman's three levels of emotional design</strong> (2004):</p>
+<ol>
+<li>
+<p><strong>Visceral</strong> — the immediate gut response to appearance. Pre-cognitive. "That looks beautiful / scary / inviting." Shapes first impressions in milliseconds.</p>
+</li>
+<li>
+<p><strong>Behavioural</strong> — the response to use. "This is satisfying to hold / frustrating to open / elegant to operate." Develops over use.</p>
+</li>
+<li>
+<p><strong>Reflective</strong> — the meaning attached to owning or using it. "This says something about who I am / what I value." The slowest, deepest level.</p>
+</li>
+</ol>
+<p>Successful products typically work at all three levels. An iPhone is visceral (sleek, jewel-like), behavioural (responsive, tactile), and reflective (status symbol, personal device).</p>
+<h3>Product semantics</h3>
+<p><strong>Product semantics</strong> is the study of how products communicate meaning through form, colour, texture, and detail. Every design decision sends signals:</p>
+<ul>
+<li>Sharp angles suggest precision, technology, speed</li>
+<li>Curves suggest warmth, comfort, nature</li>
+<li>Matte surfaces suggest professionalism; glossy surfaces suggest luxury or youth</li>
+<li>Exposed screws suggest honesty and repair; hidden fastenings suggest refinement</li>
+</ul>
+<p>Good designers use these signals intentionally. Mismatched semantics (a medical device styled like a toy) confuses users.</p>
+<h3>Aesthetic experience</h3>
+<p>Aesthetics is not decoration — it is essential. Users perceive aesthetically pleasing products as:</p>
+<ul>
+<li>Easier to use (even when objectively they are not)</li>
+<li>More trustworthy</li>
+<li>Higher quality</li>
+<li>Worth more money</li>
+</ul>
+<p>This is the <strong>aesthetic-usability effect</strong>: users forgive aesthetic products small usability flaws that would annoy them in ugly products. Beauty is not optional.</p>
+<h3>Sensory design</h3>
+<p>Products are experienced through all senses:</p>
+<ul>
+<li><strong>Sight</strong> — form, colour, material, surface</li>
+<li><strong>Touch</strong> — texture, temperature, weight, vibration</li>
+<li><strong>Hearing</strong> — click, whirr, thud, silence</li>
+<li><strong>Smell</strong> — new-car smell, leather, wood</li>
+<li><strong>Taste</strong> — rare in products but matters in food, medicine, packaging</li>
+</ul>
+<p>Designers who attend to multiple senses create richer experiences. The "click" of a premium pen, the satisfying weight of a well-made knife, the scent of freshly cut wood — all contribute.</p>
+<h3>Product personality and identity</h3>
+<p>Products have personalities. A Volvo feels safe, steady, honest. A Ferrari feels aggressive, intense, elite. An iPhone feels confident and minimalist. A Nintendo console feels playful and approachable.</p>
+<p>Personality comes from consistent decisions across form, interaction, material, sound, and language. It must align with brand identity and user aspirations.</p>
+<h3>Meaning and culture</h3>
+<p>Products carry cultural meaning:</p>
+<ul>
+<li>Heritage brands (Leica, Rolex, Moleskine) trade on history</li>
+<li>Minimalist design signals quality in some contexts, coldness in others</li>
+<li>Traditional craft signals authenticity and care</li>
+<li>High-tech aesthetics signal modernity and progress</li>
+</ul>
+<p>Designers choosing semantic directions shape user perception — powerful, and potentially manipulative.</p>
+<h2>Case studies</h2>
+<p><strong>Apple retail experience</strong> — every surface, sound, scent, and gesture in Apple stores is designed. The tactile weight of a MacBook, the spacing of the products, the staff scripts — all work together to create aspiration and trust.</p>
+<p><strong>Dieter Rams and Braun</strong> — established a design language of calm functionalism. Minimal ornament, honest materials, subtle details. Influenced Apple, Muji, thousands of others. A masterclass in consistent product semantics.</p>
+<p><strong>Tesla Cybertruck</strong> — deliberately divisive aesthetics. Sharp, angular, dystopian. Signals disruption and technical confidence. Emotional response is polarised by design.</p>
+<p><strong>Fisher-Price children's products</strong> — behavioural and visceral design for children. Bright primary colours, rounded forms, tactile satisfaction. Aesthetics tuned for early-years developmental psychology.</p>
+<p><strong>Muji household goods</strong> — minimalism as philosophy. Products almost invisible in use, packaging stripped of branding. Reflective-level design: ownership signals identity (thoughtful, deliberate) without ostentation.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Emotional design</strong> — design that considers users' emotional responses as primary to functional ones.</li>
+<li><strong>Visceral design</strong> — design addressing immediate gut responses to appearance.</li>
+<li><strong>Behavioural design</strong> — design addressing pleasure and frustration during use.</li>
+<li><strong>Reflective design</strong> — design addressing the meaning users attach to ownership.</li>
+<li><strong>Product semantics</strong> — the study of meaning communicated through product form.</li>
+<li><strong>Aesthetic-usability effect</strong> — the tendency for attractive products to be perceived as more usable.</li>
+<li><strong>Sensory design</strong> — design that engages multiple senses intentionally.</li>
+<li><strong>Product personality</strong> — the character that emerges from consistent design decisions.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Describe Don Norman's three levels of emotional design with a product example.</strong></p>
+<p><em>Visceral: immediate gut response to appearance (iPhone's sleek, jewel-like form attracts instantly). Behavioural: response to use (iPhone's smooth gesture interactions feel satisfying). Reflective: meaning attached to ownership (iPhone ownership signals taste, wealth, or tech-fluency). The iPhone succeeds because it works at all three levels. Products that work at only one level (ugly but functional, or beautiful but frustrating) rarely achieve emotional connection.</em></p>
+<p><strong>2. Explain the aesthetic-usability effect and its implications for design.</strong></p>
+<p><em>Users perceive aesthetically pleasing products as more usable, even when measured usability is identical. Attractive products get more patience from users; they forgive small flaws that would be rejected in ugly products. The implication: aesthetics is not decoration — it is essential to usability. Designers who treat visual design as optional produce products users abandon at the first frustration. Beauty and function reinforce each other.</em></p>
+<p><strong>3. Define product semantics and give two examples of how form communicates meaning.</strong></p>
+<p><em>Product semantics is the study of meaning communicated through form, colour, texture, and detail. Example 1: sharp geometric forms suggest precision and technology — used on high-end cameras and cars. Example 2: soft curved forms suggest warmth and approachability — used on home appliances and children's products. Designers use these signals intentionally to align the product with user expectations; mismatched semantics (e.g. a serious medical device styled like a toy) confuses users and undermines trust.</em></p>
+<p><strong>4. A smartphone and a garden fork are both "tools". Why do users relate to them differently at each of Norman's three levels?</strong></p>
+<p><em>Visceral: the smartphone is designed to look desirable, intimate, premium — users are drawn to it visually. The garden fork is designed to look sturdy and purposeful — visual appeal is functional, not seductive. Behavioural: the smartphone's smooth responsive interaction is designed to feel pleasurable; the fork's satisfaction comes from the tactile feedback of effective work (soil yielding). Reflective: smartphone ownership carries identity signals (status, taste, values); a garden fork rarely does, unless the user values craft or heritage tools. Different product categories engage the three levels very differently.</em></p>
+<hr />
+<p><strong>Next:</strong> <a href="C2.3-lifecycle-assessment.html">C2.3 — Life-cycle assessment (HL)</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

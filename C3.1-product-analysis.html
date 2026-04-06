@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C3.1 Product analysis and evaluation — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="active">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C3.1 — Product analysis and evaluation</h1>
+<h2>Key concepts</h2>
+<p>Evaluation is the test of whether a design actually works. Anyone can claim a product is good; evidence-based evaluation proves it. Product analysis and evaluation is what separates professional designers from enthusiastic amateurs.</p>
+<p>In the IA, <strong>Criterion E</strong> is dedicated to evaluation. Students who evaluate systematically, with evidence, score well; students who evaluate by opinion score poorly.</p>
+<h3>The purpose of evaluation</h3>
+<p>Evaluation answers three questions:</p>
+<ol>
+<li><strong>Did the product meet its specification?</strong> (technical test)</li>
+<li><strong>Did the product meet user needs?</strong> (user test)</li>
+<li><strong>What should be improved?</strong> (forward-looking)</li>
+</ol>
+<p>Evaluation is not the end of design — it is the feedback that drives the next iteration.</p>
+<h3>Evaluation frameworks</h3>
+<p><strong>Specification check</strong> — the cleanest evaluation method. For each specification point:</p>
+<ol>
+<li>State the requirement</li>
+<li>Describe how it was tested</li>
+<li>Present the result (measurement or user feedback)</li>
+<li>Judge: fully met, partially met, not met</li>
+<li>Justify the judgement</li>
+</ol>
+<p>Because the specification was written before the design (B1.1), it provides a neutral standard.</p>
+<p><strong>SWOT analysis</strong> — identifies Strengths, Weaknesses, Opportunities, Threats. Good for strategic-level evaluation, less useful for product specifics.</p>
+<p><strong>Comparative analysis</strong> — measures the new product against competitors or prior versions. Tests whether the design is better than existing alternatives.</p>
+<p><strong>User evaluation</strong> — structured usability testing with target users. Task completion rates, time-on-task, error counts, satisfaction ratings, think-aloud transcripts.</p>
+<p><strong>Lifecycle considerations</strong> — assesses environmental and social impact across the product's life.</p>
+<h3>Evidence-based vs opinion-based evaluation</h3>
+<p><strong>Opinion-based:</strong> "The grip is comfortable and the product works well."</p>
+<p><strong>Evidence-based:</strong> "95% of the 20 users tested rated handle comfort as 4 or 5 on a 5-point scale. Mean grip pressure measured at 12 N, within the 8–15 N specification range. Grip fatigue onset at 23 minutes (specification: &gt; 15 minutes)."</p>
+<p>The evidence-based statement can be questioned but not dismissed. The opinion-based statement cannot be audited.</p>
+<p>Every evaluative claim in an IA should be backed by something verifiable: a measurement, a user quote, a photograph, a completion time, a rating.</p>
+<h3>Testing and measurement</h3>
+<p>Design useful evaluation methods:</p>
+<ul>
+<li><strong>Quantitative</strong> — measurements, counts, ratings, percentages (easy to compare, hard to reveal nuance).</li>
+<li><strong>Qualitative</strong> — quotes, observations, photos, descriptions (rich detail, hard to summarise).</li>
+<li><strong>Mixed methods</strong> — both together. Best practice.</li>
+</ul>
+<p>Decide in advance what would count as success. "User completes task in under 45 seconds" is testable. "User finds it easy" is not until "easy" is defined.</p>
+<h3>Cultural and contextual evaluation</h3>
+<p>Products exist in culture and context. Evaluation should consider:</p>
+<ul>
+<li>Does it fit the user's environment (home, workplace, climate)?</li>
+<li>Does it respect cultural norms (colour, symbol, gesture)?</li>
+<li>Does it serve the full diversity of intended users?</li>
+<li>Does it have unintended consequences beyond the immediate use?</li>
+</ul>
+<h3>Being honest</h3>
+<p>Strong IAs acknowledge failures alongside successes. A product that partially meets its specification, with clear explanation of what went wrong and what would be done differently, scores better than one that claims success without evidence.</p>
+<p>Examiners reward honest critical reflection. They penalise overclaiming.</p>
+<h2>Case studies</h2>
+<p><strong>Apple product reviews</strong> — technical publications (Anandtech, iFixit) tear products down and measure every specification: battery life, thermal performance, durability, repairability. Users learn to expect rigorous evaluation. Design teams iterate based on these reviews.</p>
+<p><strong>Which? and Consumer Reports</strong> — independent testing organisations evaluate products against user-relevant criteria, publish comparative analyses. Drive design improvement through evidence-based public accountability.</p>
+<p><strong>Crash testing (Euro NCAP)</strong> — automotive safety evaluation through standardised destructive testing. Results published as star ratings. Has demonstrably driven safety improvements across the industry.</p>
+<p><strong>Dyson internal testing</strong> — thousands of hours of life testing, dust simulation, drop testing. Products not released until internal evaluation demonstrates they meet specifications. Evaluation embedded in culture.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Evaluation</strong> — systematic assessment of whether a design meets its objectives.</li>
+<li><strong>Specification check</strong> — evaluation by comparing the product against each specification point.</li>
+<li><strong>SWOT analysis</strong> — evaluation tool identifying Strengths, Weaknesses, Opportunities, Threats.</li>
+<li><strong>Comparative analysis</strong> — evaluation by comparison against existing products.</li>
+<li><strong>Quantitative evaluation</strong> — evaluation using numerical measurements.</li>
+<li><strong>Qualitative evaluation</strong> — evaluation using descriptive observations and quotes.</li>
+<li><strong>Usability testing</strong> — structured user evaluation with target users performing realistic tasks.</li>
+<li><strong>Critical reflection</strong> — honest acknowledgement of strengths, weaknesses, and learning.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Why is evidence-based evaluation more valuable than opinion-based evaluation?</strong></p>
+<p><em>Opinion is subjective, unreflectable, and carries no weight with examiners or critics. Evidence uses measurable data and documented observations that can be audited by a third party. "Users completed the task in under 45 seconds on 9 of 10 trials" is verifiable; "it is easy to use" is not. Every evaluative statement in an IA should be backed by evidence someone else could check, because that is what examiners reward.</em></p>
+<p><strong>2. Describe a systematic approach to evaluating a prototype against a specification.</strong></p>
+<p><em>Take each specification point individually. State the requirement as originally written. Describe the test method used (user test, measurement, comparison). Present the result with data (percentages, counts, ratings, quotes). Judge whether the requirement was fully met, partially met, or not met, with justification. Finally, summarise overall performance and identify the changes required in the next iteration. This produces a rigorous, auditable evaluation that an examiner can follow.</em></p>
+<p><strong>3. Distinguish between quantitative and qualitative evaluation, and explain why strong evaluation uses both.</strong></p>
+<p><em>Quantitative evaluation uses numerical data (counts, times, ratings, percentages) — easy to compare, summarise, and audit, but may miss context and nuance. Qualitative evaluation uses descriptive data (user quotes, photos, observations) — rich in detail, surfaces unexpected insights, but hard to summarise and compare. Strong evaluation uses both: quantitative data confirms the pattern; qualitative data explains why the pattern exists and what to do about it.</em></p>
+<p><strong>4. A student's IA evaluation claims "the product is a success and works really well". Rewrite this as an evidence-based statement.</strong></p>
+<p><em>"The product met 7 of 9 specification points. User testing with 12 target users showed 11/12 successfully completing the primary task within 60 seconds (specification: &lt; 90 seconds). Grip comfort averaged 4.3/5 (specification: &gt; 4.0). Two specification points were only partially met: durability (one failure in 500 cycles vs the 1,000-cycle target) and weight (320g vs 300g target). Users described the product as "natural to hold" and "clear to use". Main improvement needed: reinforce the hinge to meet the durability target." This statement is auditable, balanced, and rewards examiners with specific evidence.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>ACCESS FM — the product analysis framework</h3>
+<p>A memorable mnemonic for structured product analysis:</p>
+<ul>
+<li><strong>A</strong>esthetics — visual appearance, form, colour, texture</li>
+<li><strong>C</strong>ost — price, perceived value, cost to manufacture</li>
+<li><strong>C</strong>ustomer — target user, demographics, need</li>
+<li><strong>E</strong>nvironment — sustainability, disposal, context of use</li>
+<li><strong>S</strong>ize — dimensions, scale, portability</li>
+<li><strong>S</strong>afety — hazards, standards, user protection</li>
+<li><strong>F</strong>unction — what it does, how well it does it</li>
+<li><strong>M</strong>aterial &amp; manufacture — what it is made of, how it is made</li>
+</ul>
+<p>Without a framework, product analysis becomes a list of opinions. ACCESS FM forces breadth.</p>
+<h3>Objective vs subjective analysis</h3>
+<ul>
+<li><strong>Objective</strong> = fact (e.g. "Product X costs £49.99, weighs 340g, is 180mm tall")</li>
+<li><strong>Subjective</strong> = opinion (e.g. "I like the colour", "It feels premium")</li>
+</ul>
+<p>Strong analysis uses <strong>both</strong>. Facts anchor the argument; opinions capture user experience. Examiners reward students who distinguish the two clearly.</p>
+<h3>SWOT analysis</h3>
+<p>A complementary framework:</p>
+<ul>
+<li><strong>Strengths</strong> — advantages over competitors</li>
+<li><strong>Weaknesses</strong> — disadvantages</li>
+<li><strong>Opportunities</strong> — room for improvement or innovation</li>
+<li><strong>Threats</strong> — external risks (competitors, regulation, user trends)</li>
+</ul>
+<p>ACCESS FM findings can be sorted into SWOT to identify design opportunities.</p>
+<h3>Stakeholders and data types</h3>
+<p>Different stakeholders provide different data:</p>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+<td>Experience, pain points, preferences</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>Business requirements, brand alignment</td>
+</tr>
+<tr>
+<td>Manufacturer</td>
+<td>Process constraints, cost limits</td>
+</tr>
+<tr>
+<td>Engineer</td>
+<td>Technical feasibility, safety limits</td>
+</tr>
+</tbody>
+</table>
+<h3>Reverse engineering — the practical product analysis task</h3>
+<p>Reverse engineering is <strong>understanding how a design was made by recreating it</strong>. Gives insight into:<br />
+- The balance between form and function<br />
+- Where and how to innovate<br />
+- Materials used<br />
+- Construction methods</p>
+<p><strong>Task sequence:</strong><br />
+1. Measure the dimensions of the IA product (H × W × D)<br />
+2. Identify innovation opportunities (which component or process could improve?)<br />
+3. Recreate a rapid prototype physically or in CAD<br />
+4. Produce a 3-projection orthographic drawing with labelled components<br />
+5. Label manufacturing process and most suitable material for each component</p>
+<h3>Multi-analysis comparison</h3>
+<p><strong>Analysis 1:</strong> ACCESS FM on your chosen IA product.<br />
+<strong>Analysis 2:</strong> ACCESS FM on a more complex / premium version.<br />
+<strong>Analysis 3:</strong> ACCESS FM on a simpler / more minimal version.<br />
+<strong>Analysis 4:</strong> Venn comparison across all three. Which is most successful? Why? What patterns emerge?</p>
+<h3>Constructive discontent</h3>
+<p>The habit of looking at products critically even when they work — <em>could this be better?</em> Fuels innovation. Drives students to notice opportunities ordinary users accept without question.</p>
+<hr />
+<p><strong>Next:</strong> <a href="C1.3-beyond-usability.html">C1.3 — Beyond usability (HL)</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2.3 Life-cycle assessment (HL) — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="active">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C2.3 — Life-cycle assessment (HL)</h1>
+<h2>Key concepts</h2>
+<p><strong>Life-cycle assessment (LCA)</strong> is a structured method for measuring a product's environmental impact across its entire life — from raw material extraction to end-of-life disposal. Unlike intuition or marketing claims, LCA produces numbers: kilograms of CO₂, litres of water, grams of toxic emissions.</p>
+<p>LCA answers questions that would otherwise be unanswerable: <em>is a ceramic mug better than a disposable cup? Is an electric car better than a combustion car? Is local production better than imported?</em> These are not obvious without data.</p>
+<h3>The four LCA stages</h3>
+<p>Standardised by <strong>ISO 14040</strong> and <strong>ISO 14044</strong>:</p>
+<p><strong>1. Goal and scope definition</strong><br />
+What is being assessed? What boundary applies (cradle-to-gate, cradle-to-grave, cradle-to-cradle)? What impact categories matter (carbon, water, toxicity, land use)? This step frames everything that follows.</p>
+<p><strong>2. Life-cycle inventory (LCI)</strong><br />
+Data collection: every input (materials, energy) and output (emissions, waste) across the product's life. This is the labour-intensive step. Designers use databases (ecoinvent, GaBi) or published LCIs for common materials.</p>
+<p><strong>3. Life-cycle impact assessment (LCIA)</strong><br />
+Translate inventory data into environmental impacts using standard characterisation factors. E.g. 1 kg of methane is expressed as 28 kg CO₂-equivalent. Produces comparable numbers across impact categories.</p>
+<p><strong>4. Interpretation</strong><br />
+Analyse results, identify hotspots, draw conclusions. Which life stage dominates? Which material choice causes most impact? What would reduce impact most effectively?</p>
+<h3>Life-cycle stages analysed</h3>
+<ul>
+<li><strong>Raw material extraction</strong> — mining, forestry, agriculture</li>
+<li><strong>Processing</strong> — refining, forming, treating</li>
+<li><strong>Manufacturing</strong> — assembly, finishing</li>
+<li><strong>Distribution</strong> — transport, packaging, warehousing</li>
+<li><strong>Use phase</strong> — energy, consumables, maintenance</li>
+<li><strong>End of life</strong> — disposal, recycling, recovery</li>
+</ul>
+<p>Each stage has inputs (materials, energy) and outputs (emissions, waste).</p>
+<h3>Boundaries</h3>
+<p>LCAs differ in where they draw their system boundary:</p>
+<ul>
+<li><strong>Cradle-to-gate</strong> — extraction through factory gate (excludes use and disposal). Used for material comparisons.</li>
+<li><strong>Cradle-to-grave</strong> — extraction through disposal. Standard for products.</li>
+<li><strong>Cradle-to-cradle</strong> — extraction through recycling back into new products. Standard for circular economy analysis.</li>
+<li><strong>Gate-to-gate</strong> — a single manufacturing process only. Used for process comparisons.</li>
+</ul>
+<p>Changing boundary changes conclusions. A product that looks sustainable cradle-to-gate may look much worse cradle-to-grave if its use phase is energy-intensive.</p>
+<h3>Impact categories</h3>
+<p>LCA measures multiple environmental dimensions:</p>
+<ul>
+<li><strong>Global warming potential (GWP)</strong> — CO₂-equivalent emissions</li>
+<li><strong>Acidification potential</strong> — sulphur and nitrogen oxide emissions</li>
+<li><strong>Eutrophication</strong> — nutrient runoff causing algal blooms</li>
+<li><strong>Ozone depletion</strong> — CFCs, halons</li>
+<li><strong>Water use</strong> — litres consumed</li>
+<li><strong>Land use</strong> — hectares occupied</li>
+<li><strong>Toxicity</strong> — human and ecological</li>
+</ul>
+<p>A product may score well in one category and badly in another. Trade-offs must be made explicit.</p>
+<h3>Comparing design scenarios</h3>
+<p>LCA's most powerful use in design is comparing options:<br />
+- Aluminium vs steel bicycle frame<br />
+- Battery-electric vs hydrogen fuel-cell vehicle<br />
+- Single-use vs reusable packaging<br />
+- Imported vs locally manufactured</p>
+<p>Designers run parallel LCAs for each option and compare results. The outcome is rarely predictable from intuition.</p>
+<h3>Interpreting LCA data</h3>
+<p>LCA is not neutral:<br />
+- Assumptions affect results (what electricity mix? what recycling rates?)<br />
+- Data quality varies by region and industry<br />
+- Uncertainty can be large<br />
+- "Functional unit" choice shapes comparisons (per litre, per km driven, per year of use)</p>
+<p>Good LCAs state assumptions and uncertainties transparently. Bad LCAs cherry-pick numbers that support the desired conclusion.</p>
+<h3>LCA software tools</h3>
+<ul>
+<li><strong>SimaPro</strong> — professional LCA software, industry standard</li>
+<li><strong>GaBi</strong> — alternative professional tool</li>
+<li><strong>OpenLCA</strong> — open-source option</li>
+<li><strong>Granta EduPack / CES EduPack</strong> — educational tool with material LCI data</li>
+</ul>
+<p>Students can perform simplified LCAs using published material databases.</p>
+<h2>Case studies</h2>
+<p><strong>Plastic vs paper bag</strong> — intuitively, paper seems greener. LCAs typically show paper bags have higher carbon footprint than thin plastic bags because of processing energy — unless reused many times. The counterintuitive result shaped environmental policy.</p>
+<p><strong>Tesla Model 3 LCA</strong> — comparison with petrol cars shows electric vehicles have higher manufacturing emissions (batteries) but much lower use-phase emissions. Break-even depends on the electricity grid — quickly in renewable-heavy grids, slowly in coal-heavy grids.</p>
+<p><strong>Reusable coffee cup</strong> — a ceramic mug must be used ~50 times to beat disposable paper cups (cradle-to-grave). A stainless steel travel mug requires hundreds of uses. Reusability is only environmentally better if actually reused.</p>
+<p><strong>Packaging comparisons for beverages</strong> — LCAs of glass bottles, aluminium cans, and plastic bottles consistently show that transport distance, recycling rate, and refill infrastructure matter more than the package itself. Local glass with high refill rates wins; imported glass shipped once loses.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>LCA</strong> — Life-cycle assessment; structured environmental impact analysis across a product's life.</li>
+<li><strong>ISO 14040/14044</strong> — international standards specifying LCA methodology.</li>
+<li><strong>Functional unit</strong> — the specific quantity of function being compared (e.g. "1000 km driven", "1 year of use").</li>
+<li><strong>System boundary</strong> — the scope of stages included in the analysis.</li>
+<li><strong>Cradle-to-gate</strong> — LCA boundary from raw extraction to factory gate.</li>
+<li><strong>Cradle-to-grave</strong> — LCA boundary from raw extraction to final disposal.</li>
+<li><strong>Cradle-to-cradle</strong> — LCA boundary from raw extraction through recycling into new products.</li>
+<li><strong>GWP</strong> — Global warming potential; CO₂-equivalent emissions.</li>
+<li><strong>LCI</strong> — Life-cycle inventory; data collection stage of LCA.</li>
+<li><strong>LCIA</strong> — Life-cycle impact assessment; conversion of inventory to impact categories.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Describe the four stages of a life-cycle assessment.</strong></p>
+<p><em>Goal and scope definition: defines what is being assessed, which life stages, and which impact categories. Life-cycle inventory (LCI): data collection of every input and output across the product's life. Life-cycle impact assessment (LCIA): translates inventory data into standardised impact categories (e.g. CO₂-equivalent). Interpretation: analyses results, identifies hotspots, draws actionable conclusions. The four stages are standardised in ISO 14040/14044.</em></p>
+<p><strong>2. Distinguish between cradle-to-gate, cradle-to-grave, and cradle-to-cradle boundaries, explaining when each is appropriate.</strong></p>
+<p><em>Cradle-to-gate covers raw material extraction to the factory gate; appropriate for comparing materials or component processes. Cradle-to-grave adds use and disposal; appropriate for full product assessment, revealing whether use-phase or manufacture dominates. Cradle-to-cradle adds recycling back into new products; appropriate for circular economy analysis, showing how much material loops vs is lost. Boundary choice determines what the LCA can answer.</em></p>
+<p><strong>3. Explain why intuition about product sustainability is often wrong.</strong></p>
+<p><em>Products have complex life cycles, and different life-cycle stages dominate for different products. Plastic bags have a lower carbon footprint than paper bags unless the paper bag is reused many times — counterintuitive because "plastic = bad" is a cultural shortcut. Electric cars have higher manufacturing emissions than petrol but far lower use emissions — the better choice depends on grid mix and usage. Without full-lifecycle data, conclusions drawn from visible attributes (material, origin, look) are often wrong. LCA corrects the intuitive story with numbers.</em></p>
+<p><strong>4. A designer claims their bamboo bicycle frame is "sustainable" because bamboo is renewable. Using LCA reasoning, critique this claim.</strong></p>
+<p><em>Renewability is one factor among many. A proper LCA would assess: extraction (how is the bamboo harvested, from where?), processing (how much energy, what adhesives, where?), transport (imported from Asia or grown locally?), use-phase durability (does it last as long as aluminium?), and end of life (is it compostable, or does the adhesive prevent biodegradation?). The bamboo frame may still be more sustainable — but that conclusion requires data, not the word "bamboo". Designers must defend sustainability claims with life-cycle evidence or retract them.</em></p>
+<hr />
+<p><strong>Next:</strong> <a href="C3.2-design-for-manufacture.html">C3.2 — Design for manufacture (HL)</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2.1 Design for sustainability — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="active">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C2.1 — Design for sustainability</h1>
+<h2>Key concepts</h2>
+<p>Sustainability asks: can we keep doing this indefinitely? The answer for most current products is no — we extract resources faster than they renew, emit carbon faster than ecosystems can absorb it, and produce waste faster than systems can process it. Designers shape all of these outcomes.</p>
+<h3>The three pillars</h3>
+<p>Sustainability rests on three interlocking pillars:</p>
+<ul>
+<li><strong>Environmental</strong> — resource extraction, emissions, waste, biodiversity</li>
+<li><strong>Social</strong> — labour rights, health, equity, community impact</li>
+<li><strong>Economic</strong> — affordability, business viability, fair wages</li>
+</ul>
+<p>All three must be considered together. A product made from recycled materials but with exploitative labour is not sustainable. A cheap product made ethically but selling at a loss is not sustainable. Optimising one at the others' expense creates new problems.</p>
+<h3>Strategies for sustainable design</h3>
+<p><strong>Design for disassembly (DfD)</strong> — products can be taken apart at end of life for repair, reuse, or recycling. Avoids permanent adhesives, minimises material types, uses mechanical fasteners, labels parts with material codes.</p>
+<p><strong>Material minimisation</strong> — do more with less. Thinner walls, hollow structures, eliminated parts. Every gram saved reduces extraction, transport, and disposal.</p>
+<p><strong>Design for longevity</strong> — products that last longer reduce replacement cycles. Durable materials, repairable architecture, timeless aesthetics that avoid style obsolescence.</p>
+<p><strong>Renewable materials</strong> — bamboo, timber, cork, bioplastics. Must be genuinely renewable (not faster-than-replenishment) and processed sustainably.</p>
+<p><strong>Renewable energy in products</strong> — solar-powered devices, human-powered devices (wind-up torches, pedal-powered generators).</p>
+<p><strong>Designing for multiple life cycles</strong> — products that can be refurbished, remanufactured, or repurposed at end of first life.</p>
+<h3>Lifecycle thinking</h3>
+<p>A product's environmental footprint comes from its full life cycle:</p>
+<ol>
+<li><strong>Raw material extraction</strong> — mining, forestry, agriculture</li>
+<li><strong>Processing and manufacturing</strong> — energy, emissions, waste</li>
+<li><strong>Distribution and transport</strong> — fuel, packaging</li>
+<li><strong>Use phase</strong> — energy consumed, consumables</li>
+<li><strong>End of life</strong> — recycling, landfill, incineration</li>
+</ol>
+<p>The dominant phase varies by product. A washing machine's lifetime impact is mostly in the <strong>use phase</strong> (water and electricity). A smartphone's is mostly in <strong>manufacturing</strong>. A concrete building's is mostly in <strong>materials</strong>. Designers should know where their product's impact lives.</p>
+<h3>The waste hierarchy</h3>
+<p>From best to worst:</p>
+<ol>
+<li><strong>Refuse</strong> — don't make or buy what you don't need</li>
+<li><strong>Reduce</strong> — use less material, energy, packaging</li>
+<li><strong>Reuse</strong> — extend product life through continued use</li>
+<li><strong>Repair</strong> — fix when broken</li>
+<li><strong>Refurbish</strong> — restore to good condition</li>
+<li><strong>Remanufacture</strong> — rebuild to as-new specification</li>
+<li><strong>Recycle</strong> — break down to raw materials</li>
+<li><strong>Recover</strong> (energy from waste) — incineration with energy recovery</li>
+<li><strong>Dispose</strong> — landfill</li>
+</ol>
+<p>Recycling is near the bottom — it recovers material but loses embedded value.</p>
+<h3>Common sustainability trade-offs</h3>
+<ul>
+<li>Lighter products use less material but may be less durable</li>
+<li>Recycled materials may have variable quality</li>
+<li>Renewable materials may be less durable than engineered ones</li>
+<li>Local sourcing reduces transport but may limit material choice</li>
+</ul>
+<p>No free wins. Good design acknowledges trade-offs rather than pretending they don't exist.</p>
+<h2>Case studies</h2>
+<p><strong>Patagonia clothing</strong> — extensive repair programme, buy-back schemes, use of recycled materials, transparent supply chain. Business model built around product longevity. Runs ads telling customers "don't buy this jacket" — counter to every mass-retail instinct.</p>
+<p><strong>IKEA circular initiatives</strong> — buy-back programme, design for disassembly (flat-pack), move to renewable and recycled materials by 2030. Massive scale means small per-product improvements aggregate into major global impact.</p>
+<p><strong>Tony's Chocolonely</strong> — social sustainability focus: eliminating slavery and child labour from cocoa supply chain. Illustrates that sustainability is not only environmental.</p>
+<p><strong>Philips Pay-per-Lux service</strong> — selling "light as a service" rather than lightbulbs. Philips retains ownership, maintains fixtures, benefits from durability. Reverses traditional incentive to shorten product life.</p>
+<p><strong>The Ellen MacArthur Foundation</strong> — organisation advocating and researching circular economy principles. Has shifted industry thinking, especially in plastics and packaging.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Sustainability</strong> — meeting present needs without compromising future generations' ability to meet theirs.</li>
+<li><strong>Triple bottom line</strong> — evaluation across environmental, social, and economic dimensions.</li>
+<li><strong>Design for disassembly (DfD)</strong> — designing products to be taken apart easily at end of life.</li>
+<li><strong>Material minimisation</strong> — reducing material use without compromising performance.</li>
+<li><strong>Waste hierarchy</strong> — the ranking of waste-reduction strategies from best (refuse) to worst (dispose).</li>
+<li><strong>Lifecycle thinking</strong> — considering environmental impact across all stages of a product's life.</li>
+<li><strong>Renewable material</strong> — a material that can be replenished through natural processes on human timescales.</li>
+<li><strong>Remanufacturing</strong> — rebuilding a product to as-new specification using existing components.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Name the three pillars of sustainability and explain why all three must be considered together.</strong></p>
+<p><em>Environmental (resource use, emissions, waste), social (labour rights, equity, health), economic (viable business, fair pricing). A product made with recycled materials but exploitative labour is not truly sustainable. A fair-trade ethical product sold at a loss cannot continue. Optimising one pillar at the others' expense creates new problems elsewhere. Genuine sustainability requires balance across all three.</em></p>
+<p><strong>2. Describe three strategies for design for disassembly.</strong></p>
+<p><em>Use mechanical fasteners (screws, snap clips) instead of adhesives so parts can be separated without damage. Minimise the number of different material types used — fewer materials means easier separation for recycling. Label parts with standard material recycling codes (polymer symbols, metal alloy designations) so recyclers know what they are handling. Additional strategies: modular architecture, accessible fixings, avoid mixed-material laminates.</em></p>
+<p><strong>3. Using lifecycle thinking, identify where the dominant environmental impact lies for a washing machine vs a smartphone.</strong></p>
+<p><em>Washing machine: the use phase dominates — water, electricity, and detergent consumed over its 10-year life dwarf manufacturing impacts. Designers should optimise efficiency (low water, low energy, effective at low temperatures). Smartphone: manufacturing dominates — chip fabrication, rare-earth extraction, and assembly have high energy costs, and the device's 2–3 year typical life is too short to let use-phase catch up. Designers should optimise longevity and material efficiency. Different products demand different sustainability priorities.</em></p>
+<p><strong>4. Explain why recycling sits near the bottom of the waste hierarchy.</strong></p>
+<p><em>Recycling recovers raw material value but destroys all the design, manufacturing, and assembly value embedded in a product. Breaking a working item down to its constituent materials is strictly inferior to keeping the product in use (reuse), restoring it (repair), or rebuilding it (remanufacture). Recycling also consumes energy and often produces lower-quality material than the original (downcycling). It is better than landfill, but far worse than preventing waste in the first place through refuse, reduce, reuse, repair.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>Green design vs sustainable design</h3>
+<ul>
+<li><strong>Green design</strong> — short-term approach to environmental protection; reducing immediate impact.</li>
+<li><strong>Sustainable design</strong> — longer-term orientation; building better for future generations.</li>
+</ul>
+<p>Both are valuable, but they are not synonyms.</p>
+<h3>Datschefski's five principles (Edwin Datschefski, <em>The Total Beauty of Sustainable Products</em>)</h3>
+<p>A useful memorable framework:</p>
+<ol>
+<li><strong>Cyclic</strong> — made from recyclable materials, compostable, organic, or minerals recycled in a continuous loop (e.g. bioplastics).</li>
+<li><strong>Solar</strong> — energy (embedded and in use) comes only from renewable sources.</li>
+<li><strong>Safe</strong> — by-products emitted to air, land, or water are non-hazardous; "food" for other systems.</li>
+<li><strong>Efficient</strong> — requires 90% less energy, materials, and water than equivalent 1990 products.</li>
+<li><strong>Social</strong> — manufacture and use underpin basic human rights, safe work, fair trade.</li>
+</ol>
+<p>All five connect back to Triple Bottom Line (people, planet, profit).</p>
+<h3>Cradle-to-cradle vs cradle-to-grave</h3>
+<ul>
+<li><strong>Cradle = start</strong> of the product's life (raw material extraction)</li>
+<li><strong>Grave = end</strong> of the product's life (disposal)</li>
+<li><strong>Cradle-to-cradle</strong> = returned as input to new products (no grave)</li>
+</ul>
+<h3>Decoupling</h3>
+<p><strong>Decoupling</strong> means breaking the link between "environmental bads" and "economic goods" — growing the economy <em>without</em> growing environmental damage.</p>
+<ul>
+<li><strong>Relative decoupling</strong> — economic growth outpaces environmental damage</li>
+<li><strong>Absolute decoupling</strong> — economic growth while environmental damage decreases</li>
+</ul>
+<p>Companies like Adidas pursue decoupling to maintain profit while reducing environmental impact.</p>
+<h3>Case studies</h3>
+<ul>
+<li><strong>Tony's Chocolonely</strong> — USP is eliminating slavery from cocoa supply chains (people focus)</li>
+<li><strong>Adidas sustainability</strong> — recycled materials, Parley Ocean Plastic, long-term goals — while sometimes criticised for labour conditions (people compromise)</li>
+</ul>
+<p>Both show that companies must <strong>compromise</strong> across the three TBL dimensions and be transparent about where.</p>
+<h3>TBL task — Venn diagrams</h3>
+<p><strong>Task 1:</strong> Draw TBL Venn diagrams for products/services from different industries (Nike, McDonald's, fashion, car, fast-food). What do they need to consider now? Label conflicts and compromises between people, planet, profit.</p>
+<p><strong>Task 2:</strong> Draw a TBL Venn diagram for your own IA product.</p>
+<h3>Research task — product analysis</h3>
+<p>Find a physical product from home or school. Analyse:<br />
+- How and where it is manufactured<br />
+- Materials used and power required<br />
+- Disposal and maintenance pathway</p>
+<p>Score against Datschefski's five principles (positively and negatively), distinguishing short-term green from long-term sustainable attributes.</p>
+<h3>Discussion questions</h3>
+<ul>
+<li><em>"The environment can exist without the economy, but not the reverse."</em> — agree or disagree?</li>
+<li>Should sustainability change be led by the <strong>state</strong>, <strong>businesses</strong>, or <strong>individuals</strong>?</li>
+<li>How can countries and companies be held accountable?</li>
+</ul>
+<hr />
+<p><strong>Next:</strong> <a href="C2.2-circular-economy.html">C2.2 — Design for a circular economy</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

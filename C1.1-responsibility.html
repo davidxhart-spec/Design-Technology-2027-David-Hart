@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C1.1 Responsibility of the designer — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="active">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C1.1 — Responsibility of the designer</h1>
+<h2>Key concepts</h2>
+<p>Every design decision has consequences beyond the product. A material chosen for aesthetics drives demand for a supply chain. A lifespan limited by planned obsolescence produces waste at scale. An interface designed to maximise engagement shapes user behaviour. Designers are rarely neutral — their choices ripple outward.</p>
+<p><strong>The designer's responsibility</strong> is to acknowledge these consequences and take them seriously. Not every consequence can be eliminated, but every consequence should be considered.</p>
+<h3>Categories of responsibility</h3>
+<p><strong>Ethical responsibilities</strong> — avoiding harm, respecting dignity, designing honestly rather than deceptively. Not tricking users. Not designing products that exploit vulnerable users.</p>
+<p><strong>Social responsibilities</strong> — considering who is included and who is excluded; respecting labour rights in the supply chain; avoiding products that entrench inequality.</p>
+<p><strong>Environmental responsibilities</strong> — minimising resource extraction, pollution, and waste; choosing materials and processes that reduce environmental damage.</p>
+<p><strong>Economic responsibilities</strong> — producing products at fair prices, paying fair wages, avoiding exploitative business models.</p>
+<p>These categories overlap. A designer cannot optimise one without affecting the others. The triple bottom line (people, planet, profit) captures this interconnection.</p>
+<h3>Planned obsolescence</h3>
+<p><strong>Planned obsolescence</strong> is the deliberate limiting of a product's useful life to encourage replacement. It takes several forms:</p>
+<ul>
+<li><strong>Functional obsolescence</strong> — the product physically fails by design (printer cartridge chips that disable at a set page count, batteries welded into sealed enclosures).</li>
+<li><strong>Style obsolescence</strong> — cosmetic updates make previous versions feel outdated (annual fashion cycles, car facelifts).</li>
+<li><strong>Technological obsolescence</strong> — new standards or software deliberately break backward compatibility (OS updates that slow older phones, proprietary connectors replaced each generation).</li>
+<li><strong>Systemic obsolescence</strong> — repair is legally or practically blocked (right-to-repair battles, serial-number-locked parts).</li>
+</ul>
+<p>Planned obsolescence is profitable. It is also environmentally damaging and socially questionable. Designers who enable it share responsibility for its consequences.</p>
+<h3>Social impact of design</h3>
+<p>Products can:<br />
+- <strong>Empower</strong> or <strong>disenfranchise</strong> users (good UI vs dark patterns)<br />
+- <strong>Unite</strong> or <strong>divide</strong> communities (public spaces that welcome or exclude)<br />
+- <strong>Educate</strong> or <strong>manipulate</strong> (honest advertising vs misleading packaging)</p>
+<p>Designers ask: who benefits, and who is harmed? Who is represented, and who is missing?</p>
+<h3>Designer as agent of change</h3>
+<p>Designers are not just executors of client requirements. They shape culture. Choosing a recycled material creates demand; designing repairability normalises it; specifying inclusive interfaces teaches the industry what's possible.</p>
+<p>Individual decisions aggregate. A single designer specifying low-carbon concrete makes little difference; 10,000 designers doing so reshapes the concrete industry.</p>
+<h3>Ethical dilemmas</h3>
+<p>Designers face real tensions:</p>
+<ul>
+<li>Client wants a product that harms users — accept the commission or refuse?</li>
+<li>Supply chain includes unsafe labour — specify change or stay silent?</li>
+<li>Product will succeed commercially but damage environment — how to weigh trade-offs?</li>
+</ul>
+<p>No perfect answers. The point is to recognise the dilemma and reason about it openly.</p>
+<h2>Case studies</h2>
+<p><strong>Apple right-to-repair battles</strong> — Apple has historically opposed laws requiring companies to make repair accessible. Critics argue this entrenches planned obsolescence. Apple argues repair quality must be controlled. Genuine ethical tension between corporate control and environmental responsibility.</p>
+<p><strong>Phoebus cartel (1924–1939)</strong> — major lightbulb manufacturers agreed to cap bulb lifetimes at 1,000 hours, shortening product life to drive replacement sales. One of the earliest documented cases of planned obsolescence as industrial policy.</p>
+<p><strong>Volkswagen emissions scandal (2015)</strong> — engineers designed software to cheat emissions tests. Individual engineers, designers, and managers all made decisions that contributed. A case study in how distributed responsibility becomes no responsibility.</p>
+<p><strong>Nest learning thermostat</strong> — designed to reduce household energy consumption through smart scheduling. Illustrates designers using their skills for environmental benefit. Also raises privacy questions about data collection.</p>
+<p><strong>Fairphone</strong> — deliberately designed for repair, modular upgrade, and conflict-free materials. A product built around the designer's ethical responsibilities.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Planned obsolescence</strong> — designing products to have a limited useful life.</li>
+<li><strong>Functional obsolescence</strong> — physical failure engineered into a product.</li>
+<li><strong>Style obsolescence</strong> — aesthetic updates that make older products feel outdated.</li>
+<li><strong>Technological obsolescence</strong> — deliberate loss of compatibility with new standards.</li>
+<li><strong>Triple bottom line</strong> — evaluation framework considering people, planet, and profit together.</li>
+<li><strong>Dark pattern</strong> — a design intentionally manipulating users against their interests.</li>
+<li><strong>Right to repair</strong> — movement advocating legal access to parts, tools, and documentation for product repair.</li>
+<li><strong>Agent of change</strong> — a designer who consciously uses design decisions to shape broader systems.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Define planned obsolescence and describe three forms with examples.</strong></p>
+<p><em>Planned obsolescence is deliberately limiting a product's useful life to encourage replacement. Functional: printer chips that disable cartridges after a set page count. Style: fashion cycles making last season's clothes feel outdated. Technological: OS updates that deliberately slow older phones or drop support. Each form drives replacement purchase at environmental and social cost.</em></p>
+<p><strong>2. Explain how a designer can be "an agent of change".</strong></p>
+<p><em>Every design decision has implications beyond the product. Specifying recycled materials creates demand for recycling infrastructure. Designing for repairability normalises repair culture. Choosing local suppliers shifts economic activity regionally. Individual decisions aggregate: one designer changes little, but 10,000 designers specifying low-carbon concrete reshape an industry. The agent-of-change view rejects the idea that designers merely execute client requests — design decisions are also political.</em></p>
+<p><strong>3. Identify an ethical dilemma a designer might face and describe how they could approach it.</strong></p>
+<p><em>A designer is asked to create a gambling app's interface. The client wants features that maximise engagement (notifications, variable-reward mechanics) that exploit psychological biases. Approach: identify the harm (addiction risk, financial damage); consider alternatives (transparent odds, loss-limit tools); weigh professional responsibility (code of conduct) against commercial pressure; decide whether to refuse, modify, or proceed with harm-mitigation designs. The ethical designer is one who recognises the dilemma rather than treating it as a neutral brief.</em></p>
+<p><strong>4. Evaluate the claim that designers share responsibility for the environmental impact of their products.</strong></p>
+<p><em>The argument for: designers specify materials, shape lifespans, and define end-of-life pathways. These choices materially affect environmental outcomes. A designer who ignores these consequences delegates them to someone else. The argument against: designers operate under client and market constraints; they cannot unilaterally choose sustainability if customers won't pay for it. A balanced view: designers have partial but real responsibility — they are one of many actors, but among those most capable of changing outcomes through specification choices. Pretending they bear no responsibility conflicts with the evidence of their influence.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3><em>"There are professions more harmful than design, but only a few"</em></h3>
+<p>A provocative opening line — Victor Papanek's famous critique. Use it to start debate: <em>in what ways can design harm? Where does designer responsibility begin and end?</em></p>
+<h3>Product stewardship</h3>
+<p><strong>Product stewardship</strong> means whoever designs, produces, sells, or uses a product takes responsibility for minimising its environmental impact throughout its life cycle. Typically the <strong>producer</strong> has greatest responsibility (most control over materials, process, lifespan), but all stakeholders share it:</p>
+<ul>
+<li>Designers → specify sustainable materials</li>
+<li>Manufacturers → minimise process waste</li>
+<li>Retailers → reduce packaging, enable take-back</li>
+<li>Customers → separate recycling, repair rather than replace</li>
+<li>Governments → legislate standards (e.g. EU right-to-repair)</li>
+</ul>
+<h3>Triple Bottom Line (TBL)</h3>
+<p>Instead of measuring only profit (economic), TBL measures three dimensions:</p>
+<ul>
+<li><strong>People</strong> — social impact, labour, community</li>
+<li><strong>Planet</strong> — environmental impact</li>
+<li><strong>Profit</strong> — economic viability</li>
+</ul>
+<p>Use TBL Venn diagrams to analyse companies (Nike, McDonald's) or your own IA product. Ask: <em>what do they need to consider in the present? How can they enact positive change in the future?</em></p>
+<h3>Case study: Tony's Chocolonely</h3>
+<p>Built its entire brand around TBL — eliminating slavery from cocoa supply chains (people), reducing environmental impact of chocolate production (planet), while remaining profitable. Made ethical sourcing their USP.</p>
+<h3>iPhone and global supply chains</h3>
+<p>Apple works with suppliers in <strong>43 countries across 6 continents</strong> to make iPhones. A single product depends on an enormous global supply chain. Use this to discuss:<br />
+- Why isn't everything made in one place? (cost, expertise, scale)<br />
+- What forms of transport are involved?<br />
+- What happens when supply chains break?<br />
+- How does this relate to sustainability?</p>
+<h3>Planned vs perceived obsolescence</h3>
+<ul>
+<li><strong>Planned obsolescence</strong> — deliberately designing products to break or become obsolete (printer chips, sealed batteries, OS updates slowing old phones).</li>
+<li><strong>Perceived obsolescence</strong> — users believe a working product is no longer useful or stylish, so they replace it (fashion cycles, annual phone upgrades).</li>
+</ul>
+<p>Both are linked: planned obsolescence drives replacement; perceived obsolescence is marketing's job to accelerate it.</p>
+<h3>Countering obsolescence — design strategies</h3>
+<ul>
+<li><strong>Modular</strong> — replaceable subsystems</li>
+<li><strong>Repairable</strong> — accessible fixings, available parts</li>
+<li><strong>Upgradeable</strong> — new modules fit old products</li>
+<li><strong>Transparent</strong> — published schematics, known constituent parts</li>
+</ul>
+<p>The <strong>Fairphone</strong> embodies all four.</p>
+<h3>EU Right to Repair</h3>
+<p>The EU's 2024+ legislation requires manufacturers to make spare parts, manuals, and repair tools available for common consumer products (phones, appliances). Shifts responsibility from consumer to manufacturer and is reshaping product design.</p>
+<h3>Research task — redesign for obsolescence resistance</h3>
+<p>Pick a product (watch, toothbrush, trainers, console, headphones, kettle). Redesign it to tackle both planned and perceived obsolescence, following EU right-to-repair legislation. Create a short ACCESS FM pitch presentation, considering modularity, repairability, upgradeability, constituent parts, supply chain, and TBL.</p>
+<h3>Quality Assurance (QA) vs Quality Control (QC)</h3>
+<ul>
+<li><strong>QA</strong> — prevents defects from happening. <strong>Proactive</strong>. Covers design, documentation, processes.</li>
+<li><strong>QC</strong> — inspects products to detect defects. <strong>Reactive</strong>.</li>
+</ul>
+<p>Product recalls result from QA failures, not QC failures. They are expensive and damage brand reputation.</p>
+<hr />
+<p><strong>Next:</strong> <a href="C1.2-inclusive-design.html">C1.2 — Inclusive design</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

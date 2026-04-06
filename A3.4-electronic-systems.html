@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A3.4 Electronic systems (HL) — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="active">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>A3.4 — Electronic systems (HL)</h1>
+<h2>Key concepts</h2>
+<p>Electronic systems move, process, and respond to information using electric current. Almost every modern product contains electronics — phones, appliances, cars, toys, medical devices. Understanding basic electronic architecture is essential for any designer working beyond purely mechanical products.</p>
+<h3>The input–process–output model</h3>
+<p>Every electronic system can be described as three subsystems:</p>
+<ul>
+<li><strong>Input</strong> — sensors that detect physical quantities (light, temperature, pressure, motion) and convert them to electrical signals. Examples: LDR, thermistor, switch, microphone.</li>
+<li><strong>Process</strong> — circuits that manipulate the signal (amplify, filter, compare, calculate). Examples: op-amp, logic gates, microcontroller.</li>
+<li><strong>Output</strong> — actuators or indicators that convert electrical signals back to physical effects. Examples: LED, motor, buzzer, speaker.</li>
+</ul>
+<p>Analysing a product as input–process–output makes complex systems understandable and modular.</p>
+<h3>Basic components</h3>
+<ul>
+<li><strong>Resistor (R)</strong> — limits current. Measured in ohms (Ω). Colour bands indicate value.</li>
+<li><strong>Capacitor (C)</strong> — stores charge. Smooths signals, times circuits. Measured in farads (F, usually µF or pF).</li>
+<li><strong>Diode</strong> — allows current in one direction only. Used in rectifiers, protection circuits, LEDs.</li>
+<li><strong>Transistor</strong> — amplifies or switches current. The foundation of all modern electronics.</li>
+<li><strong>LED</strong> — light-emitting diode; visual output with low power.</li>
+<li><strong>IC (integrated circuit)</strong> — many components on a single chip (op-amp, timer, microcontroller).</li>
+</ul>
+<h3>Ohm's Law and power</h3>
+<p><strong>V = I × R</strong> (voltage = current × resistance). Fundamental relationship.</p>
+<p><strong>P = V × I</strong> (power = voltage × current, measured in watts).</p>
+<p>These two equations let you calculate any unknown given two knowns. Essential for choosing resistors, predicting battery life, and sizing components.</p>
+<h3>Logic gates and digital systems</h3>
+<p>Digital systems use only two voltage levels: HIGH (1) and LOW (0). <strong>Logic gates</strong> combine these:</p>
+<ul>
+<li><strong>AND</strong> — output HIGH only if all inputs HIGH</li>
+<li><strong>OR</strong> — output HIGH if any input HIGH</li>
+<li><strong>NOT</strong> (inverter) — output opposite of input</li>
+<li><strong>NAND, NOR, XOR</strong> — combinations of the above</li>
+</ul>
+<p>Complex digital behaviour is built from networks of gates. A microprocessor contains billions of them.</p>
+<h3>Microcontrollers</h3>
+<p>A <strong>microcontroller</strong> is a programmable IC containing a processor, memory, and input/output pins. Designers write code (in C, MicroPython, or visual languages) that reads sensors, makes decisions, and drives outputs. Arduino and Raspberry Pi Pico are popular prototyping platforms. A single microcontroller can replace hundreds of discrete components.</p>
+<h3>Sensors and actuators</h3>
+<p><strong>Sensors</strong> convert physical quantities into electrical signals:<br />
+- LDR (light), thermistor (temperature), ultrasonic (distance), accelerometer (motion), hall-effect (magnetic field), force-sensing resistor (pressure).</p>
+<p><strong>Actuators</strong> convert electrical signals into physical action:<br />
+- DC motor (rotation), servo (precise angle), solenoid (linear pull), piezo buzzer (sound), LED (light), stepper motor (incremental rotation).</p>
+<h3>Circuit design and simulation</h3>
+<p>Modern designers draft circuits in software before soldering:</p>
+<ul>
+<li><strong>Schematic capture</strong> — draw the circuit diagram (KiCad, EasyEDA, Fritzing).</li>
+<li><strong>Simulation</strong> — run the circuit virtually to check behaviour (LTspice, Tinkercad Circuits).</li>
+<li><strong>PCB layout</strong> — convert schematic to a printable circuit board.</li>
+</ul>
+<p>Simulation catches errors before hardware is built, saving time and components.</p>
+<h2>Case studies</h2>
+<p><strong>Smart thermostat (Nest, Ecobee)</strong> — sensors (temperature, occupancy, humidity) feed a microcontroller that processes data against learned schedules and user preferences, outputting signals to HVAC relays. Input-process-output at product scale.</p>
+<p><strong>Arduino-based prototypes</strong> — have democratised electronic product prototyping. A $25 board, a handful of sensors, and a breadboard let designers test electronic ideas in an evening.</p>
+<p><strong>Electric toothbrush</strong> — timer IC drives a small DC motor through a H-bridge transistor circuit, with a pressure sensor input that reduces intensity when the user presses too hard. LED indicators signal battery and operating mode.</p>
+<p><strong>Automatic hand sanitiser dispenser</strong> — infrared distance sensor (input), comparator or microcontroller (process), small pump and LED (output). A textbook IPO example.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Input</strong> — component or subsystem that converts physical quantity to electrical signal.</li>
+<li><strong>Process</strong> — circuit or code that manipulates signals.</li>
+<li><strong>Output</strong> — component that converts electrical signal to physical action.</li>
+<li><strong>Resistor</strong> — passive component limiting current.</li>
+<li><strong>Capacitor</strong> — component storing electrical charge.</li>
+<li><strong>Transistor</strong> — semiconductor that amplifies or switches current.</li>
+<li><strong>Diode</strong> — component allowing current flow in one direction.</li>
+<li><strong>LED</strong> — light-emitting diode.</li>
+<li><strong>IC</strong> — integrated circuit; many components on one chip.</li>
+<li><strong>Microcontroller</strong> — programmable IC with processor, memory, and I/O pins.</li>
+<li><strong>Sensor</strong> — component converting a physical quantity into an electrical signal.</li>
+<li><strong>Actuator</strong> — component converting an electrical signal into physical action.</li>
+<li><strong>Logic gate</strong> — digital circuit performing a Boolean operation (AND, OR, NOT).</li>
+<li><strong>Ohm's Law</strong> — V = I × R.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Describe the input–process–output model and apply it to an automatic bathroom light.</strong></p>
+<p><em>Every electronic system can be divided into an input (detecting a physical quantity), process (making decisions or transformations), and output (producing a physical effect). For an automatic bathroom light: input is a passive infrared (PIR) motion sensor; process is a timer circuit or microcontroller that switches on for a set period after movement is detected; output is an LED or filament lamp providing illumination. This modular view makes complex products designable in stages.</em></p>
+<p><strong>2. Using Ohm's Law, calculate the current through a 220 Ω resistor connected to a 5 V supply.</strong></p>
+<p><em>I = V / R = 5 / 220 = 0.0227 A = 22.7 mA. This is typical of an LED-limiting resistor, keeping the current safely below the LED's maximum rating (~20 mA for standard LEDs).</em></p>
+<p><strong>3. Explain the function of a microcontroller and why it often replaces discrete component circuits in modern products.</strong></p>
+<p><em>A microcontroller is a small programmable IC containing a processor, memory, and I/O pins. It reads signals from connected sensors, makes decisions in software, and drives outputs — replacing what would otherwise be a large assembly of logic gates, timers, and comparators. The advantage is flexibility: a single microcontroller can be re-programmed for different products or updated later, whereas discrete circuits are fixed at manufacture. Cost, size, and power consumption have all dropped sufficiently that microcontrollers now appear in children's toys.</em></p>
+<p><strong>4. Identify and describe three sensors and three actuators you might use in a student-designed "smart plant pot" that waters itself.</strong></p>
+<p><em>Sensors: soil moisture sensor (detects dryness), light sensor/LDR (detects sunlight levels), temperature sensor (detects ambient conditions). Actuators: small peristaltic pump (delivers water), LED indicator (status light), piezo buzzer (alert when water reservoir is empty). A microcontroller reads the sensors, compares to thresholds, and drives the actuators accordingly.</em></p>
+<hr />
+<p><strong>Next:</strong> <a href="A4.1-manufacturing-techniques.html">A4.1 — Manufacturing techniques (HL)</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>

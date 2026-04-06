@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C2.2 Design for a circular economy — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity & design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking & the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The IB DP Design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural application (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical application (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic application (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="active">C2.2 Design for a circular economy</a>
+  <a href="C2.3-lifecycle-assessment.html" class="">C2.3 Life-cycle assessment (HL)</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-design-for-manufacture.html" class="">C3.2 Design for manufacture (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>C2.2 — Design for a circular economy</h1>
+<h2>Key concepts</h2>
+<p>The <strong>linear economy</strong> is the default model: extract → produce → use → discard. Raw materials enter at one end, waste exits at the other. It has delivered enormous wealth but depends on infinite resources and infinite waste sinks — neither of which exists.</p>
+<p>The <strong>circular economy</strong> proposes a different model: products and materials stay in use as long as possible, and when they can't, their materials flow back into new products. Waste becomes input. The goal is to decouple prosperity from resource extraction.</p>
+<h3>Linear vs circular models</h3>
+<table>
+<thead>
+<tr>
+<th>Linear economy</th>
+<th>Circular economy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Take → make → dispose</td>
+<td>Reuse, repair, remanufacture, recycle</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>Services, leasing, sharing</td>
+</tr>
+<tr>
+<td>Short product life</td>
+<td>Long product life</td>
+</tr>
+<tr>
+<td>Single-use materials</td>
+<td>Materials stay in circulation</td>
+</tr>
+<tr>
+<td>Waste is a cost</td>
+<td>Waste is a resource</td>
+</tr>
+</tbody>
+</table>
+<h3>The circular strategies (R-hierarchy)</h3>
+<p>Many versions exist, but most include:</p>
+<ol>
+<li><strong>Refuse</strong> — design it out; make it unnecessary</li>
+<li><strong>Rethink</strong> — intensify use (share, rent)</li>
+<li><strong>Reduce</strong> — use less material</li>
+<li><strong>Reuse</strong> — second-hand, pass it on</li>
+<li><strong>Repair</strong> — fix broken products</li>
+<li><strong>Refurbish</strong> — restore to good condition</li>
+<li><strong>Remanufacture</strong> — rebuild as-new</li>
+<li><strong>Repurpose</strong> — new use for old product</li>
+<li><strong>Recycle</strong> — break down to raw materials</li>
+<li><strong>Recover</strong> — energy from waste</li>
+</ol>
+<p>Higher strategies preserve more embedded value. Recycling recovers only the raw material; refurbishment preserves the entire product.</p>
+<h3>Material cascading</h3>
+<p>In a circular system, materials move through successive uses, each of lower quality but still valuable:</p>
+<ul>
+<li>Timber → furniture → pallet → particle board → biomass energy</li>
+<li>Cotton → clothing → upholstery → wiping cloth → insulation</li>
+</ul>
+<p>Each cascade stage extracts more value before final disposal. Contrast with linear use, where a product becomes waste after one use.</p>
+<h3>Circular business models</h3>
+<p>The circular economy changes <em>how</em> companies make money:</p>
+<ul>
+<li><strong>Product-as-a-service</strong> — sell function rather than ownership (leasing, pay-per-use). Rolls-Royce sells "power by the hour" for jet engines, not engines themselves.</li>
+<li><strong>Take-back schemes</strong> — retain ownership of materials by accepting products back at end of life.</li>
+<li><strong>Subscription models</strong> — users pay for continued access (Spotify, software-as-a-service).</li>
+<li><strong>Sharing platforms</strong> — one asset used by many (Airbnb, tool libraries, car sharing).</li>
+<li><strong>Repair services</strong> — independent repair shops, right-to-repair compliance.</li>
+</ul>
+<p>These models <strong>reverse designer incentives</strong>: when the manufacturer retains ownership, durability becomes profitable instead of unprofitable.</p>
+<h3>Design for longevity</h3>
+<p>Products designed for a circular economy last longer:</p>
+<ul>
+<li><strong>Durable materials</strong> — resist wear, corrosion, UV</li>
+<li><strong>Timeless design</strong> — avoids style obsolescence</li>
+<li><strong>Repairable architecture</strong> — modular, accessible fixings, replaceable components</li>
+<li><strong>Upgradeable</strong> — newer modules fit older products (Fairphone, Framework laptop)</li>
+<li><strong>Emotional durability</strong> — products users cherish and keep</li>
+</ul>
+<p>Emotional attachment is underrated. A product users love is a product they repair rather than replace.</p>
+<h3>Challenges and critiques</h3>
+<ul>
+<li><strong>Reverse logistics</strong> are expensive — getting products back takes infrastructure.</li>
+<li><strong>Hygienic barriers</strong> limit reuse in food and medical contexts.</li>
+<li><strong>Mixed-material products</strong> resist disassembly and recycling.</li>
+<li><strong>Rebound effects</strong> — efficiency gains get absorbed by increased consumption.</li>
+<li><strong>Greenwashing</strong> — companies claim circularity without substance.</li>
+</ul>
+<p>A truly circular economy requires systemic change — not just better individual products.</p>
+<h2>Case studies</h2>
+<p><strong>Ellen MacArthur Foundation</strong> — global organisation advocating circular economy principles. Publishes research, case studies, and frameworks that have reshaped industry thinking since 2010.</p>
+<p><strong>Fairphone 5</strong> — user-replaceable battery, modular components, 8–10 year software support, published schematics, repair score 10/10 on iFixit. Demonstrates circular product design is technically possible; commercial challenge remains.</p>
+<p><strong>Patagonia Worn Wear</strong> — buys back used garments, refurbishes, resells. Also operates free repair service. Illustrates circular business models at retail scale.</p>
+<p><strong>Rolls-Royce "Power by the Hour"</strong> — airlines pay for engine uptime, not engines. Rolls-Royce owns and maintains the engines, profits from their durability. Classic product-as-a-service example.</p>
+<p><strong>Interface carpet tiles</strong> — EcoSolution Q tiles made from recycled fishing nets and old carpet, take-back scheme, climate-neutral manufacturing. Company committed to circularity at industrial scale from 1994.</p>
+<h2>Glossary</h2>
+<ul>
+<li><strong>Linear economy</strong> — traditional take-make-dispose economic model.</li>
+<li><strong>Circular economy</strong> — economic model where products and materials remain in circulation.</li>
+<li><strong>R-hierarchy</strong> — ranking of circular strategies from refuse to recover.</li>
+<li><strong>Material cascading</strong> — using materials through successive lower-value applications.</li>
+<li><strong>Product-as-a-service (PaaS)</strong> — business model selling function rather than product ownership.</li>
+<li><strong>Take-back scheme</strong> — manufacturer retrieval of products at end of life.</li>
+<li><strong>Remanufacturing</strong> — rebuilding used products to as-new specification.</li>
+<li><strong>Emotional durability</strong> — the quality of a product that makes users want to keep it.</li>
+<li><strong>Reverse logistics</strong> — infrastructure for returning products to manufacturer.</li>
+<li><strong>Greenwashing</strong> — misleading sustainability claims unsupported by practice.</li>
+</ul>
+<h2>Check your understanding</h2>
+<p><strong>1. Explain the difference between a linear and circular economic model.</strong></p>
+<p><em>The linear economy extracts resources, manufactures products, uses them briefly, and discards them as waste — a one-way flow. It depends on infinite resources and infinite waste sinks. The circular economy keeps products and materials in use as long as possible through reuse, repair, remanufacture, and recycling, treating waste as input for new production. The circular model decouples prosperity from resource extraction, at least in principle.</em></p>
+<p><strong>2. Why is recycling the least preferred circular strategy?</strong></p>
+<p><em>Recycling recovers only the raw material value and requires energy to break down and reconstitute materials, often losing quality in the process (downcycling). All the investment in design, manufacturing, assembly, and distribution is lost. Higher strategies — reuse, repair, refurbish, remanufacture — preserve more embedded value. A repaired product continues serving its purpose; a recycled product becomes raw material that must be re-manufactured into something new.</em></p>
+<p><strong>3. How does product-as-a-service change design incentives?</strong></p>
+<p><em>In traditional ownership models, short product life means repeat sales, so durability is unprofitable for manufacturers. In product-as-a-service (leasing, subscription, pay-per-use), the manufacturer retains ownership and profits from the product continuing to function at lowest long-term cost. Durability, repairability, efficiency, and recoverability all become profitable. Rolls-Royce sells engine uptime and profits from engines that rarely break. The incentive structure reverses.</em></p>
+<p><strong>4. Give two examples of material cascading.</strong></p>
+<p><em>Timber: harvested wood → furniture → pallets → particle board → biomass fuel → ash. Each stage extracts more value from the original material. Cotton: fabric → clothing → upholstery → cleaning cloths → insulation. Rather than discarding material after one use, cascading extends utility across multiple lower-value applications before disposal.</em></p>
+<h2>Teacher's notes — additional examples and activities</h2>
+<h3>The 6 R's framework</h3>
+<p>A memorable mnemonic:</p>
+<ul>
+<li><strong>Refuse</strong> — don't use what you don't need</li>
+<li><strong>Reduce</strong> — use less</li>
+<li><strong>Reuse</strong> — give new purpose to existing items</li>
+<li><strong>Repair</strong> — fix what's broken</li>
+<li><strong>Recycle</strong> — reclaim materials</li>
+<li><strong>Rethink</strong> — re-engineer entirely</li>
+</ul>
+<p>Some variations add Recondition, Re-engineer, and Recover.</p>
+<h3>Case study: trainers lifecycle</h3>
+<p><strong>Production:</strong> made in Asia-Pacific (China, Vietnam, Indonesia) with shipped cotton and oil-derived plastics.<br />
+<strong>Use:</strong> shipped globally, worn for ~400–500 hours.<br />
+<strong>Disposal:</strong> typically discarded to landfill, occasionally recycled or burned.</p>
+<p><em>Where and how could this process be more circular than linear?</em> Ask students to map the flow and identify intervention points.</p>
+<h3>Strategies explained</h3>
+<ul>
+<li><strong>Reuse</strong> — give waste new purpose (deposit schemes, refillable bottles)</li>
+<li><strong>Recycle</strong> — recover materials for new products (still linear in effect — downcycling)</li>
+<li><strong>Repair</strong> — fix existing items (common in motor industry, rare in consumer electronics)</li>
+<li><strong>Recondition</strong> — rebuild to "as new" condition, replacing parts as needed</li>
+<li><strong>Re-engineer / Rethink</strong> — significantly redesign with improved engineering</li>
+<li><strong>Dematerialisation / Reduce</strong> — reduce the total material and energy throughput per product</li>
+</ul>
+<h3>Reuse vs recycle — which is more sustainable?</h3>
+<p>Reuse is typically more sustainable than recycling. Recycling requires energy to break material down and reconstitute it (often as lower quality — downcycling). Reuse keeps the original product functional, preserving all the embodied design and manufacturing value.</p>
+<h3>Take-back legislation</h3>
+<p>Manufacturers and sellers are legally required to "take back" products at end of life. Reduces landfill and encourages design for disassembly. Examples:<br />
+- EU WEEE Directive (electronics)<br />
+- Car manufacturer take-back schemes<br />
+- Bottle deposit-return schemes</p>
+<h3>Product Recovery Strategies at End of Life</h3>
+<p>Processes of separating component parts to recover materials. Stakeholders benefit differently:<br />
+- <strong>Manufacturers</strong> — lower raw material costs, closed-loop supply<br />
+- <strong>Consumers</strong> — sometimes refunds or credits<br />
+- <strong>Environment</strong> — reduced extraction, reduced landfill</p>
+<h3>Case study: French rental app</h3>
+<p><em>"Own less, have more"</em> — French app rents out underused household items. Shifts from ownership to access. Circular by design — one item serves many users.</p>
+<h3>Research task — circular business models</h3>
+<p>Research two business examples for each strategy: reuse, recycle, repair, recondition, re-engineer, dematerialise, product recovery, take-back. Complete a comparison table.</p>
+<h3>Discussion questions</h3>
+<ul>
+<li>How has design been <strong>complicit</strong> in contributing to more waste?</li>
+<li>Can circularity ever be 100%? Where does it break down?</li>
+<li>What role should legislation play vs voluntary action?</li>
+</ul>
+<hr />
+<p><strong>Next:</strong> <a href="C3.1-product-analysis.html">C3.1 — Product analysis and evaluation</a></p>
+<div class="footer">© 2026 David Hart. Independent teacher resource — not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>
