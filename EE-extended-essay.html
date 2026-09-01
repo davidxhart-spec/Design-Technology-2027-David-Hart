@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extended essay — IB DT 2027</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity &amp; design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Introduction to structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Introduction to mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Introduction to electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking &amp; the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural systems application and selection (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical systems application and selection (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic systems application and selection (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-lifecycle-analysis.html" class="">C3.2 Life-cycle analysis (HL)</a>
+  <a href="C4.1-design-for-manufacture-strategies.html" class="">C4.1 Design for manufacture strategies (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="EE-extended-essay.html" class="active">Extended essay</a>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>The Extended Essay in Design Technology</h1>
+<p>The Extended Essay is a 4,000-word independent research paper. In Design Technology it is not a design project written up — it is a <strong>disciplined investigation into why design decisions work or fail</strong>, argued from evidence.</p>
+<p>That distinction is where most marks are won and lost.</p>
+<h2>Key concepts</h2>
+<h3>The EE is not the IA</h3>
+<p>Students confuse these constantly. They are different tasks with different aims.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Internal assessment</th>
+<th>Extended essay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>You produce</strong></td>
+<td>A redesigned product and a fidelity model</td>
+<td>A 4,000-word research paper</td>
+</tr>
+<tr>
+<td><strong>You are judged on</strong></td>
+<td>Designing</td>
+<td>Investigating and arguing</td>
+</tr>
+<tr>
+<td><strong>Core verb</strong></td>
+<td><em>Make</em></td>
+<td><em>Find out</em></td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>~35 pages, mostly visual</td>
+<td>~4,000 words, mostly prose</td>
+</tr>
+<tr>
+<td><strong>Assessed by</strong></td>
+<td>Your teacher, moderated by the IB</td>
+<td>An external examiner</td>
+</tr>
+<tr>
+<td><strong>Marks</strong></td>
+<td>33</td>
+<td>See criteria below</td>
+</tr>
+</tbody>
+</table>
+<p>If your EE could be summarised as "I designed a thing", it is an IA in disguise. The EE asks a <strong>question</strong> and answers it with data.</p>
+<h3>The research question decides your grade</h3>
+<p>Almost every weak DT extended essay is weak because of its question, not its writing. A question that cannot be answered with evidence cannot earn analysis marks, however well it is written.</p>
+<p>A workable question forces you to <strong>measure, compare or judge</strong>. Test yours against three checks:</p>
+<ol>
+<li><strong>Can it be answered?</strong> Not "is sustainable packaging good?" but a question with a determinable answer.</li>
+<li><strong>Is it narrow enough for 4,000 words?</strong> Scope is the most common failure. Narrow until it feels almost too small — it will still expand.</li>
+<li><strong>Does it need design technology?</strong> If it could be answered by a geography or economics student, it is not a DT essay.</li>
+</ol>
+<p><strong>Weak → strong:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Weak</th>
+<th>Why it fails</th>
+<th>Stronger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Is bamboo sustainable?"</td>
+<td>Unanswerable, no scope, no DT content</td>
+<td>"To what extent can bamboo laminate replace plywood in flat-pack shelving for a 20 kg load requirement?"</td>
+</tr>
+<tr>
+<td>"How can chairs be more ergonomic?"</td>
+<td>No user, no measure</td>
+<td>"To what extent do adjustable lumbar supports reduce reported discomfort for 16–18 year olds over a two-hour study session?"</td>
+</tr>
+<tr>
+<td>"I will design a better water bottle"</td>
+<td>A project, not a question</td>
+<td>"How effectively does wall geometry affect the thermal retention of a stainless steel vacuum flask?"</td>
+</tr>
+</tbody>
+</table>
+<p>Notice what the strong versions share: a defined user or context, a measurable variable, and a boundary.</p>
+<h3>Research like a designer</h3>
+<p>Strong DT research resembles the early stages of real product development — users, constraints, tests, iteration — rather than a literature summary.</p>
+<p><strong>Primary research</strong> carries the essay:</p>
+<ul>
+<li>Prototype or specimen testing with controlled variables (material, dimension, load)</li>
+<li>User trials with a defined participant group and a consistent protocol</li>
+<li>Structured observation of a task being performed</li>
+<li>Short, targeted interviews with designers, engineers or technicians</li>
+</ul>
+<p><strong>Secondary research</strong> gives it credibility:</p>
+<ul>
+<li>Academic papers on materials, human factors or sustainability</li>
+<li>Standards and guidance documents — safety, materials, environmental reporting</li>
+<li>Manufacturer datasheets and specifications</li>
+<li>Product teardowns and market analyses, used critically</li>
+</ul>
+<p>Keep the method honest. If you tested a cardboard prototype, it does not prove final product performance — say what it <em>can</em> validly indicate. Naming the limits of your own method is not weakness; it is precisely what the criteria reward.</p>
+<h3>Structure so that analysis is unavoidable</h3>
+<p>A loose structure lets an essay drift into description. This shape makes that harder:</p>
+<p><strong>Introduction</strong> — state the research question, why it matters, and what you will test or compare. Define key terms only where needed.</p>
+<p><strong>Background and theory</strong> — the lens you are looking through: human factors, materials science, a sustainability framework, structural principles. This is where DT subject knowledge earns credit.</p>
+<p><strong>Methodology</strong> — what you did and why it suited the question. Include constraints, controls and how you kept the comparison fair. Enough detail that someone could repeat it.</p>
+<p><strong>Results and analysis</strong> — present the data clearly, then <em>interpret</em> it. Patterns, anomalies, trade-offs, and what each implies for the design decision.</p>
+<p><strong>Discussion and evaluation</strong> — limitations, reliability, alternative explanations, what you would change. The highest marks live here.</p>
+<p><strong>Conclusion</strong> — answer the question directly, with a measured claim your evidence actually supports.</p>
+<h3>The sentence that turns a result into a judgement</h3>
+<p>This is the single most valuable habit in DT extended essay writing. Most students stop one sentence too early.</p>
+<blockquote>
+<p>"I tested two materials and Material A performed better."</p>
+</blockquote>
+<p>That is a result. Add the next sentence:</p>
+<blockquote>
+<p>"Material A performed better under load, but its higher cost and poorer recyclability weaken its suitability for this particular user requirement."</p>
+</blockquote>
+<p>That is a design judgement. The first earns description marks; the second earns analysis and evaluation marks. When you reread a draft, find every result and ask: <em>so what, for this design, for this user?</em></p>
+<h3>Reflection and the RPF</h3>
+<p>Criterion E is assessed <strong>solely</strong> on your Reflections on Planning and Progress form (RPF). It is not an afterthought — it carries four marks and is written across your reflection sessions with your supervisor.</p>
+<p>Reflect on decisions, not procedures. "I read some articles and then did my tests" describes. "I abandoned my first research question because pilot testing showed I could not control temperature accurately enough, so I narrowed to a single variable" reflects.</p>
+<hr />
+<h2>The assessment criteria</h2>
+<p>These are the IB's own words, from the 2027 Extended essay guide. <strong>Total 30 marks.</strong></p>
+<p>Marking is <strong>best-fit</strong>: examiners look for the descriptor that most accurately conveys the level attained, and compensate when work matches parts of different markbands. Not every indicator has to be met to be awarded a band, and top marks do not imply faultless work. Criteria A–D apply to the essay as a whole; criterion E applies only to the reflective statement on your RPF.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Marks</th>
+<th>Strands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong> Framework for the essay</td>
+<td>6</td>
+<td>Research question · Research methods · Structure</td>
+</tr>
+<tr>
+<td><strong>B</strong> Knowledge and understanding</td>
+<td>6</td>
+<td>Knowledge · Terminology · Concepts</td>
+</tr>
+<tr>
+<td><strong>C</strong> Analysis and line of argument</td>
+<td>6</td>
+<td>Analysis · Line of argument</td>
+</tr>
+<tr>
+<td><strong>D</strong> Discussion and evaluation</td>
+<td><strong>8</strong></td>
+<td>Discussion · Evaluation</td>
+</tr>
+<tr>
+<td><strong>E</strong> Reflection</td>
+<td>4</td>
+<td>Evaluative · Growth</td>
+</tr>
+</tbody>
+</table>
+<h3>Criterion A: Framework for the essay — 6 marks</h3>
+<blockquote>
+<p><em>Do the research question, research methods and structural conventions followed provide an effective framework for the essay?</em></p>
+</blockquote>
+<p>Three strands. <strong>Research question</strong> — top marks need one that is relevant to the topic, clear, and focused in relation to the scope of the essay. <strong>Research methods</strong> — methods suitable for the question, explained and applied effectively. <strong>Structure</strong> — structural conventions that effectively support communication of the research.</p>
+<p>Note the phrasing on scope: a question can be relevant and clear but only <em>partially focused</em>, and that caps you at 3–4. Focus is what separates the bands.</p>
+<h3>Criterion B: Knowledge and understanding — 6 marks</h3>
+<blockquote>
+<p><em>Does the student demonstrate knowledge and understanding of the subject matter being used in their research?</em></p>
+</blockquote>
+<p><strong>Knowledge</strong> — comprehensive, relevant research materials used to establish knowledge of the subject matter. <strong>Terminology</strong> — relevant terminology used accurately <em>and consistently</em>. <strong>Concepts</strong> — relevant concepts explained and used effectively.</p>
+<p>Terminology and concepts are scored separately. Knowing the words is not the same as deploying the ideas.</p>
+<h3>Criterion C: Analysis and line of argument — 6 marks</h3>
+<blockquote>
+<p><em>Does the student analyse the information presented in the essay and produce a coherent line of argument?</em></p>
+</blockquote>
+<p><strong>Analysis</strong> — the bottom band is blunt: "the essay is descriptive rather than analytical." Top band requires analysis that is effective and <em>consistently</em> produces relevant findings. <strong>Line of argument</strong> — a clear, sustained argument linking research question, findings and conclusions.</p>
+<p>This is where the missing-sentence habit above pays off directly.</p>
+<h3>Criterion D: Discussion and evaluation — 8 marks</h3>
+<blockquote>
+<p><em>Does the student discuss the findings and evaluate the essay?</em></p>
+</blockquote>
+<p><strong>The largest criterion in the essay</strong> — worth more than any other, and the one students most often under-write.</p>
+<p><strong>Discussion</strong> — a balanced discussion of the significance of the findings, <em>fully</em> supported by appropriate evidence. The ladder runs: no supporting evidence → sometimes supported → often supported → fully supported. <strong>Evaluation</strong> — an evaluation of the effectiveness of the essay with relevant strengths and limitations <em>explained</em>, not merely stated or described.</p>
+<p>Read that ladder carefully. "Stated" earns 3–4, "described" earns 5–6, "explained" earns 7–8. The difference between a limitation you name and a limitation you account for is four marks.</p>
+<h3>Criterion E: Reflection — 4 marks</h3>
+<blockquote>
+<p><em>Does the student evaluate the effect of the extended essay learning experience on them as a learner?</em></p>
+</blockquote>
+<p>Applies <strong>only</strong> to the reflective statement on your RPF. Evidence may be drawn from, but is not limited to: experiences and insights that could shape future thinking; explicit examples of how skills learned could be used in other contexts now and in future; how changes in perspective impacted decision-making.</p>
+<p><strong>Evaluative</strong> — reflection that is consistently evaluative and includes specific examples. <strong>Growth</strong> — reflection that consistently shows evidence of your growth and transfer of learning.</p>
+<p>Both strands punish pure description. "I learned to manage my time" is descriptive; "abandoning my first question taught me to pilot a method before committing to it, which I now do in my IA" evaluates and shows transfer.</p>
+<h2>Case studies</h2>
+<p><strong>A question that worked.</strong> A student investigated whether recycled HDPE could replace virgin polypropylene in a specific injection-moulded component. They tensile-tested specimens of both at a controlled thickness, compared results against the manufacturer's published datasheet, and evaluated the gap between lab specimens and a real moulded part. The essay scored well because the question was narrow, the method was repeatable, and the discussion was honest about what specimen testing cannot show.</p>
+<p><strong>A question that did not.</strong> "How can 3D printing make manufacturing more sustainable?" — too broad to answer, no defined product or context, no measurable variable. The student produced a competent literature summary with no analysis, because the question never demanded any.</p>
+<p><strong>Rescuing a broad question.</strong> "Is modular furniture better?" becomes answerable once you add a user, a metric and a boundary: "To what extent does modular shelving improve usable storage volume in rooms under 12 m² for student occupants?" Same interest, now researchable.</p>
+<hr />
+<h2>Check your understanding</h2>
+<ol>
+<li>Explain the difference between the internal assessment and the extended essay in Design Technology.</li>
+<li>A student proposes the research question "Are biodegradable plastics good for the environment?" Identify three weaknesses and rewrite it as a workable question.</li>
+<li>Outline the difference between primary and secondary research, giving two DT-specific examples of each.</li>
+<li>A student writes: "The aluminium sample deflected less than the steel sample." Add the sentence that turns this result into a design judgement.</li>
+<li>Criterion D is worth 8 marks — more than any other. Explain the difference between strengths and limitations that are <em>stated</em>, <em>described</em> and <em>explained</em>, and what each is worth.</li>
+<li>State which criterion is assessed solely on the RPF, and describe what makes a reflection evaluative rather than descriptive.</li>
+</ol>
+<hr />
+<h2>Glossary</h2>
+<p><strong>Extended essay (EE)</strong> — an independent 4,000-word research paper, a core requirement of the IB Diploma Programme.</p>
+<p><strong>Research question</strong> — the precisely formulated, focused question the essay sets out to answer, stated prominently at the start.</p>
+<p><strong>RPF</strong> — Reflections on Planning and Progress form. Completed across reflection sessions with the supervisor; the sole basis for criterion E.</p>
+<p><strong>Supervisor</strong> — the teacher who guides the process, holds the reflection sessions and comments on the RPF.</p>
+<p><strong>Viva voce</strong> — the concluding interview between student and supervisor, informing the final reflection.</p>
+<p><strong>Primary research</strong> — data the student generates directly: testing, trials, observation, interviews.</p>
+<p><strong>Secondary research</strong> — data from third parties: papers, standards, datasheets, reports.</p>
+<hr />
+<h2>Teacher's notes — additional examples and activities</h2>
+<p><strong>Question surgery (1 lesson).</strong> Collect draft research questions anonymously. Project them and test each against the three checks — answerable, scoped, DT-specific. Rewriting a bad question as a class is far more effective than describing a good one.</p>
+<p><strong>The missing sentence drill (20 minutes).</strong> Give students ten result sentences from past essays. They add the judgement sentence to each. This single skill moves more students up a band than any other intervention.</p>
+<p><strong>IA versus EE sort (15 minutes).</strong> Prepare fifteen statements — some describing IA work, some EE work — and have students sort them. Surfaces the confusion early, before topics are chosen.</p>
+<p><strong>Method honesty audit.</strong> Students swap drafts and annotate every claim their method cannot actually support. Trains the self-criticism criterion C rewards, and is less confronting from a peer than from a teacher.</p>
+<p><strong>Reflection modelling.</strong> Show a descriptive RPF entry beside a reflective one on the same event. Students routinely under-write reflections because nobody has shown them the difference.</p>
+<p><strong>Watch for:</strong> students choosing a topic because they like the product rather than because it raises a question; scope creep between the first and second reflection sessions; and essays where the model or prototype is beautiful but generates no data.</p>
+<div class="next-prev"><a href="C4.1-design-for-manufacture-strategies.html">&larr; C4.1 Design for manufacture strategies (HL)</a><a href="glossary.html">Glossary &rarr;</a></div>
+<div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>
