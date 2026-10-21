@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B3.3 Mechanical systems application and selection (HL) — IB DT 2027</title>
+<meta name="theme-color" content="#f4f3ee">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="DT Textbook">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -62,8 +67,14 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
   aside { width: 100%; position: static; height: auto; }
   main { padding: 24px 20px; }
 }
+/* The site as an app (2026-10-21): the contents page's Install button, and a video shown as a link when the page
+   is opened straight from files (app.js) */
+#install-app { font: inherit; font-size: 14px; font-weight: 600; color: #fff; background: #007AFF; border: 0; border-radius: 8px; padding: 8px 18px; cursor: pointer; }
+#install-app[hidden] { display: none; }
+.video-link { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #1c1c1e; color: #fff; font-weight: 600; text-decoration: none; }
 </style>
 <script src="progress.js" defer></script>
+<script src="app.js" defer></script>
 </head>
 <body>
 <div class="layout">

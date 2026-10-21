@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IB Design Technology 2027 — Student Textbook</title>
+<meta name="theme-color" content="#f4f3ee">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="DT Textbook">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -62,8 +67,14 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
   aside { width: 100%; position: static; height: auto; }
   main { padding: 24px 20px; }
 }
+/* The site as an app (2026-10-21): the contents page's Install button, and a video shown as a link when the page
+   is opened straight from files (app.js) */
+#install-app { font: inherit; font-size: 14px; font-weight: 600; color: #fff; background: #007AFF; border: 0; border-radius: 8px; padding: 8px 18px; cursor: pointer; }
+#install-app[hidden] { display: none; }
+.video-link { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #1c1c1e; color: #fff; font-weight: 600; text-decoration: none; }
 </style>
 <script src="progress.js" defer></script>
+<script src="app.js" defer></script>
 </head>
 <body>
 <div class="layout">
@@ -124,6 +135,16 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
 <li><strong>Check your understanding</strong> &mdash; practice questions with model answers</li>
 </ol>
 <p>Work through chapters in order, or dip into specific topics as they arise in class. Questions at the end of each chapter are written in the style of IB Paper 1 and Paper 2 exam items.</p>
+<div id="get-app">
+<h2>Use this book as an app</h2>
+<p>Install it once and it opens in a window of its own, with its own icon, and keeps working without the internet (the videos still need a connection). Your progress marks stay on your device.</p>
+<p><button id="install-app" type="button" hidden>Install the app</button></p>
+<ul>
+<li><strong>Windows, Chromebook or Android &mdash; Edge or Chrome:</strong> the install icon at the right of the address bar, or <em>Install</em> in the browser&rsquo;s menu.</li>
+<li><strong>iPad or iPhone &mdash; Safari:</strong> Share, then <em>Add to Home Screen</em>.</li>
+<li><strong>Mac &mdash; Safari:</strong> File, then <em>Add to Dock</em>. In Chrome or Edge on a Mac, as for Windows.</li>
+</ul>
+</div>
 <h2>Contents</h2>
 <h3>Introduction</h3>
 <ul>
