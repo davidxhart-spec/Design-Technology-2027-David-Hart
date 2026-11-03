@@ -1,0 +1,4 @@
+# Book source images — 1,265 files that no page references. The site is
+# self-contained HTML with inline CSS; these belong to curriculum-book/, not here.
+images/
+.DS_Store
