@@ -72,6 +72,27 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
 #install-app { font: inherit; font-size: 14px; font-weight: 600; color: #fff; background: #007AFF; border: 0; border-radius: 8px; padding: 8px 18px; cursor: pointer; }
 #install-app[hidden] { display: none; }
 .video-link { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #1c1c1e; color: #fff; font-weight: 600; text-decoration: none; }
+/* Chapter tabs (2026-11-05): the Internal Assessment chapter's Overview, criteria A–E and Final check, one tab
+   each (book_tabs.py writes them). CSS only — a radio and its label per tab. Printed, every panel shows. */
+main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 24px 0 0; }
+.tabs > input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label { padding: 7px 14px; border-radius: 8px 8px 0 0; background: rgba(0,0,0,0.05); color: #3a3a3c; font-size: 13px; font-weight: 600; cursor: pointer; }
+.tabs > label:hover { background: rgba(0,122,255,0.08); color: #007AFF; }
+.tabs > input:checked + label { background: #007AFF; color: #fff; }
+.tabs > input:focus-visible + label { outline: 2px solid #007AFF; outline-offset: 2px; }
+.tabs > .tab-panel { display: none; flex: 0 0 100%; min-width: 0; border-top: 3px solid #007AFF; }
+.tabs > input:nth-of-type(1):checked ~ .tab-panel:nth-of-type(1),
+.tabs > input:nth-of-type(2):checked ~ .tab-panel:nth-of-type(2),
+.tabs > input:nth-of-type(3):checked ~ .tab-panel:nth-of-type(3),
+.tabs > input:nth-of-type(4):checked ~ .tab-panel:nth-of-type(4),
+.tabs > input:nth-of-type(5):checked ~ .tab-panel:nth-of-type(5),
+.tabs > input:nth-of-type(6):checked ~ .tab-panel:nth-of-type(6),
+.tabs > input:nth-of-type(7):checked ~ .tab-panel:nth-of-type(7),
+.tabs > input:nth-of-type(8):checked ~ .tab-panel:nth-of-type(8),
+.tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
+.tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
+@media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -118,6 +139,7 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
   <a href="C4.1-design-for-manufacture-strategies.html" class="">C4.1 Design for manufacture strategies (HL)</a>
 </div>
 <div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="IA-internal-assessment.html" class="">Internal Assessment</a>
   <a href="EE-extended-essay.html" class="active">Extended essay</a>
   <a href="glossary.html" class="">Glossary</a>
   <a href="exam-technique.html" class="">Exam technique</a>
@@ -349,7 +371,7 @@ main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16
 <p><strong>Method honesty audit.</strong> Students swap drafts and annotate every claim their method cannot actually support. Trains the self-criticism criterion C rewards, and is less confronting from a peer than from a teacher.</p>
 <p><strong>Reflection modelling.</strong> Show a descriptive RPF entry beside a reflective one on the same event. Students routinely under-write reflections because nobody has shown them the difference.</p>
 <p><strong>Watch for:</strong> students choosing a topic because they like the product rather than because it raises a question; scope creep between the first and second reflection sessions; and essays where the model or prototype is beautiful but generates no data.</p>
-<div class="next-prev"><a href="C4.1-design-for-manufacture-strategies.html">&larr; C4.1 Design for manufacture strategies (HL)</a><a href="glossary.html">Glossary &rarr;</a></div>
+<div class="next-prev"><a href="IA-internal-assessment.html">&larr; Internal Assessment</a><a href="glossary.html">Glossary &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>
 </div>

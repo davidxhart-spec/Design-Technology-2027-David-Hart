@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal Assessment — IB DT 2027</title>
+<meta name="theme-color" content="#f4f3ee">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="DT Textbook">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  background: #f4f3ee; color: #1c1c1e; line-height: 1.65; font-size: 15px;
+}
+.layout { display: flex; min-height: 100vh; }
+aside {
+  width: 280px; background: #fff; border-right: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 18px; overflow-y: auto; position: sticky; top: 0; height: 100vh;
+}
+aside h1 {
+  font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #1c1c1e;
+}
+aside .sub {
+  font-size: 11px; color: #6e6e73; margin-bottom: 20px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-section { margin-bottom: 16px; }
+.nav-heading {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: #8e8e93; margin-bottom: 6px; padding: 0 8px;
+}
+aside a {
+  display: block; padding: 6px 8px; font-size: 12px; color: #3a3a3c;
+  text-decoration: none; border-radius: 5px; margin-bottom: 1px; line-height: 1.4;
+}
+aside a:hover { background: rgba(0,122,255,0.06); color: #007AFF; }
+aside a.active { background: #007AFF; color: #fff; font-weight: 600; }
+main { flex: 1; padding: 40px 56px 80px; max-width: 820px; }
+main h1 { font-size: 30px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -0.3px; }
+main h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+main h3 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; color: #1c1c1e; }
+main p { margin: 0 0 14px; color: #3a3a3c; }
+main strong { color: #1c1c1e; font-weight: 600; }
+main ul, main ol { margin: 0 0 14px 24px; color: #3a3a3c; }
+main li { margin-bottom: 4px; }
+main code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Menlo, monospace; }
+main table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+main th, main td { padding: 8px 12px; border: 1px solid rgba(0,0,0,0.08); text-align: left; vertical-align: top; }
+main th { background: #fff; font-weight: 600; }
+main a { color: #007AFF; text-decoration: none; }
+main a:hover { text-decoration: underline; }
+main hr { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 32px 0; }
+main blockquote { border-left: 3px solid #007AFF; padding-left: 16px; margin: 16px 0; color: #6e6e73; font-style: italic; }
+.next-prev {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex; justify-content: space-between; font-size: 13px;
+}
+.footer {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px; color: #8e8e93; text-align: center;
+}
+@media (max-width: 900px) {
+  .layout { flex-direction: column; }
+  aside { width: 100%; position: static; height: auto; }
+  main { padding: 24px 20px; }
+}
+/* The site as an app (2026-10-21): the contents page's Install button, and a video shown as a link when the page
+   is opened straight from files (app.js) */
+#install-app { font: inherit; font-size: 14px; font-weight: 600; color: #fff; background: #007AFF; border: 0; border-radius: 8px; padding: 8px 18px; cursor: pointer; }
+#install-app[hidden] { display: none; }
+.video-link { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #1c1c1e; color: #fff; font-weight: 600; text-decoration: none; }
+/* Chapter tabs (2026-11-05): the Internal Assessment chapter's Overview, criteria A–E and Final check, one tab
+   each (book_tabs.py writes them). CSS only — a radio and its label per tab. Printed, every panel shows. */
+main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 24px 0 0; }
+.tabs > input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label { padding: 7px 14px; border-radius: 8px 8px 0 0; background: rgba(0,0,0,0.05); color: #3a3a3c; font-size: 13px; font-weight: 600; cursor: pointer; }
+.tabs > label:hover { background: rgba(0,122,255,0.08); color: #007AFF; }
+.tabs > input:checked + label { background: #007AFF; color: #fff; }
+.tabs > input:focus-visible + label { outline: 2px solid #007AFF; outline-offset: 2px; }
+.tabs > .tab-panel { display: none; flex: 0 0 100%; min-width: 0; border-top: 3px solid #007AFF; }
+.tabs > input:nth-of-type(1):checked ~ .tab-panel:nth-of-type(1),
+.tabs > input:nth-of-type(2):checked ~ .tab-panel:nth-of-type(2),
+.tabs > input:nth-of-type(3):checked ~ .tab-panel:nth-of-type(3),
+.tabs > input:nth-of-type(4):checked ~ .tab-panel:nth-of-type(4),
+.tabs > input:nth-of-type(5):checked ~ .tab-panel:nth-of-type(5),
+.tabs > input:nth-of-type(6):checked ~ .tab-panel:nth-of-type(6),
+.tabs > input:nth-of-type(7):checked ~ .tab-panel:nth-of-type(7),
+.tabs > input:nth-of-type(8):checked ~ .tab-panel:nth-of-type(8),
+.tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
+.tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
+@media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+</style>
+<script src="progress.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="layout">
+<aside>
+<h1>IB DT 2027</h1>
+<div class="sub">Student Textbook</div>
+<div class="nav-section">
+<a href="index.html" class="">&larr; Contents</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Introduction</div>
+  <a href="00-introduction.html" class="">Introduction</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand A — Human nature, creativity &amp; design</div>
+  <a href="A1.1-ergonomics.html" class="">A1.1 Ergonomics</a>
+  <a href="A2.1-user-centred-research.html" class="">A2.1 User-centred research methods</a>
+  <a href="A2.2-prototyping-techniques.html" class="">A2.2 Prototyping techniques</a>
+  <a href="A3.1-material-classification.html" class="">A3.1 Material classification and properties</a>
+  <a href="A3.2-structural-systems.html" class="">A3.2 Introduction to structural systems (HL)</a>
+  <a href="A3.3-mechanical-systems.html" class="">A3.3 Introduction to mechanical systems (HL)</a>
+  <a href="A3.4-electronic-systems.html" class="">A3.4 Introduction to electronic systems (HL)</a>
+  <a href="A4.1-manufacturing-techniques.html" class="">A4.1 Manufacturing techniques (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand B — Design thinking &amp; the design process</div>
+  <a href="B1.1-user-centred-design.html" class="">B1.1 User-centred design</a>
+  <a href="B2.1-design-process.html" class="">B2.1 The design process</a>
+  <a href="B2.2-modelling-prototyping.html" class="">B2.2 Modelling and prototyping</a>
+  <a href="B3.1-material-selection.html" class="">B3.1 Material selection</a>
+  <a href="B3.2-structural-application.html" class="">B3.2 Structural systems application and selection (HL)</a>
+  <a href="B3.3-mechanical-application.html" class="">B3.3 Mechanical systems application and selection (HL)</a>
+  <a href="B3.4-electronic-application.html" class="">B3.4 Electronic systems application and selection (HL)</a>
+  <a href="B4.1-production-systems.html" class="">B4.1 Production systems (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Strand C — Design as a global technology</div>
+  <a href="C1.1-responsibility.html" class="">C1.1 Responsibility of the designer</a>
+  <a href="C1.2-inclusive-design.html" class="">C1.2 Inclusive design</a>
+  <a href="C1.3-beyond-usability.html" class="">C1.3 Beyond usability (HL)</a>
+  <a href="C2.1-sustainability.html" class="">C2.1 Design for sustainability</a>
+  <a href="C2.2-circular-economy.html" class="">C2.2 Design for a circular economy</a>
+  <a href="C3.1-product-analysis.html" class="">C3.1 Product analysis and evaluation</a>
+  <a href="C3.2-lifecycle-analysis.html" class="">C3.2 Life-cycle analysis (HL)</a>
+  <a href="C4.1-design-for-manufacture-strategies.html" class="">C4.1 Design for manufacture strategies (HL)</a>
+</div>
+<div class="nav-section"><div class="nav-heading">Reference</div>
+  <a href="IA-internal-assessment.html" class="active">Internal Assessment</a>
+  <a href="EE-extended-essay.html" class="">Extended essay</a>
+  <a href="glossary.html" class="">Glossary</a>
+  <a href="exam-technique.html" class="">Exam technique</a>
+</div>
+</aside>
+<main>
+<h1>Internal Assessment — the design project</h1>
+<p>The Internal Assessment (IA) is one <strong>design project</strong>: you identify, analyse, evaluate and <strong>redesign an existing product</strong> to meet the needs of a real user, your <strong>primary persona</strong>, and you build physical fidelity models to test it. It takes about <strong>50 hours</strong>, is marked out of <strong>33</strong> against five criteria (A–E), and is worth <strong>40% of the grade at SL and 30% at HL</strong> — the task and the criteria are the same at both levels.</p>
+<p>This chapter takes you through the project in <strong>twelve self-study tasks</strong> of about 55 minutes each, one stage at a time. Each task shows what its criterion asks, points you to the exemplar projects and the marks they were given, and ends with a piece of your own project written or planned. The tabs below follow the project in order: start with the Overview, then work through the criteria A to E, and finish with the Final check.</p>
+<div class="tabs">
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-1" checked><label for="tabs-ia-internal-assessment-1">Overview</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-2"><label for="tabs-ia-internal-assessment-2">A · Empathize</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-3"><label for="tabs-ia-internal-assessment-3">B · Defining the project</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-4"><label for="tabs-ia-internal-assessment-4">C · Ideation and modelling</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-5"><label for="tabs-ia-internal-assessment-5">D · Designing a solution</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-6"><label for="tabs-ia-internal-assessment-6">E · Presenting a solution</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-7"><label for="tabs-ia-internal-assessment-7">Final check</label>
+<section class="tab-panel">
+<h2>Overview</h2>
+<h3>The tasks, in order</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Title</th>
+<th>Criterion / strand</th>
+<th>You finish with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The design project, its rules and your product</td>
+<td>All — requirements, limits, academic integrity</td>
+<td>A 100-word project proposal</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The primary persona</td>
+<td>A — analyse a primary persona</td>
+<td>Research plan and persona profile draft</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Task analysis and storyboard</td>
+<td>A — storyboard from observation</td>
+<td>Task-analysis table and storyboard plan</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Analysing existing products</td>
+<td>A — analyse existing products</td>
+<td>Comparison matrix of four to six products</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The problem statement</td>
+<td>B — problem statement</td>
+<td>Draft problem statement</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The design specification</td>
+<td>B — design specification</td>
+<td>Specification table</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Generating feasible redesign ideas</td>
+<td>C — present feasible ideas</td>
+<td>Three developed ideas</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Testing and evaluating ideas</td>
+<td>C — evaluate against the specification and user feedback</td>
+<td>Evaluation matrix and chosen idea</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Iterative fidelity modelling and testing</td>
+<td>D — fidelity models and test cycles</td>
+<td>Model–test–refine plan and test log</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Design drawings for a manufacturer</td>
+<td>D — design drawings</td>
+<td>First formal drawing</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Presenting the solution and comparing it with the original</td>
+<td>E — both strands</td>
+<td>Comparison table and presentation plan</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Final check and self-assessment</td>
+<td>All criteria</td>
+<td>Limits audit and self-assessed marks</td>
+</tr>
+</tbody>
+</table>
+<h3>The marks and the limits</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Marks</th>
+<th>Approx. A4 pages</th>
+<th>Recommended words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A — Empathize</td>
+<td>9</td>
+<td>9</td>
+<td>900</td>
+</tr>
+<tr>
+<td>B — Defining the project</td>
+<td>6</td>
+<td>4</td>
+<td>1,200</td>
+</tr>
+<tr>
+<td>C — Ideation and modelling</td>
+<td>6</td>
+<td>8</td>
+<td>900</td>
+</tr>
+<tr>
+<td>D — Designing a solution</td>
+<td>6</td>
+<td>10</td>
+<td>300</td>
+</tr>
+<tr>
+<td>E — Presenting a solution</td>
+<td>6</td>
+<td>4</td>
+<td>200</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>33</strong></td>
+<td><strong>35 (maximum)</strong></td>
+<td><strong>3,500 (maximum)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Anything beyond 35 A4 pages or 3,500 words is not read. Annotations of 10 words or fewer do not count towards the words, and sources are referenced as footnotes on the page.</p>
+<h3>The exemplars</h3>
+<p>Your teacher shares twelve exemplar projects. Each comes with its marks and the moderator's comments — read the comments, not just the marks: they say why each mark was given.</p>
+<table>
+<thead>
+<tr>
+<th>Exemplar</th>
+<th>A /9</th>
+<th>B /6</th>
+<th>C /6</th>
+<th>D /6</th>
+<th>E /6</th>
+<th>Total /33</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Stand Up Desk</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>14</td>
+</tr>
+<tr>
+<td>02 Water Carrier</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>03 Stand Up Desk V2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+<td>14</td>
+</tr>
+<tr>
+<td>04 Bending Bar</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>19</td>
+</tr>
+<tr>
+<td>05 Easy On Pants</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>21</td>
+</tr>
+<tr>
+<td>06 Massage Tool</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>17</td>
+</tr>
+<tr>
+<td>07 Capsule Toy</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr>
+<td>08 Prosthetics</td>
+<td>8</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>09 Disability Desk</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>16</td>
+</tr>
+<tr>
+<td>10 Math Playset</td>
+<td>6</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>11 Trowel</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>24</td>
+</tr>
+<tr>
+<td>12 Drone Racing Tool</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p>All twelve tasks are written for you working alone with the <em>Design technology guide</em>, the exemplars and your own project. Your teacher reads and comments on <strong>one complete draft</strong>; these tasks are how you get it ready.</p>
+<h3>Task 1 — The design project, its rules and your product</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Describe what the design project asks you to do and how it is assessed.</li>
+<li>State the limits that cost marks: 35 A4 pages, 3,500 words, annotations of 10 words or fewer.</li>
+<li>Explain what academic integrity means for the project, including the single teacher-read draft.</li>
+<li>Choose an existing product, a primary persona and a task that give a project of the right complexity.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> what the design project is (10) · the rules that cost marks (10) · a high- and a low-scoring exemplar (10) · choose your product, persona and task (17) · exit task (8).</p>
+<h4>1. What the design project is</h4>
+<p>The internal assessment is one design project: an open-ended task in which you identify, analyse, evaluate and redesign an existing product to meet the needs of an intended user. As part of it you develop a physical fidelity model for testing and evaluation.</p>
+<p>You work through the design thinking process: <strong>empathize, define, ideate, prototype and test</strong>. It is iterative, not a straight line — you are expected to go back and repeat stages as you learn more about your user.</p>
+<p>Open the <em>Design technology guide</em> at the Internal assessment section (pages 70–83) and read "Internal assessment details" and "Features of the design project". Note the meaning of these key terms: primary persona, task analysis, redesign, qualitative research, quantitative research, annotations, appendices.</p>
+<h4>2. The rules that cost marks</h4>
+<ul>
+<li><strong>35 A4 pages and 3,500 words at most.</strong> The examiner stops reading at the limit; nothing after it earns marks.</li>
+<li><strong>A4 portrait throughout</strong> — the only exception is the detailed dimension drawings in criterion D.</li>
+<li><strong>Annotations of 10 words or fewer.</strong> They must be legible (typed, or clear handwriting equivalent to Arial 11 pt, black ink). A longer annotation counts as description and goes into your word count.</li>
+<li><strong>No front cover, contents page or appendices</strong> are needed — examiners do not read them. Anything that matters must be in the body of the project.</li>
+<li><strong>Reference every source as a footnote on the page.</strong> Footnotes do not count towards the words and no reference list is needed. A missing reference is treated as academic malpractice.</li>
+<li><strong>Your teacher reads one draft.</strong> They advise but do not edit, and the next version you hand in is your final submission — so make the draft complete.</li>
+<li><strong>Collaboration is not collusion.</strong> Interviewing users and asking for feedback is expected; the writing, the design decisions and the images must be your own.</li>
+</ul>
+<h4>3. Look at the finished article</h4>
+<ul>
+<li><strong>08 Prosthetics</strong> — 30/33, the strongest example. Page through it and note how the 35 pages are shared between criteria A to E.</li>
+<li><strong>12 Drone Racing Tool</strong> — 14/33. Read its commentary: which criteria lost the most marks, and why?</li>
+</ul>
+<p>Write down three differences you can see between the two projects.</p>
+<h4>4. Choose your product, persona and task</h4>
+<p>The guide warns that a simple problem with an overly complex solution is unlikely to reach the higher bands. Choose a product whose redesign has DP-level complexity, and a solution you can model physically. A good choice has:</p>
+<ul>
+<li>a real, existing product you can get hold of, test and photograph (a digital product may be analysed only when the physical one is not available — and not its UI or UX);</li>
+<li>a real primary persona you can observe, interview and photograph using it — not an imagined character;</li>
+<li>a specific task the persona performs with the product, with difficulties you can see;</li>
+<li>four to six similar products you can test and compare;</li>
+<li>enough parts, materials or mechanisms to give you real design decisions to make.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Your answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product I will redesign</td>
+<td></td>
+</tr>
+<tr>
+<td>Primary persona (who, age, context)</td>
+<td></td>
+</tr>
+<tr>
+<td>Task they perform with it</td>
+<td></td>
+</tr>
+<tr>
+<td>Problems I have already noticed</td>
+<td></td>
+</tr>
+<tr>
+<td>Similar products I can test (4–6)</td>
+<td></td>
+</tr>
+<tr>
+<td>Model I could build (materials, tools)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>5. Exit task</h4>
+<p>Write a <strong>100-word project proposal</strong>: the product, the primary persona, the task, the problem you have noticed, and why the redesign is worth doing. Keep it — it is the starting point for criteria A and B, and something to show your teacher.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>design thinking process explained</td>
+<td>IDEO U, Stanford d.school</td>
+<td>Section 1 — the five stages</td>
+</tr>
+<tr>
+<td>what is user centered design</td>
+<td>NNgroup</td>
+<td>Section 1 — why the user comes first</td>
+</tr>
+<tr>
+<td>IB design technology internal assessment 2027</td>
+<td>teacher channels — preview first</td>
+<td>Section 2 — check anything they say against the guide</td>
+</tr>
+</tbody>
+</table>
+<p>Search these phrases on YouTube rather than following fixed links, which go stale. Where no channel is named, preview a result before relying on it. Where a video and the <em>Design technology guide</em> disagree, the guide wins.</p>
+</section>
+<section class="tab-panel">
+<h2>Criterion A — Empathize (9 marks)</h2>
+<p>About 9 pages and 900 words. Criterion A asks you to understand your user before you design anything, in three strands: analyse a <strong>primary persona</strong>, present a <strong>storyboard</strong> from observing them use the product, and analyse <strong>existing products</strong>. Tasks 2, 3 and 4 take them in that order.</p>
+<h3>Task 2 — The primary persona</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Explain who your primary persona is and why they suit the redesign of the product.</li>
+<li>Plan qualitative and quantitative research into the persona's needs and behaviours.</li>
+<li>Record the persona's characteristics, context, preferences, motivations and requirements.</li>
+<li>Capture images of the persona that show their issues with the existing product.</li>
+</ul>
+<h4>1. What the criterion asks</h4>
+<p>Criterion A: Empathize is worth 9 marks (about 9 pages and 900 words). Its first strand asks you to <strong>analyse a primary persona appropriate to the redesign of the product</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td><strong>states</strong> a primary persona suited to the redesign</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td><strong>describes</strong> that persona</td>
+</tr>
+<tr>
+<td>7–9</td>
+<td><strong>explains</strong> that persona — why each characteristic matters for the redesign</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> a range of digital images of the primary persona showing their issues with an existing product, and an explanation of the persona's characteristics, context, preferences, motivations and requirements — in about <strong>two A4 pages</strong>.</p>
+<p>Watch the command terms: states → describes → explains. To reach 7–9 you must say <strong>why</strong> each characteristic matters for this product, not just list it.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics (A 8/9)</strong> — what research evidence supports each claim about the user? Two personas, each with clear goals, frustrations and needs; interviews behind every need; real photographs showing the difficulty; and further research with a secondary persona and with specialists.</li>
+<li><strong>10 Math Playset (A 6/9)</strong> — how are photographs of the real user used? A full profile — background, skills, motivation, goals and frustrations — built around the real users.</li>
+<li><strong>01 Stand Up Desk (A 2/9)</strong> — read the comments: the personas were fictional, with no research behind them, and AI-generated images replaced real observation of the user. <strong>Be warned about doing this!</strong></li>
+</ul>
+<p>One high-scoring exemplar uses more pages than the guide suggests for the persona. That is acceptable as long as the whole project stays within its page count and word limit.</p>
+<h4>3. Plan your research</h4>
+<p>The guide expects <strong>qualitative and quantitative research</strong> into the persona's needs, motivations, behaviours and experiences. Plan all three methods now:</p>
+<ul>
+<li><strong>Interview (qualitative):</strong> write eight open questions about how, when and why they use the product and what frustrates them. Avoid questions that can be answered yes or no.</li>
+<li><strong>Survey (quantitative):</strong> write six closed or rating-scale questions for ten or more people like your persona, so your claims have numbers behind them.</li>
+<li><strong>Observation:</strong> decide when you will watch — and, with permission, photograph — the persona using the product.</li>
+<li><strong>Permission:</strong> ask before photographing anyone, and keep personal details out of the report where they are not needed.</li>
+</ul>
+<h4>4. Draft the persona profile</h4>
+<p>Fill in what you know now, and mark what still needs evidence from your research.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>What I know</th>
+<th>Evidence / source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demographics — age, education, occupation, family status, access challenges</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Abilities and skills</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Behaviour patterns and attitudes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Goals, concerns and needs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Physical, social and technological environment</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Motivations and preferences</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>What they require from the product</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>☐ The persona is a real person I can observe and photograph</li>
+<li>☐ Every statement about them is backed by research evidence</li>
+<li>☐ I explain why each characteristic matters for the redesign</li>
+<li>☐ I have several images showing their issues with the existing product</li>
+</ul>
+<h4>5. Commencement task</h4>
+<p>Write the opening paragraph of your persona analysis (80–120 words): who the persona is and why their characteristics make the existing product difficult for them. Use at least one piece of evidence.</p>
+<h3>Task 3 — Task analysis and storyboard</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Break the persona's use of the product into a sequence of steps (a task analysis).</li>
+<li>Identify the difficulty at each step from real observation.</li>
+<li>Plan a storyboard that shows those issues visually, without extended writing.</li>
+<li>Turn the difficulties you find into opportunities for redesign.</li>
+</ul>
+<h4>1. What the criterion asks</h4>
+<p>The second strand of criterion A asks you to <strong>present a storyboard based on the observations of a primary persona using a product for a specific task</strong>. A task analysis is a way of building empathy: understanding how users perform a task to reach their goal.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/YUcRylAKFcw" title="IBDT: A2 - Presents a Storyboard" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion A2: presenting a storyboard &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=YUcRylAKFcw" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>a storyboard based on a <strong>limited</strong> task analysis</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>a <strong>satisfactory</strong> storyboard based on a task analysis</td>
+</tr>
+<tr>
+<td>7–9</td>
+<td>a <strong>detailed</strong> storyboard based on a <strong>comprehensive</strong> task analysis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> a storyboard for the chosen primary persona that highlights the issues of using the product. Extended writing should not be included. About <strong>three A4 pages</strong>.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics (A 8/9)</strong> — how many frames are there, and how is each issue made visible?</li>
+<li><strong>01 Stand Up Desk (A 2/9)</strong> — the comments: AI-generated imagery was used instead of real observation of the user carrying out the task.</li>
+</ul>
+<h4>3. Task analysis</h4>
+<p>Watch the persona perform the task from start to finish (or recall it now and check it by observing later). Record every step.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What the persona does</th>
+<th>Difficulty observed</th>
+<th>Evidence (photo, quote, measurement)</th>
+<th>Redesign opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Be specific: "grip slips when hands are wet", not "hard to hold". Time the steps, and measure forces, reaches or distances where you can — numbers make the analysis comprehensive.</p>
+<h4>4. Plan the storyboard</h4>
+<p>A storyboard shows the stages of the persona completing the task, in order, with the challenges they meet. Plan six to nine frames: each is one photograph or sketch, a caption, and a clear marker on the problem.</p>
+<ul>
+<li>☐ Every frame comes from an observed step, with real photographs where possible</li>
+<li>☐ The issues are highlighted visually — circles, arrows, icons</li>
+<li>☐ Captions and annotations only — no paragraphs, 10 words or fewer each</li>
+<li>☐ It fits in about three A4 pages</li>
+</ul>
+<h4>5. Exit task</h4>
+<p>Choose the single most important difficulty from your task analysis and write two sentences: what happens, and what redesign opportunity it creates. It becomes the heart of your problem statement in the next step of your project.</p>
+<h3>Task 4 — Analysing existing products</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Select a range of four to six existing products relevant to your redesign.</li>
+<li>Test and analyse their form, function, materials, aesthetics, ergonomics, manufacture, environment and safety.</li>
+<li>Identify the successes and weaknesses of every key feature.</li>
+<li>Present the analysis as annotated images of product testing.</li>
+</ul>
+<h4>1. What the criterion asks</h4>
+<p>The third strand of criterion A asks you to <strong>analyse existing products and the successes and weaknesses of key features</strong>.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/o2aiMmwVAZQ" title="IBDT: A3 - Existing Products" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion A3: existing products &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=o2aiMmwVAZQ" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td><strong>outlines</strong> a limited range of existing products and lists their key features</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td><strong>describes</strong> a range of existing products, with the successes and weaknesses of <strong>some</strong> key features</td>
+</tr>
+<tr>
+<td>7–9</td>
+<td><strong>evaluates</strong> a range of existing products, accurately judging the successes and weaknesses of <strong>all</strong> key features</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> annotated images of the product testing — a typical range is four to six products — in about <strong>four A4 pages</strong>. The guide suggests comparing: the success of the products' form and functionality; materials and components; aesthetics and ergonomic features; manufacturing and construction techniques; environmental and safety considerations.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics (A 8/9)</strong> — notice that products are tested, not just described.</li>
+<li><strong>02 Water Carrier and 05 Easy On Pants (A 5/9)</strong> — which key features are judged, and which are only listed?</li>
+</ul>
+<h4>3. Choose the products and key features</h4>
+<p>Pick four to six products, including the one you are redesigning. List five to eight key features that matter to your persona — take them from the difficulties in your task analysis (Task 3).</p>
+<h4>4. Test and compare</h4>
+<p>Test, don't just look: time it, weigh it, measure it, try it with your persona, and photograph each test. Record a success (✓) or weakness (✗) with the reason.</p>
+<table>
+<thead>
+<tr>
+<th>Key feature</th>
+<th>Product 1</th>
+<th>Product 2</th>
+<th>Product 3</th>
+<th>Product 4</th>
+<th>Product 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>5. Self-check</h4>
+<ul>
+<li>☐ Four to six products are compared</li>
+<li>☐ Every key feature is judged for every product</li>
+<li>☐ Each judgement is backed by a test or observation</li>
+<li>☐ Images show testing, not catalogue photographs</li>
+<li>☐ Annotations are 10 words or fewer</li>
+</ul>
+<h4>6. Exit task</h4>
+<p>Write the conclusion to your product analysis (60–100 words): which features succeed, which fail, and what your redesign must therefore do better.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product teardown</td>
+<td>iFixit</td>
+<td>Section 4 — looking inside a product</td>
+</tr>
+<tr>
+<td>ergonomics in product design</td>
+<td>preview first</td>
+<td>Section 3 — choosing key features</td>
+</tr>
+<tr>
+<td>competitive analysis product design</td>
+<td>preview first</td>
+<td>Section 4 — building the matrix</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-panel">
+<h2>Criterion B — Defining the project (6 marks)</h2>
+<p>About 4 pages and 1,200 words. Criterion B turns what you found in criterion A into a brief: a <strong>problem statement</strong> (Task 5) and a <strong>design specification</strong> (Task 6).</p>
+<h3>Task 5 — The problem statement</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Synthesize your qualitative and quantitative findings into one concise problem statement.</li>
+<li>Present the current situation, the current problem and the research that justifies it.</li>
+<li>Link the problem clearly to your task analysis and to opportunities for redesign.</li>
+<li>Refine the statement as new evidence arrives.</li>
+</ul>
+<h4>1. What the criterion asks</h4>
+<p>Criterion B: Defining the project is worth 6 marks (about 4 pages and 1,200 words). Its first strand asks you to <strong>produce a problem statement that identifies opportunities for the redesign of the product through the task analysis</strong>.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/aizPUi7Lwdg" title="IBDT: B1 - Produce a Problem Statement" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion B1: producing a problem statement &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=aizPUi7Lwdg" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td><strong>presents</strong> a problem statement with <strong>limited</strong> opportunities for the redesign; the links to the task analysis are superficial</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td><strong>describes</strong> a problem statement with <strong>some</strong> opportunities, informed by the task analysis</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td><strong>explains</strong> a problem statement with <strong>key</strong> opportunities, informed by the task analysis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> a problem statement which includes the current situation, the current problem and a summary of the research that shows the problem is the right one — in about <strong>one A4 page</strong>.</p>
+<h4>2. Draft the problem statement</h4>
+<p>Use this structure, one short paragraph each:</p>
+<ul>
+<li><strong>Current situation</strong> — who the persona is, the product and the task, and the context.</li>
+<li><strong>Current problem</strong> — the specific difficulties from your task analysis, with evidence.</li>
+<li><strong>Why it matters</strong> — the impact on the persona, with numbers from your survey.</li>
+<li><strong>Opportunity</strong> — what a redesign could change (do not design the solution yet).</li>
+</ul>
+<p>Sentence starters: "Currently, [persona] uses [product] to [task]…" · "The task analysis showed that at [step], [difficulty], because…" · "Survey results show that [x of y] users…" · "This creates an opportunity to redesign [feature] so that…"</p>
+<ul>
+<li>☐ Situation, problem and research summary are all present</li>
+<li>☐ Every claim can be traced to evidence from Tasks 2–4</li>
+<li>☐ It explains why, rather than just stating what</li>
+<li>☐ It identifies opportunities, not a finished solution</li>
+<li>☐ It fits in about one page</li>
+</ul>
+<h4>3. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics and 11 Trowel (B 5/6)</strong> — find the problem statement and mark the situation, the problem and the research. The moderator's comments on the 5/6: the student pinpointed the areas for redesign through a suitable task analysis and set out the situation and the problem clearly, but showed too little research to prove the problem was the right one — more research would have given the redesign a firmer footing.</li>
+<li><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: some opportunities are described with some primary and secondary research, but the links to the task analysis are superficial, there is little evidence of a real user, and testing and feedback are not shown.</li>
+</ul>
+<h4>4. Synthesize</h4>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Source (interview, survey, observation, product test)</th>
+<th>What it tells me</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Task 6 — The design specification</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Turn research findings into essential and desirable requirements.</li>
+<li>Justify each requirement with a reference to your research, including UX from your product analysis.</li>
+<li>Cover every relevant aspect: attributes, components, constraints, environment, functions, user needs, safety, aesthetics, manufacture.</li>
+<li>Write requirements that you can test later.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> the specification strand (10) · exemplar specifications (8) · build the specification table (27) · self-check (5) · exit task (5).</p>
+<h4>1. What the criterion asks</h4>
+<p>The second strand of criterion B asks you to <strong>produce product design specifications with reference to research</strong> — including the UI and UX points that came out of your existing-product analysis in criterion A.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/LU95T9xzPNY" title="IBDT: B2 Specification" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion B2: the specification &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=LU95T9xzPNY" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td><strong>states</strong> the requirements, with <strong>limited</strong> reference to the research</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td><strong>outlines</strong> the requirements, with <strong>relevant</strong> reference to the research</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td><strong>explains</strong> the requirements, with <strong>relevant and detailed</strong> reference to the research</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> a design specification that captures both <strong>essential and desirable</strong> requirements, so that the redesigned product meets the needs of the intended user — in about <strong>three A4 pages</strong>. The guide asks you to prioritise the essential and desirable requirements and to justify them with references to your sources.</p>
+<h4>2. How to plan and write your specification</h4>
+<p>A design specification is the <strong>success criteria</strong> for your product. It lists what the product <strong>must</strong> and <strong>should</strong> do to meet the user's needs and solve the problem.</p>
+<p><strong>Essential or desirable?</strong> Take an IA that redesigns the stabilisers on a child's bicycle. The essential parts of the bicycle are the frame, wheels, tyres, brakes, handlebars, seat, pedals, chain, sprockets and drivetrain, and fork. The desirable ones include a red frame, rubber handle grips, a padded seat, a lightweight frame, a bottle holder, a basket, mudguards, a bell, reflectors and a kickstand. Your specification makes the same split for the product you are redesigning.</p>
+<p><strong>State, outline, explain — one requirement written three ways.</strong> The same specification point (attributes, essential) at each mark band:</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Requirement</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State (1–2)</td>
+<td>1.1 Lightweight (E)</td>
+<td>So the bicycle is not heavy.</td>
+</tr>
+<tr>
+<td>Outline (3–4)</td>
+<td>1.1 The product should be lightweight (E)</td>
+<td>From the client interview (fig 1.1), the user said they do not want the bicycle to feel heavy or harder to control. This means the stabilisers should be lightweight.</td>
+</tr>
+<tr>
+<td>Explain (5–6)</td>
+<td>1.1 The stabilisers should not add more than 2 kg to the bicycle (E)</td>
+<td>From the client interview (fig 1.1), the user said they want the bicycle to stay easy to control and not feel noticeably heavier. The task analysis (fig 2.1) backed this up: balance and control were key user needs. The product analysis (fig 3.1) of similar stabilisers showed that lightweight supports work better, because extra mass makes the bicycle harder to steer and the rider less confident. Therefore the redesigned stabilisers should add no more than 2 kg to the bicycle.</td>
+</tr>
+</tbody>
+</table>
+<p>The explained version is measurable, it is marked essential, and every reason points to a piece of research.</p>
+<p><strong>Question prompts for each specification point</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spec point</th>
+<th>Question prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attributes</td>
+<td>What qualities should the product have? Should it be lightweight, stable, discreet, adjustable, compact, durable, foldable, portable, water-resistant, or easy to clean? Which qualities came from the persona, storyboard, or product analysis?</td>
+</tr>
+<tr>
+<td>Components</td>
+<td>What individual parts or elements are needed? Does it need nuts/bolts, clips, hinges, handles, supports, rails, grips, brackets, holders, pads, pivots, or fasteners? Which components in existing products worked well or poorly?</td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td>What limits the design? Think about budget, space, size limits, user strength, surrounding furniture/environment, available tools, materials, workshop processes, time, or installation restrictions.</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Where will the product be used? Indoors, outdoors, wet, humid, dusty, hot, bathroom, bedroom, desk, car, workshop? How should that affect the design?</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>What must the product do? What is its main function? Are there any secondary functions? What must it do better than the current product?</td>
+</tr>
+<tr>
+<td>User needs</td>
+<td>What does the user specifically need from the product? What must improve in terms of comfort, speed, convenience, support, access, or usability? What came directly from the interview, storyboard, or task analysis?</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>What hazards must be avoided? Could the user slip, strain, cut themselves, burn themselves, trap fingers, lose balance, or damage property?</td>
+</tr>
+<tr>
+<td>Aesthetics</td>
+<td>What should it look like? Consider colour, shape, finish, texture, style, and whether it should be discreet, modern, minimal, sporty, or neutral.</td>
+</tr>
+<tr>
+<td>Manufacture requirements</td>
+<td>How could the product realistically be made? What materials and processes are suitable? Does it need to be 3D printed, laser cut, bent, moulded, sewn, assembled, or batch produced?</td>
+</tr>
+<tr>
+<td>Ergonomics / anthropometrics</td>
+<td>What posture, grip, reach, clearance, work envelope, or body measurements matter? Does it need to suit a percentile range or be adjustable?</td>
+</tr>
+<tr>
+<td>Size / dimensions</td>
+<td>What exact dimensions must it fit within? What surrounding measurements matter, such as desk, armrest, shelf, bed, bag, or wall space?</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>How heavy can it be before it becomes inconvenient or uncomfortable? Did the user mention a weight preference or limit?</td>
+</tr>
+<tr>
+<td>Materials</td>
+<td>What properties are needed? Consider strength, stiffness, softness, grip, corrosion resistance, water resistance, flammability, hygiene, and durability.</td>
+</tr>
+<tr>
+<td>Stability</td>
+<td>Must the product resist slipping, tipping, bending, wobbling, or shifting? What evidence showed this was important?</td>
+</tr>
+<tr>
+<td>Durability / maintenance</td>
+<td>How long should it last? Does it need to survive repeated use, moisture, impact, or cleaning? Should it be easy to maintain or repair?</td>
+</tr>
+<tr>
+<td>Sustainability</td>
+<td>Can the design reduce waste, use fewer materials, be repaired, be disassembled, or use recyclable/reusable materials?</td>
+</tr>
+<tr>
+<td>Cost / value</td>
+<td>Is there a target price? Would the user accept a higher cost for better quality, safety, or comfort?</td>
+</tr>
+<tr>
+<td>UX</td>
+<td>What should the experience of using the product be like from start to finish? Should it be quick, intuitive, low effort, comfortable, and easy to set up or store?</td>
+</tr>
+</tbody>
+</table>
+<h4>3. Learn from the exemplars</h4>
+<ul>
+<li><strong>11 Trowel (B 5/6)</strong> — how is each requirement justified?</li>
+<li><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: essential and desirable requirements were not distinguished, and missing evidence made the justifications weak.</li>
+</ul>
+<h4>4. Build the specification table</h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Requirement (measurable)</th>
+<th>Essential or desirable</th>
+<th>Justification — research reference</th>
+<th>How it will be tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attributes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Components</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Environment</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Functions</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>User needs</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Safety</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aesthetics</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Manufacture requirements</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Make it measurable:</strong> "handle diameter 30–40 mm", not "comfortable".</li>
+<li><strong>Reference your own research</strong> — "(interview, question 3)", "(survey Q4: 70% of users)", "(product test 2)" — and footnote secondary sources such as anthropometric data.</li>
+<li><strong>Include the UX points</strong> that came out of your product analysis in Task 4.</li>
+</ul>
+<h4>5. Self-check</h4>
+<ul>
+<li>☐ Every requirement is measurable</li>
+<li>☐ Each is marked essential or desirable</li>
+<li>☐ Each is justified by research</li>
+<li>☐ Each has a test you will run in criteria C and D</li>
+<li>☐ UX from the product analysis is included</li>
+</ul>
+<h4>6. Exit task</h4>
+<p>Pick your three most important essential requirements and write one sentence for each explaining why the persona needs it.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product design specification</td>
+<td>preview first</td>
+<td>Section 3 — what a specification contains</td>
+</tr>
+<tr>
+<td>MoSCoW prioritisation</td>
+<td>preview first</td>
+<td>Section 3 — essential versus desirable</td>
+</tr>
+<tr>
+<td>anthropometric data in design</td>
+<td>preview first</td>
+<td>Section 3 — measurable user needs</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-panel">
+<h2>Criterion C — Ideation and modelling (6 marks)</h2>
+<p>About 8 pages and 900 words. Criterion C asks you to <strong>present feasible redesign ideas</strong> (Task 7) and <strong>evaluate them against your specification</strong> through testing and user feedback (Task 8).</p>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td><strong>fewer than three</strong> annotated, feasible ideas with limited key features · <strong>states</strong> the differences between the ideas against the specification</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>the <strong>three</strong> best annotated, feasible ideas, covering <strong>some</strong> key features · <strong>describes</strong> the differences between them against the specification</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>the <strong>three</strong> best annotated, feasible ideas, covering <strong>all</strong> key features · <strong>evaluates</strong> the ideas against the specification through testing and user feedback</td>
+</tr>
+</tbody>
+</table>
+<h3>Task 7 — Generating feasible redesign ideas</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Generate a range of feasible redesign ideas that address your problem statement.</li>
+<li>Communicate ideas with sketches, drawings, CAD, images and fidelity models.</li>
+<li>Annotate concisely — 10 words or fewer per annotation.</li>
+<li>Show how research and user feedback drive the development of each idea.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> the ideation strand (8) · exemplar ideas pages (8) · rapid ideation, ten thumbnails (10) · develop your three best ideas (20) · annotation practice (4) · exit task (5).</p>
+<h4>1. What the criterion asks</h4>
+<p>The first strand of criterion C asks you to <strong>present a range of annotated, feasible redesign ideas, in an appropriate medium, that address the problem statement and can be interpreted by others</strong>.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/H4vlYFh7_Ss" title="IBDT: Criterion C" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion C: ideation and modelling &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=H4vlYFh7_Ss" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<p><strong>Required evidence:</strong> a range of feasible ideas communicated using sketches, drawings, CAD, images and fidelity models (one to two A4 pages per idea); the additional research and/or feedback that drives the iterative development of the ideas, highlighted; annotations — in about <strong>six A4 pages</strong>.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics (C 6/6)</strong> — how are the three ideas developed with models and feedback? The moderator's comments: five ideas were presented, each annotated with strengths, weaknesses and user feedback and supported by physical models and user testing; each idea was scored against the specification point by point; and the ideas were narrowed to the three most convincing, with justified annotations, before one was chosen for criterion D.</li>
+</ul>
+<h4>3. Rapid ideation</h4>
+<p>Sketch <strong>ten thumbnail ideas in ten minutes</strong>, each tackling a different opportunity from your problem statement. Do not judge them yet.</p>
+<h4>4. Develop your three best ideas</h4>
+<p>Choose the three ideas that best meet your essential requirements. Give each its own page: a clear sketch or CAD view, a quick low-fidelity model (card, foam, clay) and a note of the research or feedback that changed it.</p>
+<table>
+<thead>
+<tr>
+<th>Idea</th>
+<th>Key features addressed</th>
+<th>Specification points met</th>
+<th>Model made</th>
+<th>Feedback received</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>5. Annotation practice</h4>
+<p>"This handle has been made thicker so that people with arthritis can grip it more easily" is 17 words — it counts as description. "Thicker 35 mm handle eases arthritic grip" is 7. Rewrite three of your own annotations to 10 words or fewer.</p>
+<ul>
+<li>☐ Three best ideas, one to two pages each</li>
+<li>☐ Every key feature is covered</li>
+<li>☐ Models are shown, not only sketches</li>
+<li>☐ Annotations are 10 words or fewer</li>
+<li>☐ Feedback visibly drives changes</li>
+</ul>
+<h4>6. Exit task</h4>
+<p>For each of your three ideas, write one sentence: which opportunity from your problem statement it tackles, and how.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product design sketching for beginners</td>
+<td>industrial design channels — preview first</td>
+<td>Sections 3 and 4</td>
+</tr>
+<tr>
+<td>low fidelity prototyping</td>
+<td>IDEO U, Stanford d.school</td>
+<td>Section 4 — quick models</td>
+</tr>
+<tr>
+<td>how to annotate design sketches</td>
+<td>preview first</td>
+<td>Section 5</td>
+</tr>
+</tbody>
+</table>
+<h3>Task 8 — Testing and evaluating ideas</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Test each redesign idea against the design specification.</li>
+<li>Gather and use feedback from the intended user.</li>
+<li>Evaluate strengths and weaknesses to select the most suitable idea.</li>
+<li>Present an annotated presentation drawing of the selected idea.</li>
+</ul>
+<h4>1. What the criterion asks</h4>
+<p>The second strand of criterion C asks you to <strong>evaluate the redesign ideas against the design specifications through testing and user feedback</strong> — the top band evaluates; lower bands only describe or state the differences.</p>
+<p><strong>Required evidence:</strong> an annotated presentation drawing of the feasible redesign idea, tested against the design specifications and user feedback — about <strong>two A4 pages</strong>. The chosen idea should be checked against both the performance requirements and the user's requirements.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics (C 6/6)</strong> — how is the chosen idea justified? Every idea was reviewed against the performance requirements, the user's requirements and the feedback, for all of the specification points, and a clear summary named the idea taken forward to criterion D.</li>
+</ul>
+<h4>3. Plan the tests and the feedback</h4>
+<p>For every essential requirement, decide how you will test it on your models. Plan how your persona will try each idea, and the three questions you will ask them afterwards.</p>
+<h4>4. Evaluation matrix</h4>
+<p>Score each idea 0–3 against each specification point, with the evidence that justifies the score.</p>
+<table>
+<thead>
+<tr>
+<th>Specification point</th>
+<th>Idea 1</th>
+<th>Idea 2</th>
+<th>Idea 3</th>
+<th>Evidence (test result, user feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>5. Choose and justify</h4>
+<p>Pick the idea that best meets the essential requirements and the user feedback. Note what you will carry into development, including any features worth borrowing from the other ideas.</p>
+<ul>
+<li>☐ Every idea was tested against the same specification points</li>
+<li>☐ Real user feedback is quoted</li>
+<li>☐ Strengths and weaknesses are both weighed</li>
+<li>☐ The choice is justified by evidence</li>
+<li>☐ The presentation drawing is annotated (10 words or fewer each)</li>
+</ul>
+<h4>6. Exit task</h4>
+<p>In 80–120 words, justify your chosen idea using at least two test results and one quotation from your user.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>usability testing 101</td>
+<td>NNgroup</td>
+<td>Section 3 — testing with users</td>
+</tr>
+<tr>
+<td>decision matrix</td>
+<td>preview first</td>
+<td>Section 4 — scoring ideas</td>
+</tr>
+<tr>
+<td>Pugh matrix</td>
+<td>preview first</td>
+<td>Section 4 — an alternative method</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-panel">
+<h2>Criterion D — Designing a solution (6 marks)</h2>
+<p>About 10 pages but only about 300 words — criterion D is mostly visual. It asks you to develop your chosen idea through <strong>iterative fidelity models</strong> (Task 9) and to produce <strong>design drawings</strong> a manufacturer could work from (Task 10).</p>
+<h3>Task 9 — Iterative fidelity modelling and testing</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Plan model–test–refine cycles for your chosen idea.</li>
+<li>Choose the right fidelity for each question you need to answer.</li>
+<li>Test against all the specification points and the persona's needs.</li>
+<li>Record each cycle with annotated images and short conclusions.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> the fidelity-modelling strand (8) · exemplar test cycles (7) · plan the cycles (15) · test log for cycle 1 (15) · self-check (5) · exit task (5).</p>
+<h4>1. What the criterion asks</h4>
+<p>The first strand of criterion D asks you to <strong>develop and annotate iterative fidelity models through multiple testing and refinement cycles, to arrive at the redesigned solution that addresses the problem statement, the design specifications and the needs of the intended user</strong>.</p>
+<figure class="video" style="margin: 20px 0 24px;">
+<iframe src="https://www.youtube-nocookie.com/embed/Ksjo__MmfXk" title="IBDT Criterion D" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 10px; background: #000;" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption style="font-size: 12px; color: #6e6e73; margin-top: 6px;">Video: IA Criterion D: designing a solution &middot; Mr Gaughan &middot; <a href="https://www.youtube.com/watch?v=Ksjo__MmfXk" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td>a fidelity model that <strong>partially</strong> addresses the problem statement, with <strong>limited</strong> testing against the specification and the user's needs</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>a fidelity model that <strong>satisfactorily</strong> addresses the problem statement, and <strong>outlines</strong> the testing against the specification and the user's needs</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>a fidelity model that <strong>thoroughly</strong> addresses the problem statement, and <strong>evaluates</strong> the testing against <strong>all</strong> of the specification and the user's needs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> annotated drawings — informal or formal design drawings or sketches, photographs of physical models, or CAD — of the repeated testing and refinement with the intended user, matched to the requirements in your specification, in about <strong>six A4 pages</strong>. Low-fidelity models are proof of concept and may test only one or two aspects; high-fidelity models can be tested against several specifications, with end-user feedback.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>08 Prosthetics, 07 Capsule Toy and 11 Trowel (D 6/6)</strong> — count the cycles. What changed each time, and why?</li>
+<li><strong>09 Disability Desk (D 3/6)</strong> — read the comments: what limited the testing?</li>
+</ul>
+<h4>3. Plan the cycles</h4>
+<table>
+<thead>
+<tr>
+<th>Cycle</th>
+<th>Fidelity and material</th>
+<th>Question it answers</th>
+<th>Specification points tested</th>
+<th>Who tests it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>4. Test log for cycle 1</h4>
+<table>
+<thead>
+<tr>
+<th>Specification point</th>
+<th>Test method</th>
+<th>Result (measured)</th>
+<th>User feedback</th>
+<th>Change for the next cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>5. Self-check</h4>
+<ul>
+<li>☐ At least three cycles are planned</li>
+<li>☐ Every specification point is tested by the end</li>
+<li>☐ Each change is traced to a test result or feedback</li>
+<li>☐ Every model and test is photographed</li>
+<li>☐ Annotations are 10 words or fewer; prose stays within about 300 words for the whole of criterion D</li>
+</ul>
+<h4>6. Exit task</h4>
+<p>Plan the page for cycle 1: which photographs you will use, and four to six annotations of 10 words or fewer.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prototyping design thinking</td>
+<td>IDEO U, Stanford d.school</td>
+<td>Section 3 — why iterate</td>
+</tr>
+<tr>
+<td>rapid prototyping techniques</td>
+<td>preview first</td>
+<td>Section 3 — materials and methods</td>
+</tr>
+<tr>
+<td>paper prototyping user testing</td>
+<td>NNgroup</td>
+<td>Section 4 — getting feedback on a model</td>
+</tr>
+</tbody>
+</table>
+<h3>Task 10 — Design drawings for a manufacturer</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Produce formal assembled, exploded and orthographic drawings of your final solution.</li>
+<li>Dimension the drawings so that a third-party manufacturer could make the product.</li>
+<li>Identify components, materials and assembly clearly.</li>
+<li>Annotate the drawings concisely.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> the design-drawings strand (8) · exemplar drawings at 6/6 (7) · list what a manufacturer needs (7) · produce your first formal drawing (26) · exit task (7).</p>
+<h4>1. What the criterion asks</h4>
+<p>The second strand of criterion D asks you to <strong>design drawings of the intended solution and its components that aid communication and visualization to a third-party manufacturer</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the drawings show</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td><strong>limited</strong> detail of the solution and its components</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td><strong>adequate</strong> detail of the solution and its components</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td><strong>comprehensive</strong> detail of the solution and its components</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> formal design drawings of the completed redesigned solution, and a range of formal assembled, exploded and orthographic annotated drawings — including dimensions, proportions and the assembly of the solution and its components. About one to two images per page, in about <strong>four A4 pages</strong>. These detailed dimension drawings are the one place the project may use landscape pages.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>07 Capsule Toy and 11 Trowel (D 6/6)</strong> — which views are included, and how are they dimensioned?</li>
+</ul>
+<h4>3. What the manufacturer needs</h4>
+<table>
+<thead>
+<tr>
+<th>Drawing</th>
+<th>Shows</th>
+<th>Done?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assembled view</td>
+<td>The complete product</td>
+<td></td>
+</tr>
+<tr>
+<td>Exploded view with parts list</td>
+<td>Every component and how it fits</td>
+<td></td>
+</tr>
+<tr>
+<td>Orthographic views (front, side, plan)</td>
+<td>Dimensions in mm, proportions</td>
+<td></td>
+</tr>
+<tr>
+<td>Component details</td>
+<td>Critical features, fixings, tolerances</td>
+<td></td>
+</tr>
+<tr>
+<td>Materials and finishes</td>
+<td>Callouts on the drawings</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>4. Produce your first formal drawing</h4>
+<p>Draw the orthographic views first — in CAD (Fusion, Onshape, SolidWorks) or by hand to scale. Dimension the overall sizes, key features and fixings in millimetres, and add a title block: name, scale, units and the third-angle projection symbol.</p>
+<ul>
+<li>☐ Assembled, exploded and orthographic views are all planned</li>
+<li>☐ Dimensions are in mm, with proportions shown</li>
+<li>☐ Every component is identified</li>
+<li>☐ One to two images per page</li>
+<li>☐ Someone else could make the product from these drawings</li>
+</ul>
+<h4>5. Exit task</h4>
+<p>Imagine you are the manufacturer. List three questions you would still need to ask after seeing the drawing — then add whatever answers them.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>third angle orthographic projection tutorial</td>
+<td>preview first</td>
+<td>Section 4 — laying out the views</td>
+</tr>
+<tr>
+<td>exploded view drawing Fusion 360</td>
+<td>Product Design Online, Autodesk Fusion</td>
+<td>Sections 3 and 4</td>
+</tr>
+<tr>
+<td>technical drawing dimensioning basics</td>
+<td>preview first</td>
+<td>Section 4</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-panel">
+<h2>Criterion E — Presenting a solution (6 marks)</h2>
+<p>About 4 pages and only about 200 words. Criterion E asks you to <strong>present the redesigned solution</strong> with its key features annotated, and to show <strong>how it compares with the existing product</strong> and solves the problems you identified (Task 11).</p>
+<h3>Task 11 — Presenting the solution and comparing it with the original</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Present the redesigned solution to a third-party manufacturer with its key features annotated.</li>
+<li>Choose visual methods that show the product clearly: perspective, exploded, cutaway, renders.</li>
+<li>Compare the solution with the existing product you started from.</li>
+<li>Show how the redesign addresses the problems identified for the persona.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> both strands of criterion E (8) · exemplars, high and low (7) · plan the presentation pages (15) · complete the comparison table (18) · exit task (7).</p>
+<h4>1. What the criterion asks</h4>
+<p>Criterion E: Presenting a solution is worth 6 marks (about 4 pages and only about 200 words). It asks you to <strong>present the intended redesigned solution and annotate its key features</strong>, and to <strong>present how using the redesigned solution compares with the existing product and how it addresses the problems you identified</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Marks</th>
+<th>What the work does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–2</td>
+<td><strong>limited</strong> annotation of the key features · simply sets the redesign beside the existing product</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td><strong>adequate</strong> annotation of the key features · compares with the existing product and addresses <strong>some</strong> of the problems</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td><strong>comprehensive</strong> annotation of the key features · compares with the existing product and <strong>comprehensively</strong> addresses the problems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Required evidence:</strong> the redesigned product with its key features annotated (about two to three images per page, <strong>two A4 pages</strong>), and a description of how your solution compares with the original product you set out to redesign (<strong>two A4 pages</strong>). The presentation itself — its style and medium — is not assessed.</p>
+<h4>2. Learn from the exemplars</h4>
+<ul>
+<li><strong>05 Easy On Pants and 08 Prosthetics (E 5/6)</strong> — how are the key features annotated, and how is the comparison made?</li>
+<li><strong>12 Drone Racing Tool and 10 Math Playset (E 2/6)</strong> — read the comments: what was missing?</li>
+</ul>
+<h4>3. Plan the presentation pages</h4>
+<p>List the key features to annotate — for example aesthetics, form, function, dimensions, components, materials, manufacturing processes and user experience — and choose the views that show them best: a perspective render, an exploded view, a cutaway, a photograph of the model in use.</p>
+<h4>4. Compare with the original</h4>
+<table>
+<thead>
+<tr>
+<th>Problem identified (Tasks 3 and 5)</th>
+<th>Existing product</th>
+<th>Redesigned solution</th>
+<th>Evidence that it works (test, feedback)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Then add: how the persona will use the solution, and why it suits them better than the product they started with.</p>
+<ul>
+<li>☐ Every key feature is annotated (10 words or fewer each)</li>
+<li>☐ Two to three images per page</li>
+<li>☐ Every identified problem is answered</li>
+<li>☐ Claims are backed by test results or user feedback</li>
+<li>☐ It fits in about four pages and 200 words</li>
+</ul>
+<h4>5. Exit task</h4>
+<p>Write your closing paragraph (100 words or fewer): the single biggest improvement for your persona, with the evidence that proves it.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fusion 360 rendering tutorial</td>
+<td>Product Design Online</td>
+<td>Section 3 — presentation views</td>
+</tr>
+<tr>
+<td>product design presentation board</td>
+<td>preview first</td>
+<td>Section 3 — page layout</td>
+</tr>
+<tr>
+<td>product redesign case study before and after</td>
+<td>preview first</td>
+<td>Section 4 — making the comparison</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tab-panel">
+<h2>Final check</h2>
+<p>Before your one draft goes to your teacher, check it against every limit and assess it against every criterion (Task 12).</p>
+<h3>Task 12 — Final check: limits, integrity and self-assessment</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Check the project against the page, word and annotation limits.</li>
+<li>Confirm every source is footnoted and the work is authentically your own.</li>
+<li>Self-assess each criterion using the best-fit approach.</li>
+<li>Prepare your one draft for your teacher's feedback.</li>
+</ul>
+<p><strong>Time plan (55 min):</strong> audit the limits (10) · referencing and academic integrity (10) · self-assess criteria A to E (25) · questions for your teacher (5) · exit task (5).</p>
+<h4>1. Audit the limits</h4>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Limit</th>
+<th>Mine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pages (A4 portrait, body only)</td>
+<td>35</td>
+<td></td>
+</tr>
+<tr>
+<td>Words (excluding annotations and footnotes)</td>
+<td>3,500</td>
+<td></td>
+</tr>
+<tr>
+<td>Longest annotation</td>
+<td>10 words</td>
+<td></td>
+</tr>
+<tr>
+<td>Criterion A — pages / words</td>
+<td>≈ 9 / 900</td>
+<td></td>
+</tr>
+<tr>
+<td>Criterion B — pages / words</td>
+<td>≈ 4 / 1,200</td>
+<td></td>
+</tr>
+<tr>
+<td>Criterion C — pages / words</td>
+<td>≈ 8 / 900</td>
+<td></td>
+</tr>
+<tr>
+<td>Criterion D — pages / words</td>
+<td>≈ 10 / 300</td>
+<td></td>
+</tr>
+<tr>
+<td>Criterion E — pages / words</td>
+<td>≈ 4 / 200</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Nothing beyond 35 pages or 3,500 words is read.</li>
+<li>Remove any front cover, contents page or appendix — examiners do not read them. Move anything important into the body.</li>
+</ul>
+<h4>2. Referencing and academic integrity</h4>
+<ul>
+<li>Every image, piece of data and idea from someone else is footnoted on the page where it appears.</li>
+<li>Photographs of your persona are your own and taken with permission — AI-generated images of "users" are not evidence.</li>
+<li>Interviews and user feedback are expected; the writing, decisions and drawings are yours.</li>
+<li>You will confirm that the work is authentic when you submit it — the final version cannot be withdrawn afterwards.</li>
+</ul>
+<h4>3. Self-assess criteria A to E</h4>
+<p>For each criterion, read the level descriptors from the bottom up and choose the one that fits your work best. It is not necessary for every part of a descriptor to be met — this is the IB's <strong>best-fit</strong> approach, and it is how your teacher will mark it.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Level that fits best</th>
+<th>Evidence (page numbers)</th>
+<th>What would move it up a level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A: Empathize (9)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B: Defining the project (6)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C: Ideation and modelling (6)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D: Designing a solution (6)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E: Presenting a solution (6)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>4. Questions for your teacher</h4>
+<p>Your teacher reads one draft and gives advice without editing it. Write three specific questions to hand in with it — for example: "Is my persona explained, or only described?" or "Does my specification refer to enough research?"</p>
+<h4>5. Exit task</h4>
+<p>List the three biggest improvements for your final version, with page numbers, and the date by which you will make them.</p>
+<h4>Video support</h4>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>academic integrity IB</td>
+<td>preview first</td>
+<td>Section 2</td>
+</tr>
+<tr>
+<td>how to insert footnotes in Word</td>
+<td>preview first</td>
+<td>Section 2 — referencing on the page</td>
+</tr>
+<tr>
+<td>word count excluding footnotes Word</td>
+<td>preview first</td>
+<td>Section 1 — checking the limit</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<div class="next-prev"><a href="C4.1-design-for-manufacture-strategies.html">&larr; C4.1 Design for manufacture strategies (HL)</a><a href="EE-extended-essay.html">Extended essay &rarr;</a></div>
+<div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
+</main>
+</div>
+</body>
+</html>
