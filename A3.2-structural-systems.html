@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -310,7 +322,11 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 - Reaction forces at supports or contact points</p>
 <p>Essential for analysing structural loading. Students should be able to draw free body diagrams for simple loaded members.</p>
 <h3>Practical challenge — cantilever beam</h3>
-<p>A classic workshop exercise: using 6mm plywood, screws, and glue, build the strongest cantilever beam that supports 2 kg at the free end without flexing. Weigh the structure to measure strength-to-weight ratio. Iterate through multiple designs documenting each change. Excellent for teaching structural optimisation hands-on.</p>
+<p>A classic workshop exercise: using 6mm plywood, screws, and glue, build the strongest cantilever beam that supports 2 kg at the free end without flexing. Weigh the structure to measure strength-to-weight ratio. Iterate through multiple designs documenting each change. Excellent for teaching structural optimisation hands-on.</p><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=dsl8WagJAWI" target="_blank" rel="noopener">IB DP Design Technology Topic A3.2 HL Young&#x27;s Modulus</a> — Aaron Thompson (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="A3.1-material-classification.html">&larr; A3.1 Material classification and properties</a><a href="A3.3-mechanical-systems.html">A3.3 Introduction to mechanical systems (HL) &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -286,7 +298,11 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <p><strong>3. Describe two factors a designer must consider when selecting a manufacturing process.</strong></p>
 <p><em>Volume: injection moulding, die casting, and stamping amortise expensive tooling over large runs; 3D printing, laser cutting, and CNC require no product-specific tooling and suit low volumes. Geometry: some processes cannot produce undercuts, thin walls, or complex internal features — for example, injection moulding needs draft angles for parts to release, while additive manufacturing can produce internal channels no subtractive process could reach.</em></p>
 <p><strong>4. Why are design-for-manufacture considerations best introduced early rather than late in the design process?</strong></p>
-<p><em>A design that ignores manufacturing constraints risks being unmakeable at production volumes — requiring expensive redesign near launch. Introducing DFM early lets designers select geometry, tolerances, and materials compatible with the intended process from the start, reducing cost, lead time, and scrap. Apple, for example, chooses materials and processes in parallel with industrial design; late-stage retrofitting of manufacturing would compromise their precise tolerances.</em></p>
+<p><em>A design that ignores manufacturing constraints risks being unmakeable at production volumes — requiring expensive redesign near launch. Introducing DFM early lets designers select geometry, tolerances, and materials compatible with the intended process from the start, reducing cost, lead time, and scrap. Apple, for example, chooses materials and processes in parallel with industrial design; late-stage retrofitting of manufacturing would compromise their precise tolerances.</em></p><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=SZ0YQsI_HhU" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.1 Manufacturing Techniques</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=Z0VXY9JcwZU" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.8 Forming Techniques</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=oA84d1-uY80" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.9 Joining Techniques</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=UPTLWvuG7z8" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.2 Additive Manufacturing</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=RRUBlrdP1EY" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.3 Additive Manufacturing: Prototyping vs Refined Product</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=UEZoKHFvy0Y" target="_blank" rel="noopener">IB DP Design Technology Topic A4 .1 .10 Finishing Techniques</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=X75G0aiWllc" target="_blank" rel="noopener">IB DP Design Technology Topic A4.1.7 HL Design in Theory</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=WvXpeE2_b24" target="_blank" rel="noopener">Unibody MacBook Introduction - Apple Special Event, October 2008</a> — Keynotes (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="A3.4-electronic-systems.html">&larr; A3.4 Introduction to electronic systems (HL)</a><a href="B1.1-user-centred-design.html">B1.1 User-centred design &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

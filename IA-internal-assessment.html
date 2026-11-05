@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -148,15 +160,16 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <main>
 <h1>Internal Assessment — the design project</h1>
 <p>The Internal Assessment (IA) is one <strong>design project</strong>: you identify, analyse, evaluate and <strong>redesign an existing product</strong> to meet the needs of a real user, your <strong>primary persona</strong>, and you build physical fidelity models to test it. It takes about <strong>50 hours</strong>, is marked out of <strong>33</strong> against five criteria (A–E), and is worth <strong>40% of the grade at SL and 30% at HL</strong> — the task and the criteria are the same at both levels.</p>
-<p>This chapter takes you through the project in <strong>twelve self-study tasks</strong> of about 55 minutes each, one stage at a time. Each task shows what its criterion asks, points you to the exemplar projects and the marks they were given, and ends with a piece of your own project written or planned. The tabs below follow the project in order: start with the Overview, then work through the criteria A to E, and finish with the Final check.</p>
+<p>This chapter takes you through the project in <strong>twelve self-study tasks</strong>, one stage at a time. Each task shows what its criterion asks, points you to the exemplar projects and the marks they were given, and ends with a piece of your own project written or planned. The tabs below follow the project in order: start with the Overview, then work through the criteria A to E, and finish with the Final check.</p>
+<p>The pages from the exemplar projects shown in this chapter are courtesy of the IBO. The faces and names of the people in them have been blanked out.</p>
 <div class="tabs">
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-1" checked><label for="tabs-ia-internal-assessment-1">Overview</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-2"><label for="tabs-ia-internal-assessment-2">A · Empathize</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-3"><label for="tabs-ia-internal-assessment-3">B · Defining the project</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-4"><label for="tabs-ia-internal-assessment-4">C · Ideation and modelling</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-5"><label for="tabs-ia-internal-assessment-5">D · Designing a solution</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-6"><label for="tabs-ia-internal-assessment-6">E · Presenting a solution</label>
-<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-7"><label for="tabs-ia-internal-assessment-7">Final check</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-1" checked><label for="tabs-ia-internal-assessment-1" title="Overview">Overview</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-2"><label for="tabs-ia-internal-assessment-2" title="Criterion A — Empathize (9 marks)">A · Empathize</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-3"><label for="tabs-ia-internal-assessment-3" title="Criterion B — Defining the project (6 marks)">B · Defining the project</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-4"><label for="tabs-ia-internal-assessment-4" title="Criterion C — Ideation and modelling (6 marks)">C · Ideation and modelling</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-5"><label for="tabs-ia-internal-assessment-5" title="Criterion D — Designing a solution (6 marks)">D · Designing a solution</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-6"><label for="tabs-ia-internal-assessment-6" title="Criterion E — Presenting a solution (6 marks)">E · Presenting a solution</label>
+<input type="radio" name="tabs-ia-internal-assessment" id="tabs-ia-internal-assessment-7"><label for="tabs-ia-internal-assessment-7" title="Final check">Final check</label>
 <section class="tab-panel">
 <h2>Overview</h2>
 <h3>The tasks, in order</h3>
@@ -428,7 +441,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Explain what academic integrity means for the project, including the single teacher-read draft.</li>
 <li>Choose an existing product, a primary persona and a task that give a project of the right complexity.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> what the design project is (10) · the rules that cost marks (10) · a high- and a low-scoring exemplar (10) · choose your product, persona and task (17) · exit task (8).</p>
 <h4>1. What the design project is</h4>
 <p>The internal assessment is one design project: an open-ended task in which you identify, analyse, evaluate and redesign an existing product to meet the needs of an intended user. As part of it you develop a physical fidelity model for testing and evaluation.</p>
 <p>You work through the design thinking process: <strong>empathize, define, ideate, prototype and test</strong>. It is iterative, not a straight line — you are expected to go back and repeat stages as you learn more about your user.</p>
@@ -561,12 +573,21 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <p><strong>Required evidence:</strong> a range of digital images of the primary persona showing their issues with an existing product, and an explanation of the persona's characteristics, context, preferences, motivations and requirements — in about <strong>two A4 pages</strong>.</p>
 <p>Watch the command terms: states → describes → explains. To reach 7–9 you must say <strong>why</strong> each characteristic matters for this product, not just list it.</p>
 <h4>2. Learn from the exemplars</h4>
-<ul>
-<li><strong>08 Prosthetics (A 8/9)</strong> — what research evidence supports each claim about the user? Two personas, each with clear goals, frustrations and needs; interviews behind every need; real photographs showing the difficulty; and further research with a secondary persona and with specialists.</li>
-<li><strong>10 Math Playset (A 6/9)</strong> — how are photographs of the real user used? A full profile — background, skills, motivation, goals and frustrations — built around the real users.</li>
-<li><strong>01 Stand Up Desk (A 2/9)</strong> — read the comments: the personas were fictional, with no research behind them, and AI-generated images replaced real observation of the user. <strong>Be warned about doing this!</strong></li>
-</ul>
-<p>One high-scoring exemplar uses more pages than the guide suggests for the persona. That is acceptable as long as the whole project stays within its page count and word limit.</p>
+<p><strong>08 Prosthetics (A 8/9)</strong> — what research evidence supports each claim about the user? Two personas, each with clear goals, frustrations and needs; interviews behind every need; real photographs showing the difficulty; and further research with a secondary persona and with specialists.</p>
+<div class="figs">
+<figure><a href="figures/ia/a1-persona-interview.jpg"><img src="figures/ia/a1-persona-interview.jpg" alt="Exemplar page: an interview with the primary persona, with photographs of his hand and its injuries, the main issues and the design opportunities" loading="lazy"></a><figcaption>08 Prosthetics — the interview with the primary persona. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/a1-persona-board.jpg"><img src="figures/ia/a1-persona-board.jpg" alt="Exemplar page: the primary persona board — what he does, why, what he wants, what stops him, what informs and convinces him, his day and context" loading="lazy"></a><figcaption>08 Prosthetics — the primary persona: actions, motivations and pains, each tied to research. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/a1-secondary-persona.jpg"><img src="figures/ia/a1-secondary-persona.jpg" alt="Exemplar page: an interview with a secondary persona and her persona board" loading="lazy"></a><figcaption>08 Prosthetics — a secondary persona, researched the same way. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
+<p>This student used more pages than the guide suggests for the persona. That is acceptable as long as the whole project stays within its page count and word limit.</p>
+<p><strong>10 Math Playset (A 6/9)</strong> — how are photographs of the real user used? A full profile — background, skills, motivation, goals and frustrations — built around the real users.</p>
+<div class="figs">
+<figure><a href="figures/ia/a1-math-persona-student.jpg"><img src="figures/ia/a1-math-persona-student.jpg" alt="Exemplar page: a persona profile of a student — demographics, a quotation, skills ratings, motivation, goals, frustrations and background" loading="lazy"></a><figcaption>10 Math Playset — persona 1, a student. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/a1-math-persona-teacher.jpg"><img src="figures/ia/a1-math-persona-teacher.jpg" alt="Exemplar page: a persona profile of a teacher — demographics, a quotation, motivation, goals, frustrations and background" loading="lazy"></a><figcaption>10 Math Playset — persona 2, a teacher. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
+<p><strong>01 Stand Up Desk (A 2/9)</strong> — read the comments: the personas were fictional, with no research behind them, and AI-generated images replaced real observation of the user. <strong>Be warned about doing this!</strong></p>
 <h4>3. Plan your research</h4>
 <p>The guide expects <strong>qualitative and quantitative research</strong> into the persona's needs, motivations, behaviours and experiences. Plan all three methods now:</p>
 <ul>
@@ -906,10 +927,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>☐ It fits in about one page</li>
 </ul>
 <h4>3. Learn from the exemplars</h4>
-<ul>
-<li><strong>08 Prosthetics and 11 Trowel (B 5/6)</strong> — find the problem statement and mark the situation, the problem and the research. The moderator's comments on the 5/6: the student pinpointed the areas for redesign through a suitable task analysis and set out the situation and the problem clearly, but showed too little research to prove the problem was the right one — more research would have given the redesign a firmer footing.</li>
-<li><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: some opportunities are described with some primary and secondary research, but the links to the task analysis are superficial, there is little evidence of a real user, and testing and feedback are not shown.</li>
-</ul>
+<p><strong>08 Prosthetics and 11 Trowel (B 5/6)</strong> — find the problem statement and mark the situation, the problem and the research. The moderator's comments on the Trowel's 5/6: the student pinpointed the areas for redesign through a suitable task analysis and set out the situation and the problem clearly, but showed too little research to prove the problem was the right one — more research would have given the redesign a firmer footing.</p>
+<div class="figs">
+<figure><a href="figures/ia/b1-trowel-1.jpg"><img src="figures/ia/b1-trowel-1.jpg" alt="Exemplar page: the design opportunity — housing statistics, photographs of crowded balconies and small gardens, and the outcomes" loading="lazy"></a><figcaption>11 Trowel — the current situation, with research. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b1-trowel-2.jpg"><img src="figures/ia/b1-trowel-2.jpg" alt="Exemplar page: the problem with photographs of the existing trowel in use, key opportunities and the gaps in the market" loading="lazy"></a><figcaption>11 Trowel — the problem and the opportunities. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b1-trowel-3.jpg"><img src="figures/ia/b1-trowel-3.jpg" alt="Exemplar page: unique selling points, the user and ideal demographic, hand measurements, a population chart and the client interview" loading="lazy"></a><figcaption>11 Trowel — the user, the data and the interview behind the problem. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
+<p><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: some opportunities are described with some primary and secondary research, but the links to the task analysis are superficial, there is little evidence of a real user, and testing and feedback are not shown.</p>
+<div class="figs">
+<figure><a href="figures/ia/b1-standup-desk.jpg"><img src="figures/ia/b1-standup-desk.jpg" alt="Exemplar page: research on sitting and posture, photographs of the target user at a desk beside ideal sitting and standing positions, and the design brief" loading="lazy"></a><figcaption>01 Stand Up Desk — research and a brief, but only superficial links to the task analysis. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
 <h4>4. Synthesize</h4>
 <table>
 <thead>
@@ -945,7 +974,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Cover every relevant aspect: attributes, components, constraints, environment, functions, user needs, safety, aesthetics, manufacture.</li>
 <li>Write requirements that you can test later.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> the specification strand (10) · exemplar specifications (8) · build the specification table (27) · self-check (5) · exit task (5).</p>
 <h4>1. What the criterion asks</h4>
 <p>The second strand of criterion B asks you to <strong>produce product design specifications with reference to research</strong> — including the UI and UX points that came out of your existing-product analysis in criterion A.</p>
 <figure class="video" style="margin: 20px 0 24px;">
@@ -978,6 +1006,10 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <h4>2. How to plan and write your specification</h4>
 <p>A design specification is the <strong>success criteria</strong> for your product. It lists what the product <strong>must</strong> and <strong>should</strong> do to meet the user's needs and solve the problem.</p>
 <p><strong>Essential or desirable?</strong> Take an IA that redesigns the stabilisers on a child's bicycle. The essential parts of the bicycle are the frame, wheels, tyres, brakes, handlebars, seat, pedals, chain, sprockets and drivetrain, and fork. The desirable ones include a red frame, rubber handle grips, a padded seat, a lightweight frame, a bottle holder, a basket, mudguards, a bell, reflectors and a kickstand. Your specification makes the same split for the product you are redesigning.</p>
+<div class="figs one">
+<figure><a href="figures/ia/b2-slide-essential-desirable.jpg"><img src="figures/ia/b2-slide-essential-desirable.jpg" alt="Slide: a child's bicycle with its stabilisers circled; the essential parts listed on the left and the desirable ones on the right" loading="lazy"></a><figcaption>Essential or desirable: an IA that redesigns the stabilisers on a bicycle.</figcaption></figure>
+</div>
+
 <p><strong>State, outline, explain — one requirement written three ways.</strong> The same specification point (attributes, essential) at each mark band:</p>
 <table>
 <thead>
@@ -1006,6 +1038,10 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 </tbody>
 </table>
 <p>The explained version is measurable, it is marked essential, and every reason points to a piece of research.</p>
+<div class="figs one">
+<figure><a href="figures/ia/b2-slide-state-outline-explain.jpg"><img src="figures/ia/b2-slide-state-outline-explain.jpg" alt="Slide: the same specification point written at three levels, coloured yellow for state, blue for outline and green for explain" loading="lazy"></a><figcaption>One requirement at three levels: state (yellow), outline (blue), explain (green).</figcaption></figure>
+</div>
+
 <p><strong>Question prompts for each specification point</strong></p>
 <table>
 <thead>
@@ -1090,10 +1126,20 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 </tbody>
 </table>
 <h4>3. Learn from the exemplars</h4>
-<ul>
-<li><strong>11 Trowel (B 5/6)</strong> — how is each requirement justified?</li>
-<li><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: essential and desirable requirements were not distinguished, and missing evidence made the justifications weak.</li>
-</ul>
+<p><strong>11 Trowel (B 5/6)</strong> — how is each requirement justified?</p>
+<div class="figs">
+<figure><a href="figures/ia/b2-trowel-spec-1.jpg"><img src="figures/ia/b2-trowel-spec-1.jpg" alt="Exemplar page: a specification table — function, aesthetics, target market and size — with requirements, justifications and sources" loading="lazy"></a><figcaption>11 Trowel — the design specification (1). Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b2-trowel-spec-2.jpg"><img src="figures/ia/b2-trowel-spec-2.jpg" alt="Exemplar page: the specification continued — materials, quantity, product constraints and competition" loading="lazy"></a><figcaption>11 Trowel — the design specification (2). Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
+<p><strong>01 Stand Up Desk (B 3/6)</strong> — the comments: essential and desirable requirements were not distinguished, and missing evidence made the justifications weak.</p>
+<div class="figs">
+<figure><a href="figures/ia/b2-standup-spec-1.jpg"><img src="figures/ia/b2-standup-spec-1.jpg" alt="Exemplar page: specification tables for function and size, with justification, testing and priority columns" loading="lazy"></a><figcaption>01 Stand Up Desk — function and size. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b2-standup-spec-2.jpg"><img src="figures/ia/b2-standup-spec-2.jpg" alt="Exemplar page: specification tables for target audience and aesthetics" loading="lazy"></a><figcaption>01 Stand Up Desk — target audience and aesthetics. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b2-standup-spec-3.jpg"><img src="figures/ia/b2-standup-spec-3.jpg" alt="Exemplar page: the specification table for materials and components" loading="lazy"></a><figcaption>01 Stand Up Desk — materials and components. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/b2-standup-spec-4.jpg"><img src="figures/ia/b2-standup-spec-4.jpg" alt="Exemplar page: the specification table for production and manufacturing" loading="lazy"></a><figcaption>01 Stand Up Desk — production and manufacturing. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
 <h4>4. Build the specification table</h4>
 <table>
 <thead>
@@ -1247,7 +1293,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Annotate concisely — 10 words or fewer per annotation.</li>
 <li>Show how research and user feedback drive the development of each idea.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> the ideation strand (8) · exemplar ideas pages (8) · rapid ideation, ten thumbnails (10) · develop your three best ideas (20) · annotation practice (4) · exit task (5).</p>
 <h4>1. What the criterion asks</h4>
 <p>The first strand of criterion C asks you to <strong>present a range of annotated, feasible redesign ideas, in an appropriate medium, that address the problem statement and can be interpreted by others</strong>.</p>
 <figure class="video" style="margin: 20px 0 24px;">
@@ -1256,11 +1301,13 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 </figure>
 <p><strong>Required evidence:</strong> a range of feasible ideas communicated using sketches, drawings, CAD, images and fidelity models (one to two A4 pages per idea); the additional research and/or feedback that drives the iterative development of the ideas, highlighted; annotations — in about <strong>six A4 pages</strong>.</p>
 <h4>2. Learn from the exemplars</h4>
-<ul>
-<li><strong>08 Prosthetics (C 6/6)</strong> — how are the three ideas developed with models and feedback? The moderator's comments: five ideas were presented, each annotated with strengths, weaknesses and user feedback and supported by physical models and user testing; each idea was scored against the specification point by point; and the ideas were narrowed to the three most convincing, with justified annotations, before one was chosen for criterion D.</li>
-</ul>
+<p><strong>08 Prosthetics (C 6/6)</strong> — how are the three ideas developed with models and feedback? The moderator's comments: five ideas were presented, each annotated with strengths, weaknesses and user feedback and supported by physical models and user testing; each idea was scored against the specification point by point; and the ideas were narrowed to the three most convincing, with justified annotations, before one was chosen for criterion D.</p>
+<div class="figs one">
+<figure><a href="figures/ia/c1-prosthetics-ideas.jpg"><img src="figures/ia/c1-prosthetics-ideas.jpg" alt="Exemplar page: sketches and renders of several prosthetic design directions, each annotated with specification references" loading="lazy"></a><figcaption>08 Prosthetics — initial ideation and possible design directions; the numbers in brackets point to the specification. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
 <h4>3. Rapid ideation</h4>
-<p>Sketch <strong>ten thumbnail ideas in ten minutes</strong>, each tackling a different opportunity from your problem statement. Do not judge them yet.</p>
+<p>Sketch <strong>ten quick thumbnail ideas</strong>, each tackling a different opportunity from your problem statement. Do not judge them yet.</p>
 <h4>4. Develop your three best ideas</h4>
 <p>Choose the three ideas that best meet your essential requirements. Give each its own page: a clear sketch or CAD view, a quick low-fidelity model (card, foam, clay) and a note of the research or feedback that changed it.</p>
 <table>
@@ -1347,9 +1394,12 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <p>The second strand of criterion C asks you to <strong>evaluate the redesign ideas against the design specifications through testing and user feedback</strong> — the top band evaluates; lower bands only describe or state the differences.</p>
 <p><strong>Required evidence:</strong> an annotated presentation drawing of the feasible redesign idea, tested against the design specifications and user feedback — about <strong>two A4 pages</strong>. The chosen idea should be checked against both the performance requirements and the user's requirements.</p>
 <h4>2. Learn from the exemplars</h4>
-<ul>
-<li><strong>08 Prosthetics (C 6/6)</strong> — how is the chosen idea justified? Every idea was reviewed against the performance requirements, the user's requirements and the feedback, for all of the specification points, and a clear summary named the idea taken forward to criterion D.</li>
-</ul>
+<p><strong>08 Prosthetics (C 6/6)</strong> — how is the chosen idea justified? Every idea was reviewed against the performance requirements, the user's requirements and the feedback, for all of the specification points, and a clear summary named the idea taken forward to criterion D.</p>
+<div class="figs">
+<figure><a href="figures/ia/c2-prosthetics-evaluation.jpg"><img src="figures/ia/c2-prosthetics-evaluation.jpg" alt="Exemplar page: each design direction evaluated against the specification and the user's feedback, side by side" loading="lazy"></a><figcaption>08 Prosthetics — the ideas evaluated against the specification and user feedback. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+<figure><a href="figures/ia/c2-prosthetics-justification.jpg"><img src="figures/ia/c2-prosthetics-justification.jpg" alt="Exemplar page: the chosen combination of directions justified, with annotated development sketches" loading="lazy"></a><figcaption>08 Prosthetics — the chosen idea justified and developed further. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
 <h4>3. Plan the tests and the feedback</h4>
 <p>For every essential requirement, decide how you will test it on your models. Plan how your persona will try each idea, and the three questions you will ask them afterwards.</p>
 <h4>4. Evaluation matrix</h4>
@@ -1438,7 +1488,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Test against all the specification points and the persona's needs.</li>
 <li>Record each cycle with annotated images and short conclusions.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> the fidelity-modelling strand (8) · exemplar test cycles (7) · plan the cycles (15) · test log for cycle 1 (15) · self-check (5) · exit task (5).</p>
 <h4>1. What the criterion asks</h4>
 <p>The first strand of criterion D asks you to <strong>develop and annotate iterative fidelity models through multiple testing and refinement cycles, to arrive at the redesigned solution that addresses the problem statement, the design specifications and the needs of the intended user</strong>.</p>
 <figure class="video" style="margin: 20px 0 24px;">
@@ -1595,7 +1644,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Identify components, materials and assembly clearly.</li>
 <li>Annotate the drawings concisely.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> the design-drawings strand (8) · exemplar drawings at 6/6 (7) · list what a manufacturer needs (7) · produce your first formal drawing (26) · exit task (7).</p>
 <h4>1. What the criterion asks</h4>
 <p>The second strand of criterion D asks you to <strong>design drawings of the intended solution and its components that aid communication and visualization to a third-party manufacturer</strong>.</p>
 <table>
@@ -1624,7 +1672,12 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <h4>2. Learn from the exemplars</h4>
 <ul>
 <li><strong>07 Capsule Toy and 11 Trowel (D 6/6)</strong> — which views are included, and how are they dimensioned?</li>
+<li><strong>08 Prosthetics (D 6/6)</strong> — an exploded assembly drawing and a dimensioned pattern, both made for someone else to build from.</li>
 </ul>
+<div class="figs one">
+<figure><a href="figures/ia/d2-prosthetics-assembly.jpg"><img src="figures/ia/d2-prosthetics-assembly.jpg" alt="Exemplar page: an exploded CAD view of the prosthetic finger with assembly notes, and a dimensioned glove pattern" loading="lazy"></a><figcaption>08 Prosthetics — assembly instructions and a dimensioned glove pattern. Courtesy of the IBO; faces and names blanked.</figcaption></figure>
+</div>
+
 <h4>3. What the manufacturer needs</h4>
 <table>
 <thead>
@@ -1712,7 +1765,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Compare the solution with the existing product you started from.</li>
 <li>Show how the redesign addresses the problems identified for the persona.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> both strands of criterion E (8) · exemplars, high and low (7) · plan the presentation pages (15) · complete the comparison table (18) · exit task (7).</p>
 <h4>1. What the criterion asks</h4>
 <p>Criterion E: Presenting a solution is worth 6 marks (about 4 pages and only about 200 words). It asks you to <strong>present the intended redesigned solution and annotate its key features</strong>, and to <strong>present how using the redesigned solution compares with the existing product and how it addresses the problems you identified</strong>.</p>
 <table>
@@ -1825,7 +1877,6 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li>Self-assess each criterion using the best-fit approach.</li>
 <li>Prepare your one draft for your teacher's feedback.</li>
 </ul>
-<p><strong>Time plan (55 min):</strong> audit the limits (10) · referencing and academic integrity (10) · self-assess criteria A to E (25) · questions for your teacher (5) · exit task (5).</p>
 <h4>1. Audit the limits</h4>
 <table>
 <thead>
@@ -1966,7 +2017,12 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 </table>
 </section>
 </div>
-
+<div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=YUcRylAKFcw" target="_blank" rel="noopener">IBDT: A2 - Presents a Storyboard</a> — Mr Gaughan (YouTube)</li><li><a href="https://www.youtube.com/watch?v=o2aiMmwVAZQ" target="_blank" rel="noopener">IBDT: A3 - Existing Products</a> — Mr Gaughan (YouTube)</li><li><a href="https://www.youtube.com/watch?v=aizPUi7Lwdg" target="_blank" rel="noopener">IBDT: B1 - Produce a Problem Statement</a> — Mr Gaughan (YouTube)</li><li><a href="https://www.youtube.com/watch?v=LU95T9xzPNY" target="_blank" rel="noopener">IBDT: B2 Specification</a> — Mr Gaughan (YouTube)</li><li><a href="https://www.youtube.com/watch?v=H4vlYFh7_Ss" target="_blank" rel="noopener">IBDT: Criterion C</a> — Mr Gaughan (YouTube)</li><li><a href="https://www.youtube.com/watch?v=Ksjo__MmfXk" target="_blank" rel="noopener">IBDT Criterion D</a> — Mr Gaughan (YouTube)</li></ul>
+<p>The exemplar project pages are courtesy of the IBO (International Baccalaureate Organization). The faces and names of the people in them have been blanked out.</p>
+</div>
 <div class="next-prev"><a href="C4.1-design-for-manufacture-strategies.html">&larr; C4.1 Design for manufacture strategies (HL)</a><a href="EE-extended-essay.html">Extended essay &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

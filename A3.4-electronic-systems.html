@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -372,6 +384,374 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <p><em>A microcontroller is a small programmable IC containing a processor, memory, and I/O pins. It reads signals from connected sensors, makes decisions in software, and drives outputs — replacing what would otherwise be a large assembly of logic gates, timers, and comparators. The advantage is flexibility: a single microcontroller can be re-programmed for different products or updated later, whereas discrete circuits are fixed at manufacture. Cost, size, and power consumption have all dropped sufficiently that microcontrollers now appear in children's toys.</em></p>
 <p><strong>4. Identify and describe three sensors and three actuators you might use in a student-designed "smart plant pot" that waters itself.</strong></p>
 <p><em>Sensors: soil moisture sensor (detects dryness), light sensor/LDR (detects sunlight levels), temperature sensor (detects ambient conditions). Actuators: small peristaltic pump (delivers water), LED indicator (status light), piezo buzzer (alert when water reservoir is empty). A microcontroller reads the sensors, compares to thresholds, and drives the actuators accordingly.</em></p>
+<h2>Self-study tasks</h2>
+<p>Six self-study tasks take you through electronic systems (A3.4) and their application and selection (B3.4), one step at a time. Each stands alone — a short reading, worked examples, guided practice and an exit task — and is written for you working alone with this book, the internet and, where noted, a multimeter or a circuit simulator such as Tinkercad Circuits. The videos they mention are the ones in Key concepts above. Your teacher has the markscheme.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Title</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Electronics in everyday products and responsible use</td>
+<td>A3.4 introduction; responsible use of electronics; B3.4 electronics in everyday products</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Analogue and digital signals, input devices and sensors</td>
+<td>A3.4 analogue and digital signals; input devices and sensors; B3.4 sensor selection</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Electrical calculations and measuring tools</td>
+<td>B3.4 electrical calculations (V, I, R, P); electronic measuring tools</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Resistors, capacitors, and circuit and flow diagrams</td>
+<td>B3.4 resistors and capacitors in series and parallel; system diagrams; flow diagrams</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Microcontrollers, control and feedback systems</td>
+<td>A3.4 microcontrollers; outputs; feedback and control systems</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Operational amplifiers and system design synthesis</td>
+<td>A3.4 operational amplifiers; bringing A3.4 and B3.4 together; responsibility and sustainability</td>
+</tr>
+</tbody>
+</table>
+<div class="tabs">
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-1" checked><label for="tabs-a3-4-electronic-systems-1" title="Task 1 — Electronics in everyday products and responsible use">Task 1</label>
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-2"><label for="tabs-a3-4-electronic-systems-2" title="Task 2 — Analogue and digital signals, input devices and sensors">Task 2</label>
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-3"><label for="tabs-a3-4-electronic-systems-3" title="Task 3 — Electrical calculations and measuring tools">Task 3</label>
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-4"><label for="tabs-a3-4-electronic-systems-4" title="Task 4 — Resistors, capacitors, and circuit and flow diagrams">Task 4</label>
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-5"><label for="tabs-a3-4-electronic-systems-5" title="Task 5 — Microcontrollers, control and feedback systems">Task 5</label>
+<input type="radio" name="tabs-a3-4-electronic-systems" id="tabs-a3-4-electronic-systems-6"><label for="tabs-a3-4-electronic-systems-6" title="Task 6 — Operational amplifiers and system design synthesis">Task 6</label>
+<section class="tab-panel">
+<h3>Task 1 — Electronics in everyday products and responsible use</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Describe the input–process–output model of an electronic system.</li>
+<li>Identify electronic systems embedded in everyday products.</li>
+<li>Explain e-waste, planned obsolescence, RoHS/WEEE and CE safety marking.</li>
+<li>Evaluate a real product against responsible-design criteria.</li>
+</ul>
+<h4>1. What is an electronic system?</h4>
+<p>Every electronic product, however simple, follows the same pattern: an <strong>input</strong> senses something in the world, a <strong>process</strong> stage (a circuit or microcontroller) decides what to do with that information, and an <strong>output</strong> acts on the decision. A kettle senses temperature and switches off a heating element; a phone senses a touch and lights a pixel; a washing machine senses water level and drives a motor. Keep this input–process–output model in mind — Tasks 2–6 build up each stage in detail.</p>
+<p>List five products you own or use daily. For each, write one sentence identifying its input, its process and its output.</p>
+<h4>2. Responsible use of electronics</h4>
+<p>Designers of electronic products carry responsibilities beyond making the product work. Research each term below and write a two- to three-sentence definition in your own words:</p>
+<ul>
+<li><strong>E-waste</strong> — discarded electrical and electronic equipment; one of the fastest-growing waste streams globally, much of it containing recoverable metals and hazardous substances.</li>
+<li><strong>Planned obsolescence</strong> — designing a product to have an artificially short useful life (non-replaceable batteries, unrepairable seals, software that slows or stops supporting older hardware).</li>
+<li><strong>Right to repair</strong> — the movement and, in some regions, legislation requiring manufacturers to make parts, tools and documentation available so products can be repaired rather than replaced.</li>
+<li><strong>RoHS</strong> (Restriction of Hazardous Substances) — an EU directive restricting substances such as lead, mercury and cadmium in electronic products.</li>
+<li><strong>WEEE</strong> (Waste Electrical and Electronic Equipment) — an EU directive governing the collection, recycling and recovery of electronic waste.</li>
+<li><strong>CE marking and low-voltage safety standards</strong> — marks and standards confirming a product meets minimum safety requirements for sale (insulation, fusing, protection against electric shock).</li>
+</ul>
+<h4>3. Case study</h4>
+<p>Choose one electronic product you own. Answer in full sentences:</p>
+<ul>
+<li>What are its input(s), process and output(s)?</li>
+<li>Can the battery be replaced by the user? Can the casing be opened without specialist tools?</li>
+<li>Does the product or its packaging carry a CE mark, a WEEE "crossed-out wheelie bin" symbol, or state RoHS compliance?</li>
+<li>Estimate its expected lifespan. What would most likely cause it to be thrown away — failure, damage, or the user simply wanting a newer model?</li>
+<li>Overall, would you call this a responsibly designed product? Give two reasons.</li>
+</ul>
+<h4>4. Practice questions</h4>
+<ol>
+<li>Define e-waste in one sentence.</li>
+<li>State one advantage of planned obsolescence for a manufacturer and one disadvantage for a user.</li>
+<li>Explain what a RoHS-compliant product tells a consumer about its materials.</li>
+<li>A washing machine's control board fails after eight years and cannot be sourced separately, so the whole machine is scrapped. Explain how this illustrates a tension between cost and responsible design.</li>
+<li>Suggest two design decisions a manufacturer could make to extend a smartphone's useful life.</li>
+</ol>
+<h4>5. Exit task</h4>
+<p>In one paragraph (80–120 words): choose one everyday electronic product and argue whether it was designed responsibly. Justify your view using at least two specific criteria from this task (for example repairability, RoHS compliance, expected lifespan).</p>
+<h4>Video support</h4>
+<ul>
+<li><strong>A3.4.1 Electronic Systems Intro</strong> (Key concepts, above) — watch before section 1: what makes a system electronic; the input–process–output model. Section 1's five-product exercise follows directly from it.</li>
+<li><strong>A3.4.2 Electronic Safety and Sustainability</strong> (Key concepts, above) — watch before section 2: responsible use, safety marking, sustainability and disposal.</li>
+</ul>
+<p>For the disposal side in more depth, search YouTube for "planned obsolescence explained" (iFixit) or "what happens to our e-waste" (DW Planet A).</p>
+</section>
+<section class="tab-panel">
+<h3>Task 2 — Analogue and digital signals, input devices and sensors</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Distinguish analogue from digital signals.</li>
+<li>Explain why microcontrollers need analogue-to-digital conversion.</li>
+<li>Identify common input devices and sensors and what physical quantity each detects.</li>
+<li>Select an appropriate sensor for a given design scenario.</li>
+</ul>
+<h4>1. Analogue and digital signals</h4>
+<p>An <strong>analogue</strong> signal varies continuously over a range (for example a temperature sensor's output voltage rising smoothly as it warms). A <strong>digital</strong> signal has only discrete states, almost always just two: HIGH (logic 1, close to the supply voltage) and LOW (logic 0, close to 0 V).</p>
+<p>Most real-world quantities — light, sound, temperature, pressure — are analogue. A microcontroller's processor, however, only understands digital values. An <strong>analogue-to-digital converter (ADC)</strong>, usually built into the microcontroller, samples the analogue voltage at regular intervals and converts each sample to a binary number the processor can use. Sketch a simple analogue voltage–time graph, then sketch the stepped digital approximation an ADC would produce alongside it.</p>
+<p>Answer: why does a digital thermometer display, for example, "21.5 °C" rather than a perfectly smooth reading — what does this tell you about the ADC's resolution?</p>
+<h4>2. Input devices and sensors</h4>
+<p>Research each sensor below. For each, note (a) the physical quantity it detects and (b) one everyday product that uses it:</p>
+<ul>
+<li><strong>LDR</strong> (light-dependent resistor) — light intensity</li>
+<li><strong>Thermistor</strong> — temperature</li>
+<li><strong>Push switch / tactile switch</strong> — mechanical contact</li>
+<li><strong>Potentiometer</strong> — rotational or linear position</li>
+<li><strong>PIR</strong> (passive infrared) <strong>sensor</strong> — movement of a warm body</li>
+<li><strong>Ultrasonic distance sensor</strong> — distance to an object</li>
+<li><strong>Microphone</strong> — sound pressure</li>
+<li><strong>Reed switch</strong> — presence of a magnetic field</li>
+</ul>
+<h4>3. Sensor selection table</h4>
+<p>Build a table with the columns <em>Design scenario · Sensor chosen · Signal type (analogue/digital) · Why</em>, and complete it for these four scenarios:</p>
+<ul>
+<li>A porch light that switches on automatically at dusk</li>
+<li>A washing machine door that must be shut before the drum will spin</li>
+<li>A robot vacuum that must stop before hitting a wall</li>
+<li>A room thermostat that reads the current temperature</li>
+</ul>
+<h4>4. Practice questions</h4>
+<ol>
+<li>Explain, in your own words, the difference between an analogue and a digital signal.</li>
+<li>State the function of an ADC and explain why it is needed between an analogue sensor and a microcontroller.</li>
+<li>A student wants a system to count how many times a door opens in a day. Recommend a suitable sensor and justify your choice.</li>
+<li>Explain why a switch produces a digital signal without needing an ADC.</li>
+<li>An LDR's resistance falls as light increases. Sketch a simple circuit (LDR and fixed resistor as a potential divider) that would produce a voltage the microcontroller could read, and label which end reads the higher voltage in bright light.</li>
+</ol>
+<h4>5. Exit task</h4>
+<p>Design brief: "A smart plant pot needs to tell its owner when the soil is too dry." Name the sensor you would use, state whether its output is analogue or digital, and describe in three or four sentences how the signal would need to be processed before the microcontroller could act on it.</p>
+<h4>Video support</h4>
+<ul>
+<li><strong>A3.4.5 Electronic Systems Digital Systems</strong> (Key concepts, above) — watch before section 1: analogue and digital signals.</li>
+<li><strong>A3.4.7 &amp; A3.4.8 Input Components and Processing Devices</strong> (Key concepts, above) — watch before section 2: input devices and sensors.</li>
+</ul>
+<p>If A3.4.5 does not go far enough into analogue-to-digital conversion and resolution for section 1's sketches, search YouTube for "what is an analog to digital converter for beginners" (DroneBot Workshop). For a sensor you are unsure about, search its name plus "how it works".</p>
+</section>
+<section class="tab-panel">
+<h3>Task 3 — Electrical calculations and measuring tools</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Apply V = IR and P = IV to solve circuit problems.</li>
+<li>Explain what a multimeter and an oscilloscope each measure and how.</li>
+<li>Read a simple oscilloscope trace.</li>
+<li>Solve multi-step calculations involving current, voltage, resistance and power.</li>
+</ul>
+<h4>1. The three key equations</h4>
+<p>Learn these, and be able to rearrange them:</p>
+<ul>
+<li><strong>V = IR</strong></li>
+<li><strong>P = IV</strong></li>
+<li><strong>P = I²R</strong></li>
+</ul>
+<p>where V = voltage (volts, V), I = current (amps, A), R = resistance (ohms, Ω) and P = power (watts, W).</p>
+<h4>2. Worked examples</h4>
+<ul>
+<li><strong>Example 1:</strong> a 12 V supply is connected to a 4 Ω resistor. Find the current. I = V / R = 12 / 4 = <strong>3 A</strong></li>
+<li><strong>Example 2:</strong> a component draws 0.5 A from a 9 V supply. Find its power consumption. P = IV = 0.5 × 9 = <strong>4.5 W</strong></li>
+<li><strong>Example 3:</strong> a 6 W bulb operates at 12 V. Find the current it draws and its resistance. I = P / V = 6 / 12 = <strong>0.5 A</strong>; R = V / I = 12 / 0.5 = <strong>24 Ω</strong></li>
+</ul>
+<h4>3. Measuring tools</h4>
+<p>Research and summarise, in your own words:</p>
+<ul>
+<li><strong>Multimeter</strong> — a handheld instrument that measures voltage (voltmeter mode, connected in parallel across a component), current (ammeter mode, connected in series in the circuit) and resistance (ohmmeter mode, measured on a component with the power removed). Note the safety rule: never measure resistance on a live circuit.</li>
+<li><strong>Oscilloscope</strong> — displays a graph of voltage (y-axis) against time (x-axis), so you can see a signal's shape, amplitude, frequency and whether it is analogue (smooth or sloped) or digital (square steps). Look up an image of a sine-wave trace and a square-wave trace and sketch both, labelling the y-axis (V) and the x-axis (time).</li>
+</ul>
+<h4>4. Practice questions</h4>
+<ol>
+<li>A resistor of 220 Ω has 5 V across it. Calculate the current flowing through it.</li>
+<li>A motor draws 2 A at 6 V. Calculate its power.</li>
+<li>An LED requires a current of 20 mA when 2 V is dropped across it. Calculate the resistance of the resistor needed in series to drop the remaining voltage from a 9 V supply. (Hint: find the voltage the resistor must drop first, then apply V = IR.)</li>
+<li>A component is rated at 3 W and operates at 12 V. Calculate the current it draws.</li>
+<li>Explain why an ammeter must be connected in series but a voltmeter in parallel.</li>
+<li>Sketch the multimeter dial setting and probe placement you would use to check whether a 9 V battery is still delivering close to 9 V.</li>
+</ol>
+<h4>5. Exit task</h4>
+<p>A torch uses two 1.5 V batteries in series to power an LED bulb rated at 3 V, 0.06 A. Calculate (a) the total supply voltage, (b) the power delivered to the bulb, and (c) say which multimeter setting and connection method you would use to confirm the current drawn in the real circuit. Show all working.</p>
+<h4>Video support</h4>
+<p>There is no video on this page for calculations and measuring tools, so use these searches:</p>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic electricity resistance and Ohm's law</td>
+<td>Afrotechmods</td>
+<td>Section 1, V = IR</td>
+</tr>
+<tr>
+<td>basic electricity power and watts</td>
+<td>Afrotechmods</td>
+<td>Section 1, P = IV</td>
+</tr>
+<tr>
+<td>how to use a multimeter for beginners</td>
+<td>Afrotechmods, ElectroBOOM</td>
+<td>Section 3 and the exit task</td>
+</tr>
+<tr>
+<td>how to use an oscilloscope basics</td>
+<td>EEVblog</td>
+<td>Section 3, reading a trace</td>
+</tr>
+<tr>
+<td>how to calculate LED series resistor</td>
+<td>Afrotechmods</td>
+<td>Practice question 3</td>
+</tr>
+</tbody>
+</table>
+<p>If you only have time for two, watch the Ohm's law and multimeter videos — they carry the calculations and the exit task.</p>
+</section>
+<section class="tab-panel">
+<h3>Task 4 — Resistors, capacitors, and circuit and flow diagrams</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Calculate combined resistance for resistors in series and parallel.</li>
+<li>Calculate combined capacitance for capacitors in series and parallel.</li>
+<li>Draw and interpret block (system) diagrams.</li>
+<li>Draw a flow diagram for simple control logic.</li>
+</ul>
+<h4>1. Resistors in series and parallel</h4>
+<p><strong>Series:</strong> the total resistance is the sum of the resistances.</p>
+<p>R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub></p>
+<p><strong>Parallel:</strong> the reciprocal of the total equals the sum of the reciprocals.</p>
+<p>1 / R<sub>total</sub> = 1 / R<sub>1</sub> + 1 / R<sub>2</sub> + 1 / R<sub>3</sub></p>
+<p>Work through: two 100 Ω resistors in series (answer: 200 Ω); two 100 Ω resistors in parallel (answer: 50 Ω); a 60 Ω and a 30 Ω resistor in parallel (answer: 20 Ω).</p>
+<h4>2. Capacitors in series and parallel</h4>
+<p>Capacitors behave the <strong>opposite</strong> way to resistors.</p>
+<p><strong>Parallel:</strong> the total capacitance is the sum.</p>
+<p>C<sub>total</sub> = C<sub>1</sub> + C<sub>2</sub> + C<sub>3</sub></p>
+<p><strong>Series:</strong> the reciprocals add.</p>
+<p>1 / C<sub>total</sub> = 1 / C<sub>1</sub> + 1 / C<sub>2</sub> + 1 / C<sub>3</sub></p>
+<p>Work through: two 100 µF capacitors in parallel (answer: 200 µF); two 100 µF capacitors in series (answer: 50 µF). Write one sentence explaining why the series and parallel rules swap between resistors and capacitors.</p>
+<h4>3. Circuit arrangement and system diagrams</h4>
+<p>A <strong>system (block) diagram</strong> shows the flow of information or energy through a product without drawing every component — typically boxes for input, process and output, joined by arrows. A <strong>circuit diagram</strong> shows the actual components (resistors, capacitors, switches, ICs) and how they are wired.</p>
+<p>Draw a system diagram for an automatic porch light: box 1 "LDR (light sensor)" → box 2 "Microcontroller (compares light level to threshold)" → box 3 "Relay and lamp (output)". Label each arrow with what passes along it (a signal, not a wire).</p>
+<h4>4. Flow diagrams</h4>
+<p>A <strong>flow diagram</strong> (flowchart) represents the logic or sequence of decisions a system follows, using standard symbols: oval (start/end), rectangle (process/action), diamond (decision, always with a yes/no or true/false branch) and parallelogram (input/output).</p>
+<p>Draw a flow diagram for a room light that should turn on automatically at night <strong>and</strong> only if a person is detected (using a light sensor and a PIR sensor). Include at least one decision diamond with two branches.</p>
+<h4>5. Exit task</h4>
+<p>A security light must switch on when it is dark <strong>and</strong> motion is detected, and switch off automatically after 30 seconds with no further motion. (a) Draw a system diagram showing inputs, process and output. (b) Draw a flow diagram showing the decision logic, including the 30-second timeout. (c) If the light uses two 5 W LED strips wired in parallel from a 12 V supply, calculate the total current drawn.</p>
+<h4>Video support</h4>
+<ul>
+<li><strong>A3.4.4 Resistors and Capacitors in Series and Parallel</strong> (Key concepts, above) — watch before sections 1 and 2: both series/parallel rules, directly.</li>
+<li><strong>A3.4.6 Active and Passive Components</strong> — component types and what each does in a circuit; it is not on this page, so search YouTube for "A3.4.6 HL Electronic Systems Active and Passive Components" (Aaron Thompson).</li>
+</ul>
+<p>Sections 3 and 4 are drawing conventions: search YouTube for "system block diagram input process output" and "flowchart symbols explained", or work from the examples in the task.</p>
+</section>
+<section class="tab-panel">
+<h3>Task 5 — Microcontrollers, control and feedback systems</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Explain the role of a microcontroller in an electronic system.</li>
+<li>Distinguish open-loop from closed-loop (feedback) control.</li>
+<li>Explain how a feedback system corrects itself.</li>
+<li>Apply the input–process–output model to a control system with feedback.</li>
+</ul>
+<h4>1. What a microcontroller does</h4>
+<p>A <strong>microcontroller</strong> is a small computer on a single chip — a processor, memory and input/output pins — programmed to run one specific task repeatedly. It sits at the <em>process</em> stage of the input–process–output model: it reads input signals (from sensors, through its ADC where needed), runs stored instructions (a program) to decide what to do, and drives outputs (LEDs, motors, displays) accordingly. Examples you may recognise: Arduino boards, the Raspberry Pi Pico, the chip inside a washing machine's control panel.</p>
+<p>List three reasons a microcontroller-based design might be chosen over a fixed (non-programmable) circuit for the same job. (Consider the cost of change, flexibility and the complexity of the logic required.)</p>
+<h4>2. Open-loop and closed-loop control</h4>
+<p><strong>Open-loop control:</strong> the system produces an output from the input alone and does not check whether the output achieved the desired result. Example: a simple toaster timer that runs for a fixed time regardless of how brown the toast actually is.</p>
+<p><strong>Closed-loop control:</strong> the system measures its own output (or the effect of that output) and feeds that measurement back to adjust what it does next. Example: a thermostat-controlled heater that keeps checking the room temperature and switches the heater on and off to hold a target value.</p>
+<p>For each of these, decide open-loop or closed-loop and justify: (a) a washing machine that runs a fixed 40-minute cycle regardless of load size; (b) a cruise-control system that holds a car at a set speed uphill and downhill; (c) a microwave that runs for the time you set on the dial.</p>
+<h4>3. Feedback systems</h4>
+<p>A closed-loop (feedback) system has four parts: a <strong>sensor</strong> (measures the actual output or condition), a <strong>comparator</strong> (compares the actual value with the desired, target value, giving the error), a <strong>controller</strong> (decides the correction needed) and an <strong>actuator</strong> (applies the correction). The loop repeats continuously.</p>
+<p>Draw this as a system diagram, with an arrow looping back from the sensor to the comparator, for a room thermostat: the target temperature is set by the user → the comparator checks it against the sensor's current reading → the controller switches the heater relay → the heater changes the room temperature → the sensor detects the new temperature → the loop repeats.</p>
+<h4>4. Practice questions</h4>
+<ol>
+<li>Define "microcontroller" in your own words.</li>
+<li>Explain one advantage of closed-loop control over open-loop control.</li>
+<li>A garden sprinkler runs for 10 minutes every morning at 7 a.m. whether or not it rained the night before. Is this open-loop or closed-loop? Justify your answer and suggest one sensor that could be added to improve it.</li>
+<li>Explain what "error" means in a feedback control loop.</li>
+<li>A cruise-control system is set to 100 km/h. The car starts climbing a hill and slows to 95 km/h. Describe, step by step, how the feedback loop responds.</li>
+</ol>
+<h4>5. Exit task</h4>
+<p>Design a closed-loop system for an automatic pet feeder that must dispense food only when the bowl is empty. Name the sensor, describe the comparator's decision and describe the actuator's action, in four or five sentences, using the four-part feedback structure from section 3.</p>
+<h4>Video support</h4>
+<ul>
+<li><strong>A3.4.9 Control Circuits and Microcontrollers</strong> (Key concepts, above) — watch before sections 1 and 3.</li>
+<li><strong>A3.4.11 Open and Closed Loops</strong> (Key concepts, above) — watch before section 2.</li>
+<li><strong>A3.4.7 &amp; A3.4.8 Input Components and Processing Devices</strong> (Key concepts, above) — more on what sits at the process stage, if you want it for section 1.</li>
+</ul>
+<p>For another explanation of open- and closed-loop control, search YouTube for "open loop vs closed loop control system" (RealPars or The Engineering Mindset).</p>
+</section>
+<section class="tab-panel">
+<h3>Task 6 — Operational amplifiers and system design synthesis</h3>
+<h4>Learning outcomes</h4>
+<ul>
+<li>Explain the function of an operational amplifier (op-amp) as a comparator and as an amplifier.</li>
+<li>Recognise op-amp symbols and terminals.</li>
+<li>Bring Tasks 1–5 together in a full electronic system design.</li>
+<li>Justify design decisions against responsibility and sustainability criteria.</li>
+</ul>
+<h4>1. Operational amplifiers</h4>
+<p>An <strong>operational amplifier (op-amp)</strong> is an integrated circuit with two inputs — inverting (−) and non-inverting (+) — and one output. It has two common roles in design technology:</p>
+<ul>
+<li><strong>Comparator:</strong> compares the voltages on its two inputs. If the non-inverting input is higher, the output swings to its maximum ("high"); if the inverting input is higher, the output swings to its minimum ("low"). This is exactly the comparator in the feedback loop of Task 5 — comparing a sensor's voltage with a reference (threshold) voltage.</li>
+<li><strong>Amplifier:</strong> with resistors added in a feedback arrangement around the chip, it multiplies a small input voltage by a fixed gain to give a larger output voltage — useful for boosting a weak sensor signal (a microphone, or a small thermocouple) to a level a microcontroller's ADC can read accurately.</li>
+</ul>
+<p>Sketch the standard op-amp symbol (a triangle) and label the inverting input, the non-inverting input, the output and the two power-supply pins.</p>
+<h4>2. Worked example</h4>
+<p>A light sensor (an LDR potential divider) outputs 0–3 V depending on brightness. A porch light should switch on once the voltage falls below 1.2 V (dusk). Explain, using the comparator function, how an op-amp with a fixed 1.2 V reference on one input and the sensor's voltage on the other would produce a digital HIGH/LOW output suitable for switching a relay — state which input the reference goes to, and why.</p>
+<h4>3. Synthesis design task</h4>
+<p>Bring together everything from Tasks 1–5. Design brief: "A smart bicycle light that switches on automatically in low light, brightens when the bike is moving quickly, and warns the rider when its battery is low."</p>
+<p>Produce:</p>
+<ul>
+<li>a <strong>system (block) diagram</strong> showing every input, the microcontroller as the process stage, and every output (Task 4's conventions);</li>
+<li>a <strong>list of the sensors</strong> you would use and, for each, whether its signal is analogue or digital and whether it needs an op-amp or ADC stage (Task 2 and section 1 of this task);</li>
+<li>a simple <strong>flow diagram</strong> of the control logic, including at least one feedback loop (Tasks 4 and 5);</li>
+<li>a <strong>calculation</strong>: if the LED output draws 0.3 A at 6 V, calculate its power consumption (Task 3);</li>
+<li>a short paragraph (60–80 words) <strong>evaluating your design</strong> against the responsible-use criteria from Task 1 (repairability, expected lifespan, disposal, safety marking).</li>
+</ul>
+<h4>4. Exit task: exam-style question</h4>
+<p>Answer in full, exam-style prose (150–200 words): "Discuss how electronic systems in a modern product balance user convenience against environmental responsibility. Refer to specific components or concepts from at least three of Tasks 1–6 in your answer." Structure your answer with a clear point, supporting technical detail, and a brief evaluative conclusion.</p>
+<h4>Video support</h4>
+<p>There is no operational-amplifier video on this page. A3.4.6 Active and Passive Components (see Task 4) gives useful background — an op-amp is an active component — but does not cover the comparator or amplifier configurations, so use these searches:</p>
+<table>
+<thead>
+<tr>
+<th>Search phrase</th>
+<th>Suggested channel</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>op amp comparator explained</td>
+<td>Afrotechmods</td>
+<td>Section 1, the comparator role</td>
+</tr>
+<tr>
+<td>operational amplifier basics for beginners</td>
+<td>Afrotechmods, The Engineering Mindset</td>
+<td>Section 1, the amplifier role and gain</td>
+</tr>
+<tr>
+<td>LDR light sensor switch op amp circuit</td>
+<td>hobby electronics channels</td>
+<td>Section 2's worked example</td>
+</tr>
+</tbody>
+</table>
+<p>Watch the two op-amp videos before section 1. The rest of this task is design work, better served by your own notes from Tasks 1–5 than by more video.</p>
+</section>
+</div>
+<div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=OojZRjf1viw" target="_blank" rel="noopener">IB DP Design Technology Topic A3.4.1 Electronic Systems Intro</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=o026ncyAxNE" target="_blank" rel="noopener">A3.4.7&amp;A3.4.8 HL Electronic Systems: Input Components and Processing Devices</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=pCkJKZo40w8" target="_blank" rel="noopener">IB DP Design Technology Topic A3.4.11 Electronic Systems Open and Closed Loops</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=rIyk99pRtAM" target="_blank" rel="noopener">IB DP Design Technology Topic A3.4.2 Electronic Safety and Sustainability</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=nC9yLACSqvk" target="_blank" rel="noopener">A3.4.4 HL Electronic Systems Resistors and Capacitors in Series and Parallel</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=r6esBMnO_To" target="_blank" rel="noopener">IB DP Design Technology Topic A3.4.5 Electronic Systems Digital Systems</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=VwWcx6XdnFQ" target="_blank" rel="noopener">A3.4.9 Electronic Systems HL Control Circuits and Microcontrollers</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=bCOYD_cJCZY" target="_blank" rel="noopener">IB DP Design Technology Topic 3.4.10 Output Devices</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=tiGw9PQbvrg" target="_blank" rel="noopener">Arduino is easy, actually</a> — Robonyx (YouTube)</li><li><a href="https://www.youtube.com/watch?v=5hYFX2mDNAY" target="_blank" rel="noopener">Top 20 Arduino Projects for 2025: Science Exhibition &amp; DIY Ideas!</a> — Roboarmy (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="A3.3-mechanical-systems.html">&larr; A3.3 Introduction to mechanical systems (HL)</a><a href="A4.1-manufacturing-techniques.html">A4.1 Manufacturing techniques (HL) &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

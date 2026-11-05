@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -276,7 +288,11 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 </ul>
 <h3>Classroom tasks</h3>
 <p><strong>Isometric drawing progression:</strong> Start with a single cube on grid paper, progress to multiple cubes, then to a cantilever chair drawn freehand with protractor. Add rendering to convey material and depth.</p>
-<p><strong>Iterative CAD exercise:</strong> Model a simple product in low-fidelity CAD. 3D print or laser cut. Evaluate with a target user. Re-design, re-print. Document each iteration.</p>
+<p><strong>Iterative CAD exercise:</strong> Model a simple product in low-fidelity CAD. 3D print or laser cut. Evaluate with a target user. Re-design, re-print. Document each iteration.</p><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=MDFWGBz-cvI" target="_blank" rel="noopener">IB DP Design Technology Topic A2.2.1 High and Low Fidelity Prototyping</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=fcDSQEPM5Iw" target="_blank" rel="noopener">IB DP Design Technology Topic A2.2.3 &amp; 4 Physical Prototypes</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=n-ZLZO84HUA" target="_blank" rel="noopener">IB DP Design Technology Topic A2.2.6 Rapid Prototyping</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=edMbv8Q5SFk" target="_blank" rel="noopener">IB DP Design Technology Topic A2.2.3 &amp; 5 Virtual Prototypes</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=QZsqfAzI1Yc" target="_blank" rel="noopener">Dyson's Vacuum Innovation Story: A Journey of 5,000+ Prototypes to Revolutionize Cleaning</a> — Innovation Leaders Club (YouTube)</li><li><a href="https://www.youtube.com/watch?v=ANe_HW4X8oc" target="_blank" rel="noopener">Starship - Test Like You Fly</a> — SpaceX (YouTube)</li><li><a href="https://www.youtube.com/watch?v=vSZOqatLdbs" target="_blank" rel="noopener">Cardboard prototyping for furniture</a> — Gillis Björk (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="A2.1-user-centred-research.html">&larr; A2.1 User-centred research methods</a><a href="A3.1-material-classification.html">A3.1 Material classification and properties &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

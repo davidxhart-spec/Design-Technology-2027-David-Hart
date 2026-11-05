@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -300,7 +312,11 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <li><em>"The environment can exist without the economy, but not the reverse."</em> — agree or disagree?</li>
 <li>Should sustainability change be led by the <strong>state</strong>, <strong>businesses</strong>, or <strong>individuals</strong>?</li>
 <li>How can countries and companies be held accountable?</li>
-</ul>
+</ul><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=ej5FhFFMu8M" target="_blank" rel="noopener">Sustainable Design - Design for the 21st Century with Don Norman</a> — Interaction Design Foundation (YouTube)</li><li><a href="https://www.youtube.com/watch?v=mq5oobKViZs" target="_blank" rel="noopener">Design Technology Topic 2.2 Waste Mitigation Strategies</a> — Aaron Thompson (YouTube)</li><li><a href="https://www.youtube.com/watch?v=gmpdqOerOF4" target="_blank" rel="noopener">The Five Principles of Sustainability - Design and Sustainability (3/7)</a> — OpenLearn from The Open University (YouTube)</li><li><a href="https://www.youtube.com/watch?v=TacIaCk2bWk" target="_blank" rel="noopener">We Got an Exclusive Behind-the-Scenes Tour of Patagonia Headquarters | Behind the Brand: Patagonia</a> — Huckberry (YouTube)</li><li><a href="https://www.youtube.com/watch?v=P-Pd3VsyGuo" target="_blank" rel="noopener">IKEA - circular</a> — EATMEATER (YouTube)</li><li><a href="https://www.youtube.com/watch?v=zCRKvDyyHmI" target="_blank" rel="noopener">Explaining the Circular Economy and How Society Can Re-think Progress | Animated Video Essay</a> — Ellen MacArthur Foundation (YouTube)</li><li><a href="https://www.youtube.com/watch?v=-n1awO_WMaU" target="_blank" rel="noopener">Adidas' TOP 3 Sustainable Innovations That Will Change Everything!</a> — Urban Trend Watch (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="C1.3-beyond-usability.html">&larr; C1.3 Beyond usability (HL)</a><a href="C2.2-circular-economy.html">C2.2 Design for a circular economy &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

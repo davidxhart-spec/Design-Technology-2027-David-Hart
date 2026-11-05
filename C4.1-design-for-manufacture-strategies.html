@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -323,7 +335,11 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 <ul>
 <li><a href="glossary.html">Glossary</a></li>
 <li><a href="exam-technique.html">Exam technique</a></li>
-</ul>
+</ul><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=WvXpeE2_b24" target="_blank" rel="noopener">Unibody MacBook Introduction - Apple Special Event, October 2008</a> — Keynotes (YouTube)</li><li><a href="https://www.youtube.com/watch?v=C3oiy9eekzk" target="_blank" rel="noopener">LEGO Bricks In The Making</a> — The LEGO Group (YouTube)</li><li><a href="https://www.youtube.com/watch?v=0h8vAGCiRX0" target="_blank" rel="noopener">How IKEA Mastered Furniture</a> — Primal Space (YouTube)</li><li><a href="https://www.youtube.com/watch?v=_7MfDRiO8zU" target="_blank" rel="noopener">The technology behind the Dyson DC59 cordless vacuum cleaner.</a> — Dyson (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="C3.2-lifecycle-analysis.html">&larr; C3.2 Life-cycle analysis (HL)</a><a href="IA-internal-assessment.html">Internal Assessment &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>

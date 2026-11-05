@@ -93,6 +93,18 @@ main h4 { font-size: 14px; font-weight: 700; margin: 20px 0 6px; color: #1c1c1e;
 .tabs > input:nth-of-type(9):checked ~ .tab-panel:nth-of-type(9),
 .tabs > input:nth-of-type(10):checked ~ .tab-panel:nth-of-type(10) { display: block; }
 @media print { .tabs > input, .tabs > label { display: none; } .tabs > .tab-panel { display: block; border-top: none; } }
+/* Figures (2026-11-05): the IA chapter's exemplar pages and slides, two to a row (one, for a wide slide or a dense page);
+   a click opens the full picture. Credits at the foot of a page: its videos' creators, and the IBO for exemplar pages. */
+main .figs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin: 14px 0 24px; }
+main .figs.one { grid-template-columns: 1fr; }
+main figure { margin: 0; }
+main figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.12); border-radius: 6px; background: #fff; }
+main figcaption { font-size: 12px; color: #6e6e73; margin-top: 6px; line-height: 1.45; }
+main .credits { margin: 40px 0 0; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #6e6e73; }
+main .credits .credits-title { font-weight: 700; color: #3a3a3c; margin: 0 0 6px; }
+main .credits p { color: #6e6e73; margin: 0 0 8px; }
+main .credits ul { margin: 0 0 10px 20px; color: #6e6e73; }
+main .credits li { margin-bottom: 3px; }
 </style>
 <script src="progress.js" defer></script>
 <script src="app.js" defer></script>
@@ -247,7 +259,11 @@ Analyse results, identify hotspots, draw conclusions. Which life stage dominates
 <p><strong>3. Explain why intuition about product sustainability is often wrong.</strong></p>
 <p><em>Products have complex life cycles, and different life-cycle stages dominate for different products. Plastic bags have a lower carbon footprint than paper bags unless the paper bag is reused many times — counterintuitive because "plastic = bad" is a cultural shortcut. Electric cars have higher manufacturing emissions than petrol but far lower use emissions — the better choice depends on grid mix and usage. Without full-lifecycle data, conclusions drawn from visible attributes (material, origin, look) are often wrong. LCA corrects the intuitive story with numbers.</em></p>
 <p><strong>4. A designer claims their bamboo bicycle frame is "sustainable" because bamboo is renewable. Using LCA reasoning, critique this claim.</strong></p>
-<p><em>Renewability is one factor among many. A proper LCA would assess: extraction (how is the bamboo harvested, from where?), processing (how much energy, what adhesives, where?), transport (imported from Asia or grown locally?), use-phase durability (does it last as long as aluminium?), and end of life (is it compostable, or does the adhesive prevent biodegradation?). The bamboo frame may still be more sustainable — but that conclusion requires data, not the word "bamboo". Designers must defend sustainability claims with life-cycle evidence or retract them.</em></p>
+<p><em>Renewability is one factor among many. A proper LCA would assess: extraction (how is the bamboo harvested, from where?), processing (how much energy, what adhesives, where?), transport (imported from Asia or grown locally?), use-phase durability (does it last as long as aluminium?), and end of life (is it compostable, or does the adhesive prevent biodegradation?). The bamboo frame may still be more sustainable — but that conclusion requires data, not the word "bamboo". Designers must defend sustainability claims with life-cycle evidence or retract them.</em></p><div class="credits">
+<p class="credits-title">Credits</p>
+<p>With thanks to the creators of the videos on this page:</p>
+<ul><li><a href="https://www.youtube.com/watch?v=3_fjEc4aQVk" target="_blank" rel="noopener">Which bag should you use? - Luka Seamus Wright and Imogen Ellen Napper</a> — TED-Ed (YouTube)</li><li><a href="https://www.youtube.com/watch?v=MMrj1jIGHWY" target="_blank" rel="noopener">Best Reusable Coffee Cups (2020 Review!)</a> — European Coffee Trip (YouTube)</li></ul>
+</div>
 <div class="next-prev"><a href="C3.1-product-analysis.html">&larr; C3.1 Product analysis and evaluation</a><a href="C4.1-design-for-manufacture-strategies.html">C4.1 Design for manufacture strategies (HL) &rarr;</a></div>
 <div class="footer">&copy; 2026 David Hart. Independent teacher resource &mdash; not affiliated with the IBO.</div>
 </main>
